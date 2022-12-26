@@ -3487,7 +3487,7 @@ object SOFrm: TSOFrm
         object Label53: TLabel
           Left = 0
           Top = 0
-          Width = 848
+          Width = 3
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -7762,7 +7762,7 @@ object SOFrm: TSOFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -9799,7 +9799,7 @@ object SOFrm: TSOFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -10876,7 +10876,7 @@ object SOFrm: TSOFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OP2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -13010,7 +13010,7 @@ object SOFrm: TSOFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -14865,7 +14865,7 @@ object SOFrm: TSOFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 330000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 60
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -16915,7 +16915,7 @@ object SOFrm: TSOFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 330000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 60
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -21968,7 +21968,7 @@ object SOFrm: TSOFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OP2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

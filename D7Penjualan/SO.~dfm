@@ -1188,16 +1188,16 @@ object SOFrm: TSOFrm
             WordWrap = False
           end
           object Edit2: TEdit
-            Left = 728
-            Top = 159
+            Left = 841
+            Top = 188
             Width = 82
             Height = 19
             Anchors = [akTop, akRight]
             TabOrder = 23
           end
           object BtnPanel: TButton
-            Left = 800
-            Top = 158
+            Left = 841
+            Top = 171
             Width = 17
             Height = 20
             Anchors = [akTop, akRight]
