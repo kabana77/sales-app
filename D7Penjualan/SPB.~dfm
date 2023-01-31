@@ -1,5 +1,5 @@
 object SPBFrm: TSPBFrm
-  Left = 249
+  Left = 251
   Top = 139
   Width = 1496
   Height = 749
