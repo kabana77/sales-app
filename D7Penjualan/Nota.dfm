@@ -5386,8 +5386,7 @@ object NotaFrm: TNotaFrm
     DataSource = dsQMaster
     OpenDataSource = False
     UserName = 'DBQMaster'
-    Left = 136
-    Top = 8
+    Left = 168
     object ppDBQMasterppField1: TppField
       FieldAlias = 'IBUKTI'
       FieldName = 'IBUKTI'
@@ -6638,7 +6637,7 @@ object NotaFrm: TNotaFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -8882,7 +8881,7 @@ object NotaFrm: TNotaFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

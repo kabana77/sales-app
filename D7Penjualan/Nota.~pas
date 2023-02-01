@@ -1875,76 +1875,63 @@ procedure TNotaFrm.QDetailCalcFields(DataSet: TDataSet);
 begin
  if (QMasterMU.AsString='USD') and (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then
  begin
-  //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
   QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
  end
  else if (QMasterMU.AsString='USD') and (QDetailKD_SUBLOKASI_GJ2.AsString='BALE') then
  begin
-  //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
   QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
  end
  ELSE
   if (QMasterMU.AsString='USD') and (QDetailKD_SUBLOKASI_GJ2.AsString='') then
   begin
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
   end
   else
 
-  //<><>&^*%^*%^*(
-  if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') and (QDetailKD_SUBLOKASI_GJ2.AsString='KILO')then
+  //<><>&^*%^*%^*(      ITOCHU
+  if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') and (QDetailKD_SUBLOKASI_GJ2.AsString='BALE')then
   begin
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
   end
   ELSE
-  if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') and (QDetailKD_SUBLOKASI_GJ2.AsString='BALE')then
+  if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') and (QDetailKD_SUBLOKASI_GJ2.AsString='KILO')then
   begin
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
   end
-  //77878979870&*(&*&(&*^^&&^%*&*(
+  //77878979870&*(&*&(&*^^&&^%*&*( END ITOCHU
 
   ELSE
   if (QMasterMU.AsString<>'USD') and (QMasterMU.AsString<>'IDR') and (QDetailSATUAN.AsString='KILO') then
   begin
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
   end
   ELSE
   if (QMasterMU.AsString<>'USD') and (QMasterMU.AsString<>'IDR') and (QDetailSATUAN.AsString='BALE') then
   begin
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
   end
   ELSE
   if (QMasterMU.AsString='IDR')and(QDetailSATUAN.AsString='BALE')  then //*QMasterKURS.AsFloat
   begin
-
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
   end
   ELSE
   if (QMasterMU.AsString='IDR')and(QDetailSATUAN.AsString='KILO')  then  //*QMasterKURS.AsFloat
   begin
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2_kg.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty11.AsFloat;
   end
   ELSE
   if (QMasterMU.AsString='IDR')and(QDetailSATUAN.AsString='')  then //*QMasterKURS.AsFloat
   begin
-    //QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
     QDetailSUB_TOTAL.AsFloat:=((QDetailHRG2.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat))*(1-QDetailDISC.AsFloat/100)*QDetailqty7.AsFloat;
   end;
 
  if RadioGroup1.ItemIndex=1 then
  begin
-    //QDetailhargaT.AsFloat:=QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat;
     QDetailhargaT.AsFloat:=QDetailHRG2.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat;
  end
  else
  begin
-    //QDetailhargaT.AsFloat:=QDetailHRG2_KG.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat;
     QDetailhargaT.AsFloat:=QDetailHRG2_KG.AsFloat+(QDetailINSURANCE.AsFloat+QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat)+QDetailSUBTOTAL.AsFloat;
  end;
 
@@ -2249,256 +2236,229 @@ if (QMasterMU.AsString='USD') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then
                 vpot:=0;
                 //ShowMessage('tekan kg');
                 QTotalInput.Close;
-                {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-                ' where a.ibukti=:pibukti';}
-
                 QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(INSURANCE+COMMISSION+FREIGHT)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
                 ' where a.ibukti=:pibukti';
 
                 QTotalInput.DeclareVariable('pibukti',otInteger);
                 QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-                //  ShowMessage(QTotalInput.SQL.Text);
+
                 QTotalInput.Open;
               	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
               	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
                 wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
               	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
 
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=vsub_total/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=vsub_total/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
+                if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+                vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+                vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+                if QMasterINC_PPN.AsString<>'' then
+                   case QMasterINC_PPN.AsInteger of
+                        0 : begin
+                              vdpp:=vsub_total-vdiskon-vpot;
+                              vppn:=0;
+                              vakhir:=vdpp;   // -vdiskon
+                            end;
+                        1 : begin
+                              vdpp:=vsub_total/1.1;
+                              vppn:=vsub_total-vdpp-vdiskon-vpot;
+                              vakhir:=(vdpp-vdiskon)+vppn;
+                            end;
+                        2 : begin
+                              vdpp:=vsub_total-vdiskon-vpot;
+                              vppn:=vdpp*0.1-vdiskon-vpot;
+                              vakhir:=vdpp+vppn; //-vdiskon
+                            end;
+                        3 : begin
+                              vdpp:=vsub_total/1.11;
+                              vppn:=vsub_total-vdpp-vdiskon-vpot;
+                              vakhir:=(vdpp-vdiskon)+vppn;
+                            end;
+                        4 : begin
+                              vdpp:=vsub_total-vdiskon-vpot;
+                              vppn:=vdpp*0.11-vdiskon-vpot;
+                              vakhir:=vdpp+vppn; //-vdiskon
+                            end;
+                    end;
 
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end
-  ELSE
-if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='BALE') then //wwDBComboBox4.Text='BALE' then
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
+                    LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+                    LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+                    LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+                    LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+                end
+                ELSE if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='BALE') then //wwDBComboBox4.Text='BALE' then
+                begin
+                  vdiskon:=0;
+                  vdpp:=0;
+                  vppn:=0;
+                  vakhir:=0;
+                  vsub_total:=0;
+                  vpot:=0;
+                  QTotalInput.Close;
+                  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(INSURANCE+COMMISSION+FREIGHT)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
+                  ' where a.ibukti=:pibukti';
 
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+cis+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
+                  QTotalInput.DeclareVariable('pibukti',otInteger);
+                  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+                  QTotalInput.Open;
 
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(INSURANCE+COMMISSION+FREIGHT)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-  ' where a.ibukti=:pibukti';
+                	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat)+' Bale';
+                	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+                  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+                	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
 
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
+                  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+                  vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+                  vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+                  if QMasterINC_PPN.AsString<>'' then
+                     case QMasterINC_PPN.AsInteger of
+                          0 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=0;
+                                vakhir:=vdpp;   // -vdiskon
+                              end;
+                          1 : begin
+                                vdpp:=vsub_total/1.1;
+                                vppn:=vsub_total-vdpp-vdiskon-vpot;
+                                vakhir:=(vdpp-vdiskon)+vppn;
+                              end;
+                          2 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=vdpp*0.1-vdiskon-vpot;
+                                vakhir:=vdpp+vppn; //-vdiskon
+                              end;
+                          3 : begin
+                                vdpp:=vsub_total/1.11;
+                                vppn:=vsub_total-vdpp-vdiskon-vpot;
+                                vakhir:=(vdpp-vdiskon)+vppn;
+                              end;
+                          4 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=vdpp*0.11-vdiskon-vpot;
+                                vakhir:=vdpp+vppn; //-vdiskon
+                              end;
+                     end;
 
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+                    LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+                    LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+                    LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+                    LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
 
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=vsub_total/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=vsub_total/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
+                end
+                else if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
+                begin
+                  vdiskon:=0;
+                  vdpp:=0;
+                  vppn:=0;
+                  vakhir:=0;
+                  vsub_total:=0;
+                  vpot:=0;
 
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end
-else
+                  QTotalInput.Close;
+                  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(INSURANCE+COMMISSION+FREIGHT)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
+                  ' where a.ibukti=:pibukti';
+                  QTotalInput.DeclareVariable('pibukti',otInteger);
+                  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+                  QTotalInput.Open;
 
-if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
+                	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
+                	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
+                  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+                	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
 
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_KG+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(INSURANCE+COMMISSION+FREIGHT)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-  ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
+                  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+                  vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+                  vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+                  if QMasterINC_PPN.AsString<>'' then
+                     case QMasterINC_PPN.AsInteger of
+                          0 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=0;
+                                vakhir:=vdpp;   // -vdiskon
+                              end;
+                          1 : begin
+                                vdpp:=vsub_total/1.1;
+                                vppn:=vsub_total-vdpp-vdiskon-vpot;
+                                vakhir:=(vdpp-vdiskon)+vppn;
+                              end;
+                          2 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=vdpp*0.1-vdiskon-vpot;
+                                vakhir:=vdpp+vppn; //-vdiskon
+                              end;
+                          3 : begin
+                                vdpp:=vsub_total/1.11;
+                                vppn:=vsub_total-vdpp-vdiskon-vpot;
+                                vakhir:=(vdpp-vdiskon)+vppn;
+                              end;
+                          4 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=vdpp*0.11-vdiskon-vpot;
+                                vakhir:=vdpp+vppn; //-vdiskon
+                              end;
+                     end;
 
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
-	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
-  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+                     LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+                     LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+                     LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+                     LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+                end
+                else
+                begin
+                  vdiskon:=0;
+                  vdpp:=0;
+                  vppn:=0;
+                  vakhir:=0;
+                  vsub_total:=0;
+                  vpot:=0;
+                  QTotalInput.Close;
 
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=vsub_total/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=vsub_total/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
+                  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(INSURANCE+COMMISSION+FREIGHT)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
+                  ' where a.ibukti=:pibukti';
+                  QTotalInput.DeclareVariable('pibukti',otInteger);
+                  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+                  QTotalInput.Open;
+                	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
+                	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+                  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+                	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+                  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+                  vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+                  vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+                  if QMasterINC_PPN.AsString<>'' then
+                     case QMasterINC_PPN.AsInteger of
+                          0 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=0;
+                                vakhir:=vdpp;   // -vdiskon
+                              end;
+                          1 : begin
+                                vdpp:=(vsub_total/1.1)-vdiskon;
+                                vppn:=vsub_total-vdpp-vpot;
+                                vakhir:=vdpp+vppn;
+                              end;
+                          2 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=vdpp*0.1-vdiskon-vpot;
+                                vakhir:=vdpp+vppn; //-vdiskon
+                              end;
+                          3 : begin
+                                vdpp:=(vsub_total/1.11)-vdiskon;
+                                vppn:=vsub_total-vdpp-vpot;
+                                vakhir:=vdpp+vppn;
+                              end;
+                          4 : begin
+                                vdpp:=vsub_total-vdiskon-vpot;
+                                vppn:=vdpp*0.11-vdiskon-vpot;
+                                vakhir:=vdpp+vppn; //-vdiskon
+                              end;
+                     end;
 
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end
-else
+                     LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+                     LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+                     LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+                     LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
 
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-  //ShowMessage('tekan terakhir');
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+cis+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(INSURANCE+COMMISSION+FREIGHT)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-  ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-    wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
-
-
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total/1.1)-vdiskon;
-        vppn:=vsub_total-vdpp-vpot;
-        vakhir:=vdpp+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total/1.11)-vdiskon;
-        vppn:=vsub_total-vdpp-vpot;
-        vakhir:=vdpp+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end;
+                end;
 end;
 
 procedure TNotaFrm.ppDetailBand2BeforePrint(Sender: TObject);
@@ -2528,64 +2488,48 @@ end;
 
 procedure TNotaFrm.BtnPrintInputClick(Sender: TObject);
 begin
-
-//ppLabel48.Caption:=
-if wwDBComboBox1.Text = 'TANPA PPN' then
-  begin
-    ppLPPN.Visible:=False;
-  end
-else
-  begin
-    ppLPPN.Visible:=True;
-  end;
+  if wwDBComboBox1.Text = 'TANPA PPN' then ppLPPN.Visible:=False else ppLPPN.Visible:=True;
+  
   if QMasterISPJK.AsInteger = 0 then
   begin
-      ppDBText15.Visible:=False;
-      ppDBText16.Visible:=False;
-      ppDBText17.Visible:=False;
+    ppDBText15.Visible:=False;
+    ppDBText16.Visible:=False;
+    ppDBText17.Visible:=False;
   end
   else
   begin
-      ppDBText15.Visible:=True;
-      ppDBText16.Visible:=True;
-      ppDBText17.Visible:=True;
+    ppDBText15.Visible:=True;
+    ppDBText16.Visible:=True;
+    ppDBText17.Visible:=True;
   end;
+
+  {ball unit}
   if RadioGroup1.ItemIndex=1 then
   begin
-        QDetailhargaT.AsFloat:=QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat;
-        ppLabel32.Visible:=False;
-        ppDBText53.Visible:=False;
-        //ppDBText56.Visible:=False;
-        ppDBCalc9.Visible:=False;
-        ppDBCalc8.Visible:=True;
-        ppDBText22.Visible:=True;
-        ppDBText21.Visible:=True;
-        ppDBText30.Visible:=True;
-        ppDBText57.Visible:=True;
-
-        ppLabel32.Visible:=false;
-        ppDBText30.Visible:=True;
-       // ShowMessage(QDetailhargaT.Text);
+    QDetailhargaT.AsFloat:=QDetailHRG2.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat;
+    ppLabel32.Visible:=False;
+    ppDBText53.Visible:=False;
+    ppDBCalc9.Visible:=False;
+    ppDBCalc8.Visible:=True;
+    ppDBText22.Visible:=True;
+    ppDBText21.Visible:=True;
+    ppDBText30.Visible:=True;
+    ppDBText57.Visible:=True;
+    ppLabel32.Visible:=false;
+    ppDBText30.Visible:=True;
   end
-  else
+  else {kgs unit}
   begin
     QDetailhargaT.AsFloat:=QDetailHRG2_KG.AsFloat+QDetailCIS.AsFloat+QDetailSUBTOTAL.AsFloat;
-        ppDBText30.Visible:=False;
-        ppDBText22.Visible:=False;
-        ppDBText21.Visible:=False;
-        ppDBCalc8.Visible:=False;
-        ppDBCalc9.Visible:=True;
-        ppLabel32.Visible:=True;
-        ppDBText53.Visible:=True;
-        //ppDBText56.Visible:=True;
-        //pplabel32.Caption:='KILO';
-       // ShowMessage(QDetailhargaT.Text);
-        //ppLabel48.Caption:=QDetailhargaT.Text;
-        //ppLabel48.Caption:=QDetailHRG2_KG.AsString;
-        //ppLabel49.Caption:=QDetailQTY11.AsString;
-
-        ppLabel32.Visible:=true;
-        ppDBText30.Visible:=false;
+    ppDBText30.Visible:=False;
+    ppDBText22.Visible:=False;
+    ppDBText21.Visible:=False;
+    ppDBCalc8.Visible:=False;
+    ppDBCalc9.Visible:=True;
+    ppLabel32.Visible:=True;
+    ppDBText53.Visible:=True;
+    ppLabel32.Visible:=true;
+    ppDBText30.Visible:=false;
   end;
 
   if QMasterMU.AsString<>'IDR' then
@@ -2595,592 +2539,459 @@ else
     pp21.DisplayFormat:=('#,###.###;(#,###.###);-');
     pp22.DisplayFormat:=('#,###.###;(#,###.###);-');
     pp25.DisplayFormat:=('#,###.###;(#,###.###);-');
-    //ppVariable1.DisplayFormat:=('#,###.###;(#,###.###);-');
   end;
 
   if PageControl2.ActivePageIndex=0 then
   begin
     ppDBQDetail.DataSource:=dsQDetail;
     ppNo2.AsInteger:=0;
-    if RGKertas.ItemIndex=0 then
-      ppReportInput.PrinterSetup.PaperHeight:=297
-      else
-      ppReportInput.PrinterSetup.PaperHeight:=140;
-      ppReportInput.Print;
-    end
-  else
-  if PageControl2.ActivePageIndex=1 then
+    if RGKertas.ItemIndex=0 then ppReportInput.PrinterSetup.PaperHeight:=297 else ppReportInput.PrinterSetup.PaperHeight:=140;
+    ppReportInput.Print;
+  end
+  else if PageControl2.ActivePageIndex=1 then
   begin
     ppDBQDetail.DataSource:=dsQDetail3;
     ppNo2.AsInteger:=0;
-    if RGKertas.ItemIndex=0 then
-      ppReportInput.PrinterSetup.PaperHeight:=297
-      else
-      ppReportInput.PrinterSetup.PaperHeight:=140;
-      ppReportInput.Print;
-    end
+    if RGKertas.ItemIndex=0 then ppReportInput.PrinterSetup.PaperHeight:=297 else ppReportInput.PrinterSetup.PaperHeight:=140;
+    ppReportInput.Print;
+  end
 end;
 
 procedure TNotaFrm.QMasterBeforePost(DataSet: TDataSet);
 begin
 
-QDetailCIS.AsFloat:=QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat+QDetailINSURANCE.AsFloat;
+ QDetailCIS.AsFloat:=QDetailFREIGHT.AsFloat+QDetailCOMMISSION.AsFloat+QDetailINSURANCE.AsFloat;
 
-if (QMasterMU.AsString='USD') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then
-  begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-
+ if (QMasterMU.AsString='USD') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then
+ begin
+  vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
   QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
   QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(freight+comission+insurace)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
     ' where a.ibukti=:pibukti';
   QTotalInput.DeclareVariable('pibukti',otInteger);
   QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
   QTotalInput.Open;
-
 	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
 	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
   wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
 	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
 
   if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=(vsub_total-vdiskon-vpot)*0.1;
-        vakhir:=vdpp+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=(vsub_total-vdiskon-vpot)*0.11;
-        vakhir:=vdpp+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir{-QMasterUM.AsFloat});
-  //QMasterPROSENTASE.AsFloat:=vpot;
-  end
-else
-
-if (QMasterMU.AsString='USD') AND (QDetailKD_SUBLOKASI_GJ2.AsString='BALE') then //wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
-  begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+cis+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
-
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-  end
-else
-
-if (QMasterMU.AsString='USD') AND (QDetailKD_SUBLOKASI_GJ2.AsString='') then
-  begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
-
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
-	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
-  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-  end
-else
-
-if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') and (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
-  begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-  //if wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
-  //begin
-  //ShowMessage('tekan kg');
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
-	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
-  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end
-  ELSE
-if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='BALE') then //wwDBComboBox4.Text='BALE' then
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-
-  QTotalInput.Close;
-
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+cis+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
-
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end
-else
-
-if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-
-  QTotalInput.Close;
-
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_KG+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_KG+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
-
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
-	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
-  wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end
-else
-
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-  //ShowMessage('tekan terakhir');
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+cis+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-    wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
-
-
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-    vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.11-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  //QMasterPROSENTASE.AsFloat:=vpot;
-end;
-
-    if  wwDBComboBox2.itemindex=0 then
-    begin
-      if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
-        begin
-          DMFrm.FNoUrut.Close;
-          DMFrm.FNoUrut.SetVariable(0,vkode);
-          DMFrm.FNoUrut.SetVariable(1,'-');
-          DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
-          DMFrm.FNoUrut.SetVariable(3,'P');
-          DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
-          DMFrm.FNoUrut.Open;
-          QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-          QMasterSUB_TOTAL.AsFloat:=vsub_total;
-          QMasterDPP.AsFloat:=vdpp;
-          QMasterPPN.AsFloat:=vppn;
-          QMasterAKHIR.AsFloat:=vakhir;
-          QMasterNhari.AsFloat:=0;
+     vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+     vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+     vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+     if QMasterINC_PPN.AsString<>'' then
+        case QMasterINC_PPN.AsInteger of
+          0 : begin
+               vdpp:=vsub_total-vdiskon-vpot;
+               vppn:=0;
+               vakhir:=vdpp;   // -vdiskon
+             end;
+          1 : begin
+               vdpp:=(vsub_total-vdiskon)/1.1;
+               vppn:=(vsub_total-vdiskon-vpot)*0.1;
+               vakhir:=vdpp+vppn;
+              end;
+          2 : begin
+               vdpp:=vsub_total-vdiskon-vpot;
+               vppn:=vdpp*0.1-vdiskon-vpot;
+               vakhir:=vdpp+vppn; //-vdiskon
+              end;
+          3 : begin
+               vdpp:=(vsub_total-vdiskon)/1.11;
+               vppn:=(vsub_total-vdiskon-vpot)*0.11;
+               vakhir:=vdpp+vppn;
+              end;
+          4 : begin
+               vdpp:=vsub_total-vdiskon-vpot;
+               vppn:=vdpp*0.11-vdiskon-vpot;
+               vakhir:=vdpp+vppn; //-vdiskon
+              end;
         end;
-    end;
-     //ELSE
-//begin       //7
-  if  wwDBComboBox2.itemindex=1 then
-    begin   //6
-  //  if vakhir<=QMasterSISA_KREDIT.AsFloat then
-   //   begin  //4
-      if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
-   //     begin //3
-   //     if QMasterKD_REKANAN2.AsString='' then
-   //       begin   //1
-  //          ShowMessage('CUSTOMER harus diisi !');
- //           Abort;
-  //        end    //1
-  //      else
-          begin  //2
-            DMFrm.FNoUrut.Close;
-            DMFrm.FNoUrut.SetVariable(0,vkode);
-            DMFrm.FNoUrut.SetVariable(1,'-');
-            DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
-            DMFrm.FNoUrut.SetVariable(3,'P');
-            DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
-            DMFrm.FNoUrut.Open;
-            QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-{     QMasterSUB_TOTAL.AsFloat:=vsub_total;
-     QMasterDPP.AsFloat:=vdpp;
-     QMasterPPN.AsFloat:=vppn;
-     QMasterAKHIR.AsFloat:=vakhir;  }
-        //  end;   //2
-       // end;     //3
-     QMasterSUB_TOTAL.AsFloat:=vsub_total;
-     QMasterDPP.AsFloat:=vdpp;
-     QMasterPPN.AsFloat:=vppn;
-     QMasterAKHIR.AsFloat:=vakhir;
-     QMasterPROSENTASE.AsFloat:=vpot;
 
- //    end  //4
- // else
-  //  begin  //5
-  //    ShowMessage('Maaf, melampaui BATAS KREDIT, hubungi Bag. Keuangan !');
-  //    Abort;
-    end;   //5
-     end;  //6
-     //end     //7
-//else
-//begin
-if  wwDBComboBox2.Text='LC' then
-    begin
-    if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
+        LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+        LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+        LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+        LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir{-QMasterUM.AsFloat});
+     end
+     else if (QMasterMU.AsString='USD') AND (QDetailKD_SUBLOKASI_GJ2.AsString='BALE') then
      begin
-     DMFrm.FNoUrut.Close;
-     DMFrm.FNoUrut.SetVariable(0,vkode);
-     DMFrm.FNoUrut.SetVariable(1,'-');
-     DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
-     DMFrm.FNoUrut.SetVariable(3,'P');
-     DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
-     DMFrm.FNoUrut.Open;
-     QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-     QMasterSUB_TOTAL.AsFloat:=vsub_total;
-     QMasterDPP.AsFloat:=vdpp;
-     QMasterPPN.AsFloat:=vppn;
-   //  QMasterAKHIR.AsFloat:=vakhir;
-     QMasterNhari.AsFloat:=0;
-     end;
-     end;
-//end;
-   QMasterSUB_TOTAL.AsFloat:=vsub_total;
-   QMasterDPP.AsFloat:=vdpp;
-   QMasterPPN.AsFloat:=vppn;
-   QMasterAKHIR.AsFloat:=vakhir;
-   QMasterPROSENTASE.AsFloat:=vpot;
+       vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+       QTotalInput.Close;
+       QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
+       ' where a.ibukti=:pibukti';
+       QTotalInput.DeclareVariable('pibukti',otInteger);
+       QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+       QTotalInput.Open;
+
+     	 wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
+       wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+       wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+     	 wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+
+      if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+      vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+      vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+      if QMasterINC_PPN.AsString<>'' then
+         case QMasterINC_PPN.AsInteger of
+           0 : begin
+                vdpp:=vsub_total-vdiskon-vpot;
+                vppn:=0;
+                vakhir:=vdpp;   // -vdiskon
+              end;
+          1 : begin
+                vdpp:=(vsub_total-vdiskon)/1.1;
+                vppn:=vsub_total-vdpp-vdiskon-vpot;
+                vakhir:=(vdpp-vdiskon)+vppn;
+              end;
+          2 : begin
+                vdpp:=vsub_total-vdiskon-vpot;
+                vppn:=vdpp*0.1-vdiskon-vpot;
+                vakhir:=vdpp+vppn; //-vdiskon
+              end;
+          3 : begin
+                vdpp:=(vsub_total-vdiskon)/1.11;
+                vppn:=vsub_total-vdpp-vdiskon-vpot;
+                vakhir:=(vdpp-vdiskon)+vppn;
+              end;
+          4 : begin
+                vdpp:=vsub_total-vdiskon-vpot;
+                vppn:=vdpp*0.11-vdiskon-vpot;
+                vakhir:=vdpp+vppn; //-vdiskon
+              end;
+         end;
+         LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+         LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+         LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+         LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+      end
+      else if (QMasterMU.AsString='USD') AND (QDetailKD_SUBLOKASI_GJ2.AsString='') then
+      begin
+        vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+        QTotalInput.Close;
+        QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
+        ' where a.ibukti=:pibukti';
+
+        QTotalInput.DeclareVariable('pibukti',otInteger);
+        QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+        QTotalInput.Open;
+
+      	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
+      	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
+        wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+       	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+        if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+        vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+        vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+        if QMasterINC_PPN.AsString<>'' then
+          case QMasterINC_PPN.AsInteger of
+            0 : begin
+                  vdpp:=vsub_total-vdiskon-vpot;
+                  vppn:=0;
+                  vakhir:=vdpp;   // -vdiskon
+                end;
+            1 : begin
+                  vdpp:=(vsub_total-vdiskon)/1.1;
+                  vppn:=vsub_total-vdpp-vdiskon-vpot;
+                  vakhir:=(vdpp-vdiskon)+vppn;
+                end;
+            2 : begin
+                  vdpp:=vsub_total-vdiskon-vpot;
+                  vppn:=vdpp*0.1-vdiskon-vpot;
+                  vakhir:=vdpp+vppn; //-vdiskon
+                end;
+            3 : begin
+                  vdpp:=(vsub_total-vdiskon)/1.11;
+                  vppn:=vsub_total-vdpp-vdiskon-vpot;
+                  vakhir:=(vdpp-vdiskon)+vppn;
+                end;
+            4 : begin
+                  vdpp:=vsub_total-vdiskon-vpot;
+                  vppn:=vdpp*0.11-vdiskon-vpot;
+                  vakhir:=vdpp+vppn; //-vdiskon
+                end;
+          end;
+
+          LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+          LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+          LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+          LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+        end
+        else if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') and (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
+        begin
+          vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+          QTotalInput.Close;
+          QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
+          ' where a.ibukti=:pibukti';
+
+          QTotalInput.DeclareVariable('pibukti',otInteger);
+          QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+          QTotalInput.Open;
+        	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
+        	wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
+          wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+          wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+
+          if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+          vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+          vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+          if QMasterINC_PPN.AsString<>'' then
+             case QMasterINC_PPN.AsInteger of
+                0 : begin
+                      vdpp:=vsub_total-vdiskon-vpot;
+                      vppn:=0;
+                      vakhir:=vdpp;   // -vdiskon
+                    end;
+                1 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.1;
+                      vppn:=vsub_total-vdpp-vdiskon-vpot;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                    end;
+                2 : begin
+                      vdpp:=vsub_total-vdiskon-vpot;
+                      vppn:=vdpp*0.1-vdiskon-vpot;
+                      vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+                3 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.11;
+                      vppn:=vsub_total-vdpp-vdiskon-vpot;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                    end;
+                4 : begin
+                      vdpp:=vsub_total-vdiskon-vpot;
+                      vppn:=vdpp*0.11-vdiskon-vpot;
+                      vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+             end;
+
+            LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+            LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+            LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+            LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+
+          end
+          ELSE if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='BALE') then //wwDBComboBox4.Text='BALE' then
+          begin
+            vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+            QTotalInput.Close;
+
+            if (QMasterKD_REKANAN.AsFloat=100037) then { 100037 : itochu broo }
+              QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a where a.ibukti=:pibukti'
+            else
+              QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a where a.ibukti=:pibukti';
+
+            QTotalInput.DeclareVariable('pibukti',otInteger);
+            QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+            QTotalInput.Open;
+
+            wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat)+' Bale';
+          	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+            wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+          	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+
+            if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+            vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+            vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+            if QMasterINC_PPN.AsString<>'' then
+              case QMasterINC_PPN.AsInteger of
+                 0 : begin
+                      vdpp:=vsub_total-vdiskon-vpot;
+                      vppn:=0;
+                      vakhir:=vdpp;   // -vdiskon
+                    end;
+                 1 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.1;
+                      vppn:=vsub_total-vdpp-vdiskon-vpot;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                     end;
+                 2 : begin
+                      vdpp:=vsub_total-vdiskon-vpot;
+                      vppn:=vdpp*0.1-vdiskon-vpot;
+                      vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+                3 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.11;
+                      vppn:=vsub_total-vdpp-vdiskon-vpot;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                    end;
+                4 : begin
+                      vdpp:=vsub_total-vdiskon-vpot;
+                      vppn:=vdpp*0.11-vdiskon-vpot;
+                      vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+              end;
+
+              LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+              LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+              LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+              LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+
+          end
+          else if (QMasterMU.AsString='IDR') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
+          begin
+             vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+             QTotalInput.Close;
+             QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty11) as kg, sum(((hrg2_KG+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total, sum(pot_hrg2)as pot_hrg from '+cUserTabel+'bukti_detail a'+
+             ' where a.ibukti=:pibukti';
+             QTotalInput.DeclareVariable('pibukti',otInteger);
+             QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+             QTotalInput.Open;
+           	 wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
+             wwDBGrid1.ColumnByName('QTY11').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat);
+             wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+             wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+
+             if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+             vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+             vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+             if QMasterINC_PPN.AsString<>'' then
+                case QMasterINC_PPN.AsInteger of
+                  0 : begin
+                        vdpp:=vsub_total-vdiskon-vpot;
+                        vppn:=0;
+                        vakhir:=vdpp;   // -vdiskon
+                      end;
+                  1 : begin
+                        vdpp:=(vsub_total-vdiskon)/1.1;
+                        vppn:=vsub_total-vdpp-vdiskon-vpot;
+                        vakhir:=(vdpp-vdiskon)+vppn;
+                      end;
+                  2 : begin
+                        vdpp:=vsub_total-vdiskon-vpot;
+                        vppn:=vdpp*0.1-vdiskon-vpot;
+                        vakhir:=vdpp+vppn; //-vdiskon
+                      end;
+                  3 : begin
+                        vdpp:=(vsub_total-vdiskon)/1.11;
+                        vppn:=vsub_total-vdpp-vdiskon-vpot;
+                        vakhir:=(vdpp-vdiskon)+vppn;
+                      end;
+                  4 : begin
+                        vdpp:=vsub_total-vdiskon-vpot;
+                        vppn:=vdpp*0.11-vdiskon-vpot;
+                        vakhir:=vdpp+vppn; //-vdiskon
+                      end;
+                end;
+
+                LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+                LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+                LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+                LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+             end
+          else
+          begin
+            vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+            QTotalInput.Close;
+            QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total, sum(pot_hrg2) as pot_hrg from '+cUserTabel+'bukti_detail a'+
+            ' where a.ibukti=:pibukti';
+            QTotalInput.DeclareVariable('pibukti',otInteger);
+            QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+            QTotalInput.Open;
+          	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
+          	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+            wwDBGrid1.ColumnByName('POT_HRG2').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('POT_HRG').AsFloat);
+          	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+            if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+            vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+            vpot:=QTotalInput.FieldByName('POT_HRG').AsFloat;
+            if QMasterINC_PPN.AsString<>'' then
+              case QMasterINC_PPN.AsInteger of
+                0 : begin
+                     vdpp:=vsub_total-vdiskon-vpot;
+                     vppn:=0;
+                     vakhir:=vdpp;   // -vdiskon
+                    end;
+                1 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.1;
+                      vppn:=vsub_total-vdpp-vdiskon-vpot;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                    end;
+                2 : begin
+                      vdpp:=vsub_total-vdiskon-vpot;
+                      vppn:=vdpp*0.1-vdiskon-vpot;
+                      vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+                3 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.11;
+                      vppn:=vsub_total-vdpp-vdiskon-vpot;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                    end;
+                4 : begin
+                     vdpp:=vsub_total-vdiskon-vpot;
+                     vppn:=vdpp*0.11-vdiskon-vpot;
+                     vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+              end;
+
+              LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+              LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+              LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+              LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+          end;
+
+
+          if  wwDBComboBox2.itemindex=0 then
+          begin
+            if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
+            begin
+              DMFrm.FNoUrut.Close;
+              DMFrm.FNoUrut.SetVariable(0,vkode);
+              DMFrm.FNoUrut.SetVariable(1,'-');
+              DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+              DMFrm.FNoUrut.SetVariable(3,'P');
+              DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
+              DMFrm.FNoUrut.Open;
+              QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
+              QMasterSUB_TOTAL.AsFloat:=vsub_total;
+              QMasterDPP.AsFloat:=vdpp;
+              QMasterPPN.AsFloat:=vppn;
+              QMasterAKHIR.AsFloat:=vakhir;
+              QMasterNhari.AsFloat:=0;
+            end;
+          end;
+          if  wwDBComboBox2.itemindex=1 then
+          begin
+            if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
+            begin
+              DMFrm.FNoUrut.Close;
+              DMFrm.FNoUrut.SetVariable(0,vkode);
+              DMFrm.FNoUrut.SetVariable(1,'-');
+              DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+              DMFrm.FNoUrut.SetVariable(3,'P');
+              DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
+              DMFrm.FNoUrut.Open;
+              QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
+              QMasterSUB_TOTAL.AsFloat:=vsub_total;
+              QMasterDPP.AsFloat:=vdpp;
+              QMasterPPN.AsFloat:=vppn;
+              QMasterAKHIR.AsFloat:=vakhir;
+              QMasterPROSENTASE.AsFloat:=vpot;
+            end;
+          end;
+          if  wwDBComboBox2.Text='LC' then
+          begin
+            if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
+            begin
+             DMFrm.FNoUrut.Close;
+             DMFrm.FNoUrut.SetVariable(0,vkode);
+             DMFrm.FNoUrut.SetVariable(1,'-');
+             DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+             DMFrm.FNoUrut.SetVariable(3,'P');
+             DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
+             DMFrm.FNoUrut.Open;
+             QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
+             QMasterSUB_TOTAL.AsFloat:=vsub_total;
+             QMasterDPP.AsFloat:=vdpp;
+             QMasterPPN.AsFloat:=vppn;
+             QMasterNhari.AsFloat:=0;
+            end;
+          end;
+
+         QMasterSUB_TOTAL.AsFloat:=vsub_total;
+         QMasterDPP.AsFloat:=vdpp;
+         QMasterPPN.AsFloat:=vppn;
+         QMasterAKHIR.AsFloat:=vakhir;
+         QMasterPROSENTASE.AsFloat:=vpot;
 end;
 
 procedure TNotaFrm.QDetailNewRecord(DataSet: TDataSet);
@@ -3352,297 +3163,214 @@ begin
   vppn:=0;
   vakhir:=0;
   vsub_total:=0;
-  //if wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
-  //begin
-  //ShowMessage('tekan kg');
   QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2_kg+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
 
   QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total from '+cUserTabel+'bukti_detail a'+
     ' where a.ibukti=:pibukti';
 
   QTotalInput.DeclareVariable('pibukti',otInteger);
   QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
   QTotalInput.Open;
 	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
 	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
-
-
 	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
- { end
-  else
-  if wwDBComboBox4.Text='BALE' then//QMasterLOT.AsString='BALE' then
-  begin
-  ShowMessage('tekan bale');
-  QTotalInput.Close;
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+cis))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
+  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+  vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+  if QMasterINC_PPN.AsString<>'' then
+    case QMasterINC_PPN.AsInteger of
+      0 : begin
+        vdpp:=vsub_total-vdiskon;
+        vppn:=0;
+        vakhir:=vdpp;   // -vdiskon
+      end;
+      1 : begin
+        vdpp:=(vsub_total-vdiskon)/1.1;
+        vppn:=vsub_total-vdpp-vdiskon;
+        vakhir:=(vdpp-vdiskon)+vppn;
+      end;
+      2 : begin
+        vdpp:=vsub_total-vdiskon;
+        vppn:=vdpp*0.1-vdiskon;
+        vakhir:=vdpp+vppn; //-vdiskon
+      end;
+      3 : begin
+        vdpp:=(vsub_total-vdiskon)/1.11;
+        vppn:=vsub_total-vdpp-vdiskon;
+        vakhir:=(vdpp-vdiskon)+vppn;
+      end;
+      4 : begin
+        vdpp:=vsub_total-vdiskon;
+        vppn:=vdpp*0.11-vdiskon;
+        vakhir:=vdpp+vppn; //-vdiskon
+      end;
+    end;
 
-
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+    LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+    LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+    LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+    LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
   end
-  else
+  else if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
   begin
-  ShowMessage('tekan terakhir');
-  QTotalInput.Close;
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+cis))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
+    vdiskon:=0;
+    vdpp:=0;
+    vppn:=0;
+    vakhir:=0;
+    vsub_total:=0;
+    QTotalInput.Close;
+    QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total from '+cUserTabel+'bukti_detail a'+
     ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
+    QTotalInput.DeclareVariable('pibukti',otInteger);
+    QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+    QTotalInput.Open;
+	  wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
+  	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+  	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
 
-
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-  end; }
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+    if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
     vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon;
+    if QMasterINC_PPN.AsString<>'' then
+       case QMasterINC_PPN.AsInteger of
+          0 : begin
+              vdpp:=vsub_total-vdiskon;
+              vppn:=0;
+              vakhir:=vdpp;   // -vdiskon
+          end;
+          1 : begin
+              vdpp:=(vsub_total-vdiskon)/1.1;
+              vppn:=vsub_total-vdpp-vdiskon;
+              vakhir:=(vdpp-vdiskon)+vppn;
+          end;
+          2 : begin
+              vdpp:=vsub_total-vdiskon;
+              vppn:=vdpp*0.1-vdiskon;
+              vakhir:=vdpp+vppn; //-vdiskon
+          end;
+          3 : begin
+              vdpp:=(vsub_total-vdiskon)/1.11;
+              vppn:=vsub_total-vdpp-vdiskon;
+              vakhir:=(vdpp-vdiskon)+vppn;
+         end;
+         4 : begin
+             vdpp:=vsub_total-vdiskon;
+             vppn:=vdpp*0.11-vdiskon;
+             vakhir:=vdpp+vppn; //-vdiskon
+         end;
+       end;
+
+       LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+       LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+       LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+       LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+    end
+    ELSE if QMasterMU.AsString='IDR' then //wwDBComboBox4.Text='BALE' then
+    begin
+      vdiskon:=0;
+      vdpp:=0;
+      vppn:=0;
+      vakhir:=0;
+      vsub_total:=0;
+      QTotalInput.Close;
+      QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
+      ' where a.ibukti=:pibukti';
+      QTotalInput.DeclareVariable('pibukti',otInteger);
+      QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+      QTotalInput.Open;
+    	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
+    	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+    	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+
+
+      if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+      vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+      if QMasterINC_PPN.AsString<>'' then
+          case QMasterINC_PPN.AsInteger of
+            0 : begin
+                vdpp:=vsub_total-vdiskon;
+                vppn:=0;
+                vakhir:=vdpp;   // -vdiskon
+            end;
+            1 : begin
+                vdpp:=(vsub_total-vdiskon)/1.1;
+                vppn:=vsub_total-vdpp-vdiskon;
+                vakhir:=(vdpp-vdiskon)+vppn;
+            end;
+            2 : begin
+                vdpp:=vsub_total-vdiskon;
+                vppn:=vdpp*0.1-vdiskon;
+                vakhir:=vdpp+vppn; //-vdiskon
+            end;
+            3 : begin
+                vdpp:=(vsub_total-vdiskon)/1.11;
+                vppn:=vsub_total-vdpp-vdiskon;
+                vakhir:=(vdpp-vdiskon)+vppn;
+            end;
+            4 : begin
+                vdpp:=vsub_total-vdiskon;
+                vppn:=vdpp*0.11-vdiskon;
+                vakhir:=vdpp+vppn; //-vdiskon
+            end;
+          end;
+
+          LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+          LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+          LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+          LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+      end
+      else
+      begin
+        vdiskon:=0;
+        vdpp:=0;
         vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.1-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.11-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
+        vakhir:=0;
+        vsub_total:=0;
+        QTotalInput.Close;
+        QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
+        ' where a.ibukti=:pibukti';
+        QTotalInput.DeclareVariable('pibukti',otInteger);
+        QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+        QTotalInput.Open;
+        wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
+        wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+      	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+        if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+        vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+        if QMasterINC_PPN.AsString<>'' then
+           case QMasterINC_PPN.AsInteger of
+                0 : begin
+                      vdpp:=vsub_total-vdiskon;
+                      vppn:=0;
+                      vakhir:=vdpp;   // -vdiskon
+                    end;
+                1 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.1;
+                      vppn:=vsub_total-vdpp-vdiskon;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                    end;
+                2 : begin
+                      vdpp:=vsub_total-vdiskon;
+                      vppn:=vdpp*0.1-vdiskon;
+                      vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+                3 : begin
+                      vdpp:=(vsub_total-vdiskon)/1.11;
+                      vppn:=vsub_total-vdpp-vdiskon;
+                      vakhir:=(vdpp-vdiskon)+vppn;
+                    end;
+                4 : begin
+                      vdpp:=vsub_total-vdiskon;
+                      vppn:=vdpp*0.11-vdiskon;
+                      vakhir:=vdpp+vppn; //-vdiskon
+                    end;
+           end;
 
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-  end
-else
-if (QMasterMU.AsString='IDR') and (QMasterKD_REKANAN.AsString='100037') AND (QDetailKD_SUBLOKASI_GJ2.AsString='KILO') then //wwDBComboBox4.Text='BALE' then
-  begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  //if wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
-  //begin
-  //ShowMessage('tekan kg');
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2_kg+cis+subtotal))*(1-disc/100)*(qty11)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
-
-
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-  
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.1-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.11-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-end
-  ELSE
-if QMasterMU.AsString='IDR' then //wwDBComboBox4.Text='BALE' then
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  //ShowMessage('tekan bale');
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+cis+subtotal))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
-   ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
-
-
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.1-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.11-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-end
-
-else
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  //ShowMessage('tekan terakhir');
-  QTotalInput.Close;
-  {QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+cis+subtotal))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';}
-
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Bale';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-//	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat);
-
-
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-
-
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then
-    vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-    vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-  if QMasterINC_PPN.AsString<>'' then
-  case QMasterINC_PPN.AsInteger of
-  0 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
-  1 : begin
-        vdpp:=(vsub_total-vdiskon)/1.1;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  2 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.1-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  3 : begin
-        vdpp:=(vsub_total-vdiskon)/1.11;
-        vppn:=vsub_total-vdpp-vdiskon;
-        vakhir:=(vdpp-vdiskon)+vppn;
-      end;
-  4 : begin
-        vdpp:=vsub_total-vdiskon;
-        vppn:=vdpp*0.11-vdiskon;
-        vakhir:=vdpp+vppn; //-vdiskon
-      end;
-  end;
-
-  LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
-  LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
-  LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
-  LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
-end;
-end;
-QMasterSUB_TOTAL.AsFloat:=vsub_total;
+           LDPP.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vdpp);
+           LPPN.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vppn);
+           LAKHIR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir);
+           LSisa.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vakhir-QMasterUM.AsFloat);
+        end;
+    end;
+    QMasterSUB_TOTAL.AsFloat:=vsub_total;
 end;
 
 procedure TNotaFrm.QMasterBeforeInsert(DataSet: TDataSet);
