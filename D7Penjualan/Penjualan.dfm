@@ -1,5 +1,5 @@
 object PenjualanFrm: TPenjualanFrm
-  Left = 303
+  Left = 304
   Top = 225
   Width = 807
   Height = 477

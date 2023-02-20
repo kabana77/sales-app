@@ -1495,117 +1495,91 @@ begin
     QDetailQTY7.AsFloat:=QDetailQTY3.AsFloat*181.44;
 
   QDetailQTY2.AsFloat:=QDetailQTY3.AsFloat;//*QDetailQTY4.AsFloat;
-  
- { if QDetailQTY2.AsFloat>QCekBuktiQTY9.AsFloat then
-    begin
-      ShowMessage('Qty Order ='+FloatToStr(QCekBuktiQTY9.Asfloat)+' Tidak boleh melebihi itu!!!');
-      Abort;
-    end;  }
-if QDetailKETERANGAN_D.AsString = '' then
-begin
+
+  if QDetailKETERANGAN_D.AsString = '' then
+  begin
     QCekBuktiSisa.Close;
     QCekBuktiSisa.SetVariable('nota', QMasterNO_BUKTI.AsString);
     QCekBuktiSisa.SetVariable('item', QItemKD_ITEM.AsString);
     QCekBuktiSisa.Open;
+
     QCekBuktiSisa1.Close;
     QCekBuktiSisa1.Open;
+    
     QCekBuktiSisa2.Close;
     QCekBuktiSisa2.SetVariable('nota', QMasterNO_BUKTI.AsString);
     QCekBuktiSisa2.SetVariable('item', QDetailKD_ITEM.AsString);
+    QCekBuktiSisa2.SetVariable('ket', QDetailKETERANGAN_D.AsString);
     QCekBuktiSisa2.Open;
-
-end
-else
-begin
+  end
+  else
+  begin
     QCekBuktiSisaK.Close;
     QCekBuktiSisaK.SetVariable('nota', QMasterNO_BUKTI.AsString);
     QCekBuktiSisaK.SetVariable('item', QItemKD_ITEM.AsString);
     QCekBuktiSisaK.SetVariable('keterangan', QDetailKETERANGAN_D.AsString);
     QCekBuktiSisaK.Open;
     QCekBuktiSisaK1.Close;
-  {  QCekBuktiSisaK1.SetVariable('nota', QMasterNO_BUKTI.AsString);
-    QCekBuktiSisaK1.SetVariable('item', QItemKD_ITEM.AsString);
-    QCekBuktiSisaK1.SetVariable('keterangan', QDetailKETERANGAN_D.AsString); }
     QCekBuktiSisaK1.Open;
     QCekBuktiSisaK2.Close;
     QCekBuktiSisaK2.SetVariable('nota', QMasterNO_BUKTI.AsString);
     QCekBuktiSisaK2.SetVariable('item', QDetailKD_ITEM.AsString);
     QCekBuktiSisaK2.SetVariable('keterangan', QDetailKETERANGAN_D.AsString);
     QCekBuktiSisaK2.Open;
+  end;
 
-end;
-//ShowMessage(QCekBuktiSisa1QTY_SISA.AsString);
-//QCekBuktiSisa1SISA.AsFloat:=QCekBuktiSisa2QTY9.AsFloat-QCekBuktiSisaQTY_SISA.AsFloat;
-if QDetailKETERANGAN_D.AsString = '' then
-begin
-  QCekBuktiSisa2SISA.AsFloat:=QCekBuktiSisa2QTY9.AsFloat-QCekBuktiSisaQTY_SISA.AsFloat;
+  if QDetailKETERANGAN_D.AsString = '' then
+  begin
+    QCekBuktiSisa2SISA.AsFloat:=QCekBuktiSisa2QTY9.AsFloat-QCekBuktiSisaQTY_SISA.AsFloat;
     if QDetailQTY3.AsFloat>QCekBuktiSisa2SISA.AsFloat then
     begin
       ShowMessage('Qty sisa ='+FloatToStr(QCekBuktiSisa2SISA.Asfloat)+' Tidak boleh melebihi itu!!');
+      //ShowMessage('ORDER : '+FloatToStr(QCekBuktiSisa2QTY9.AsFloat));
+      //ShowMessage('SISA : '+FloatToStr(QCekBuktiSisaQTY_SISA.AsFloat));
+      //ShowMessage(QCekBuktiSisa2.SQL.Text);
       Abort;
     end;
-end
-else
-begin
-  QCekBuktiSisaK2SISA.AsFloat:=QCekBuktiSisaK2QTY9.AsFloat-QCekBuktiSisaKQTY_SISA.AsFloat;
-  //ShowMessage(QCekBuktiSisaK2QTY9.AsString);
-  //ShowMessage(QCekBuktiSisaKQTY_SISA.AsString);
- // ShowMessage(QCekBuktiSisaK2SISA.AsString);
+  end
+  else
+  begin
+    QCekBuktiSisaK2SISA.AsFloat:=QCekBuktiSisaK2QTY9.AsFloat-QCekBuktiSisaKQTY_SISA.AsFloat;
     if QDetailQTY3.AsFloat>QCekBuktiSisaK2SISA.AsFloat then
-      begin
-        ShowMessage('Qty sisa K ='+FloatToStr(QCekBuktiSisaK2SISA.AsFloat)+' Tidak boleh melebihi itu!!');
-        Abort;
-      end;
-end;
+    begin
+      ShowMessage('Qty sisa K ='+FloatToStr(QCekBuktiSisaK2SISA.AsFloat)+' Tidak boleh melebihi itu!!');
+      Abort;
+    end;
+  end;
 
   if QDetailKD_ITEM.AsString='' then
-     begin
-        ShowMessage('BARANG harus diisi !');
-        Abort;
-     end
-     else
-     {
-  if QDetailKD_SUB_LOKASI2.AsString='' then
-     begin
-        ShowMessage('LOKASI TUJUAN harus diisi !');
-        Abort;
-     end
-     else
-  if QDetailKD_SUB_LOKASI2.AsString=QDetailKD_SUB_LOKASI.AsString then
-     begin
-        ShowMessage('LOKASI TUJUAN harus berbeda !');
-        Abort;
-     end
-     else }
-  if QDetailQTY2.Asfloat=0 then
-     begin
-        ShowMessage('QTY siap dimuat harus diisi !');
-        Abort;
-     end
-     else
-  if QDetailQTY2.Asfloat>QDetailQTY1.Asfloat then
-     begin
-        ShowMessage('QTY dimuat tidak boleh lebih dari LOKASI ASAL !');
-        Abort;
-     end
-     else
-  if QDetailQTY2.Asfloat>QDetailQTY1.Asfloat then
-     begin
-        ShowMessage('QTY dimuat tidak boleh lebih dari LOKASI ASAL !');
-        Abort;
-     end
-     else     
-  if QDetailQTY1.Asfloat=0 then
-     begin
-        ShowMessage('QTY Barang harus ada !');
-        Abort;
-     end
-     else
-  if QDetailKD_SUB_LOKASI.AsString='' then
-     begin
-        ShowMessage('LOKASI harus diisi !');
-        Abort;
-     end;
+  begin
+    ShowMessage('BARANG harus diisi !');
+    Abort;
+  end
+  else if QDetailQTY2.Asfloat=0 then
+  begin
+    ShowMessage('QTY siap dimuat harus diisi !');
+    Abort;
+  end
+  else if QDetailQTY2.Asfloat>QDetailQTY1.Asfloat then
+  begin
+    ShowMessage('QTY dimuat tidak boleh lebih dari LOKASI ASAL !');
+    Abort;
+  end
+  else if QDetailQTY2.Asfloat>QDetailQTY1.Asfloat then
+  begin
+    ShowMessage('QTY dimuat tidak boleh lebih dari LOKASI ASAL !');
+    Abort;
+  end
+  else if QDetailQTY1.Asfloat=0 then
+  begin
+    ShowMessage('QTY Barang harus ada !');
+    Abort;
+  end
+  else if QDetailKD_SUB_LOKASI.AsString='' then
+  begin
+    ShowMessage('LOKASI harus diisi !');
+    Abort;
+  end;
 end;
 
 procedure TPindahLokasi2Frm.TabSheet3Show(Sender: TObject);

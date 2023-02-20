@@ -101,7 +101,7 @@ object costingFrm: TcostingFrm
       Top = 76
       Width = 1350
       Height = 706
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1

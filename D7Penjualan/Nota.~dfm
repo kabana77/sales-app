@@ -1,5 +1,5 @@
 object NotaFrm: TNotaFrm
-  Left = 318
+  Left = 319
   Top = 212
   Width = 1270
   Height = 687
@@ -6629,7 +6629,7 @@ object NotaFrm: TNotaFrm
     DataPipeline = ppDBQDetail
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
-    PrinterSetup.PaperName = 'MIS'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Default'
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350
@@ -7784,7 +7784,7 @@ object NotaFrm: TNotaFrm
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'Terbilang : #Seratus limapuluh juta rupiah#'#13#10
-        CharWrap = False
+        CharWrap = True
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -7795,9 +7795,9 @@ object NotaFrm: TNotaFrm
         Stretch = True
         TextAlignment = taRightJustified
         Transparent = True
-        mmHeight = 13229
+        mmHeight = 12435
         mmLeft = 113242
-        mmTop = 41540
+        mmTop = 31485
         mmWidth = 80169
         BandType = 7
         mmBottomOffset = 0
@@ -7851,7 +7851,7 @@ object NotaFrm: TNotaFrm
         DataPipelineName = 'ppDBQMaster'
         mmHeight = 4939
         mmLeft = 186373
-        mmTop = 24342
+        mmTop = 16404
         mmWidth = 6773
         BandType = 7
       end
@@ -7876,34 +7876,8 @@ object NotaFrm: TNotaFrm
         DataPipelineName = 'ppDBQMaster'
         mmHeight = 4233
         mmLeft = 186161
-        mmTop = 28840
+        mmTop = 20902
         mmWidth = 6985
-        BandType = 7
-      end
-      object pp23: TppDBText
-        UserName = 'DBText21'
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'AKHIR'
-        DataPipeline = ppDBQMaster
-        DisplayFormat = '#,#;(#,#);-'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taRightJustified
-        Transparent = True
-        Visible = False
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 3969
-        mmLeft = 180975
-        mmTop = 48419
-        mmWidth = 10583
         BandType = 7
       end
       object ppLabel15: TppLabel
@@ -7942,7 +7916,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         mmHeight = 3969
         mmLeft = 135467
-        mmTop = 24871
+        mmTop = 16933
         mmWidth = 9260
         BandType = 7
       end
@@ -7962,29 +7936,8 @@ object NotaFrm: TNotaFrm
         Transparent = True
         mmHeight = 4586
         mmLeft = 135414
-        mmTop = 29104
+        mmTop = 21167
         mmWidth = 9313
-        BandType = 7
-      end
-      object pp13: TppLabel
-        UserName = 'Label12'
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'Akhir :'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        Visible = False
-        mmHeight = 3969
-        mmLeft = 133086
-        mmTop = 48419
-        mmWidth = 10054
         BandType = 7
       end
       object ppLine16: TppLine
@@ -7994,9 +7947,9 @@ object NotaFrm: TNotaFrm
         Border.Style = psSolid
         Border.Visible = False
         Weight = 0.750000000000000000
-        mmHeight = 1588
+        mmHeight = 794
         mmLeft = 163513
-        mmTop = 35454
+        mmTop = 26458
         mmWidth = 30163
         BandType = 7
       end
@@ -8020,7 +7973,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         mmHeight = 5165
         mmLeft = 177007
-        mmTop = 37042
+        mmTop = 26988
         mmWidth = 16171
         BandType = 7
       end
@@ -8040,7 +7993,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         mmHeight = 4233
         mmLeft = 110332
-        mmTop = 37042
+        mmTop = 26988
         mmWidth = 34290
         BandType = 7
       end
@@ -8053,7 +8006,7 @@ object NotaFrm: TNotaFrm
         Weight = 0.750000000000000000
         mmHeight = 1588
         mmLeft = 163513
-        mmTop = 35983
+        mmTop = 25929
         mmWidth = 30163
         BandType = 7
       end
@@ -8425,7 +8378,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         mmHeight = 4022
         mmLeft = 129382
-        mmTop = 15081
+        mmTop = 7144
         mmWidth = 15409
         BandType = 7
       end
@@ -8450,7 +8403,7 @@ object NotaFrm: TNotaFrm
         DataPipelineName = 'ppDBQMaster'
         mmHeight = 4763
         mmLeft = 180975
-        mmTop = 15081
+        mmTop = 7144
         mmWidth = 12171
         BandType = 7
       end
@@ -8470,7 +8423,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         mmHeight = 4022
         mmLeft = 124884
-        mmTop = 20108
+        mmTop = 12171
         mmWidth = 19939
         BandType = 7
       end
@@ -8495,7 +8448,7 @@ object NotaFrm: TNotaFrm
         DataPipelineName = 'ppDBQMaster'
         mmHeight = 4784
         mmLeft = 187209
-        mmTop = 20108
+        mmTop = 12171
         mmWidth = 5842
         BandType = 7
       end
@@ -8528,7 +8481,9 @@ object NotaFrm: TNotaFrm
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
-        Caption = 'terhadap nota penjualan yang telah jatuh tempo tersebut di atas'
+        Caption = 
+          'pelunasan terhadap nota penjualan yang telah jatuh tempo tersebu' +
+          't di atas'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial Narrow'
@@ -8538,7 +8493,7 @@ object NotaFrm: TNotaFrm
         mmHeight = 4233
         mmLeft = 3440
         mmTop = 29369
-        mmWidth = 108215
+        mmWidth = 114036
         BandType = 7
       end
       object ppLabel31: TppLabel
@@ -8548,9 +8503,7 @@ object NotaFrm: TNotaFrm
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
-        Caption = 
-          'maka pengiriman barang akan dilakukan kembali setelah dilakukan ' +
-          'pelunasan'
+        Caption = 'maka pengiriman barang akan dilakukan kembali setelah dilakukan'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial Narrow'
@@ -8605,7 +8558,7 @@ object NotaFrm: TNotaFrm
         Visible = False
         mmHeight = 5027
         mmLeft = 153459
-        mmTop = 20638
+        mmTop = 12700
         mmWidth = 16404
         BandType = 7
       end
@@ -8873,7 +8826,7 @@ object NotaFrm: TNotaFrm
     DataPipeline = ppDBDetail2
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
-    PrinterSetup.PaperName = 'MIS'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Default'
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350

@@ -1133,11 +1133,9 @@ type
     ppDBCalc7: TppDBCalc;
     pp21: TppDBText;
     pp22: TppDBText;
-    pp23: TppDBText;
     ppLabel15: TppLabel;
     pp11: TppLabel;
     pp12: TppLabel;
-    pp13: TppLabel;
     ppLine16: TppLine;
     pp25: TppVariable;
     pp15: TppLabel;

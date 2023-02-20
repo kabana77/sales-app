@@ -1,8 +1,8 @@
 object SPBFrm: TSPBFrm
-  Left = 251
-  Top = 139
-  Width = 1496
-  Height = 749
+  Left = 118
+  Top = 9
+  Width = 1665
+  Height = 876
   Caption = 'PO Non Bahan Baku'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,7 +24,7 @@ object SPBFrm: TSPBFrm
   object DBText3: TDBText
     Left = 0
     Top = 49
-    Width = 1480
+    Width = 1649
     Height = 27
     Align = alTop
     Alignment = taRightJustify
@@ -41,8 +41,8 @@ object SPBFrm: TSPBFrm
   end
   object Label1: TLabel
     Left = 0
-    Top = 697
-    Width = 1480
+    Top = 824
+    Width = 1649
     Height = 13
     Align = alBottom
     Color = clSkyBlue
@@ -51,7 +51,7 @@ object SPBFrm: TSPBFrm
   object PanelHeader: TPanel
     Left = 0
     Top = 0
-    Width = 1480
+    Width = 1649
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -68,8 +68,8 @@ object SPBFrm: TSPBFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 76
-    Width = 1480
-    Height = 621
+    Width = 1649
+    Height = 748
     ActivePage = TabSheet1
     Align = alClient
     Style = tsFlatButtons
@@ -81,21 +81,21 @@ object SPBFrm: TSPBFrm
       object PageControl2: TPageControl
         Left = 0
         Top = 0
-        Width = 1472
-        Height = 590
+        Width = 1641
+        Height = 717
         ActivePage = tbManual
         Align = alClient
         TabOrder = 0
         object tbManual: TTabSheet
           Caption = 'Mode Manual'
           DesignSize = (
-            1464
-            562)
+            1633
+            689)
           object DBText5: TDBText
-            Left = 1614
+            Left = 1783
             Top = 0
             Width = 80
-            Height = 24
+            Height = 151
             Alignment = taRightJustify
             Anchors = [akTop, akRight, akBottom]
             AutoSize = True
@@ -111,7 +111,7 @@ object SPBFrm: TSPBFrm
           object PanelMaster: TPanel
             Left = 0
             Top = 0
-            Width = 1464
+            Width = 1633
             Height = 201
             Align = alTop
             BevelOuter = bvNone
@@ -123,7 +123,7 @@ object SPBFrm: TSPBFrm
             ParentFont = False
             TabOrder = 0
             DesignSize = (
-              1464
+              1633
               201)
             object Label7: TLabel
               Left = 8
@@ -139,7 +139,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label9: TLabel
-              Left = 869
+              Left = 1038
               Top = 43
               Width = 23
               Height = 13
@@ -153,7 +153,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Bevel1: TBevel
-              Left = 868
+              Left = 1037
               Top = 64
               Width = 202
               Height = 10
@@ -161,7 +161,7 @@ object SPBFrm: TSPBFrm
               Shape = bsBottomLine
             end
             object LBarcode: TDBText
-              Left = 972
+              Left = 1141
               Top = 0
               Width = 90
               Height = 24
@@ -234,7 +234,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label8: TLabel
-              Left = 869
+              Left = 1038
               Top = 83
               Width = 54
               Height = 13
@@ -261,7 +261,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label11: TLabel
-              Left = 805
+              Left = 974
               Top = 147
               Width = 86
               Height = 13
@@ -275,7 +275,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label12: TLabel
-              Left = 805
+              Left = 974
               Top = 171
               Width = 30
               Height = 13
@@ -363,7 +363,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object wwDBDateTimePicker1: TwwDBDateTimePicker
-              Left = 973
+              Left = 1142
               Top = 40
               Width = 97
               Height = 19
@@ -487,7 +487,7 @@ object SPBFrm: TSPBFrm
               WordWrap = False
             end
             object wwDBDateTimePicker2: TwwDBDateTimePicker
-              Left = 973
+              Left = 1142
               Top = 80
               Width = 97
               Height = 19
@@ -506,7 +506,7 @@ object SPBFrm: TSPBFrm
               TabOrder = 6
             end
             object wwDBEdit1: TwwDBEdit
-              Left = 908
+              Left = 1077
               Top = 168
               Width = 161
               Height = 19
@@ -521,7 +521,7 @@ object SPBFrm: TSPBFrm
               WordWrap = False
             end
             object wwDBEdit3: TwwDBEdit
-              Left = 908
+              Left = 1077
               Top = 144
               Width = 161
               Height = 19
@@ -672,16 +672,16 @@ object SPBFrm: TSPBFrm
           object PanelDetail: TPanel
             Left = 0
             Top = 242
-            Width = 1464
-            Height = 251
+            Width = 1633
+            Height = 378
             Align = alClient
             BevelOuter = bvNone
             TabOrder = 1
             object wwDBGrid1: TwwDBGrid
               Left = 0
               Top = 0
-              Width = 1464
-              Height = 251
+              Width = 1633
+              Height = 378
               ControlType.Strings = (
                 'NO_LOT;CustomEdit;LookItem;F'
                 'KD_ITEM;CustomEdit;wwDBLookupComboDlg1;F')
@@ -800,17 +800,17 @@ object SPBFrm: TSPBFrm
           end
           object PanelFooter1: TPanel
             Left = 0
-            Top = 493
-            Width = 1464
+            Top = 620
+            Width = 1633
             Height = 69
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 2
             DesignSize = (
-              1464
+              1633
               69)
             object BtnClose1: TBitBtn
-              Left = 959
+              Left = 1128
               Top = 27
               Width = 75
               Height = 25
@@ -922,7 +922,7 @@ object SPBFrm: TSPBFrm
               end
             end
             object RGKertas: TRadioGroup
-              Left = 570
+              Left = 739
               Top = 0
               Width = 89
               Height = 41
@@ -936,7 +936,7 @@ object SPBFrm: TSPBFrm
               TabOrder = 3
             end
             object BtnPrintInputNS: TBitBtn
-              Left = 423
+              Left = 592
               Top = 6
               Width = 102
               Height = 25
@@ -948,7 +948,7 @@ object SPBFrm: TSPBFrm
               NumGlyphs = 2
             end
             object RGSatuan: TRadioGroup
-              Left = 665
+              Left = 834
               Top = 0
               Width = 100
               Height = 41
@@ -962,7 +962,7 @@ object SPBFrm: TSPBFrm
               TabOrder = 5
             end
             object RGFormat: TRadioGroup
-              Left = 774
+              Left = 943
               Top = 0
               Width = 177
               Height = 68
@@ -976,7 +976,7 @@ object SPBFrm: TSPBFrm
               TabOrder = 6
             end
             object BtnPrintInput: TBitBtn
-              Left = 867
+              Left = 1036
               Top = 27
               Width = 71
               Height = 25
@@ -1003,17 +1003,17 @@ object SPBFrm: TSPBFrm
           object PanelBand: TPanel
             Left = 0
             Top = 201
-            Width = 1464
+            Width = 1633
             Height = 41
             Align = alTop
             BevelOuter = bvNone
             Color = clSkyBlue
             TabOrder = 3
             DesignSize = (
-              1464
+              1633
               41)
             object Label14: TLabel
-              Left = 1029
+              Left = 1198
               Top = 2
               Width = 43
               Height = 13
@@ -1079,7 +1079,7 @@ object SPBFrm: TSPBFrm
               Caption = 'Tgl_Insert'
             end
             object wwDBSpinLine1: TwwDBSpinEdit
-              Left = 1029
+              Left = 1198
               Top = 18
               Width = 41
               Height = 21
@@ -1148,8 +1148,8 @@ object SPBFrm: TSPBFrm
           object PageControl3: TPageControl
             Left = 0
             Top = 0
-            Width = 1464
-            Height = 562
+            Width = 1633
+            Height = 689
             ActivePage = TabSheet7
             Align = alClient
             TabOrder = 0
@@ -3311,7 +3311,7 @@ object SPBFrm: TSPBFrm
               object Panel5: TPanel
                 Left = 0
                 Top = 0
-                Width = 1456
+                Width = 1625
                 Height = 185
                 Align = alTop
                 TabOrder = 0
@@ -3532,8 +3532,8 @@ object SPBFrm: TSPBFrm
               object Panel7: TPanel
                 Left = 0
                 Top = 226
-                Width = 1456
-                Height = 267
+                Width = 1625
+                Height = 394
                 Align = alClient
                 TabOrder = 1
                 object wwDBGrid4: TwwDBGrid
@@ -3649,8 +3649,8 @@ object SPBFrm: TSPBFrm
               end
               object Panel6: TPanel
                 Left = 0
-                Top = 493
-                Width = 1456
+                Top = 620
+                Width = 1625
                 Height = 41
                 Align = alBottom
                 TabOrder = 2
@@ -3768,17 +3768,17 @@ object SPBFrm: TSPBFrm
               object Panel8: TPanel
                 Left = 0
                 Top = 185
-                Width = 1456
+                Width = 1625
                 Height = 41
                 Align = alTop
                 BevelOuter = bvNone
                 Color = clSkyBlue
                 TabOrder = 3
                 DesignSize = (
-                  1456
+                  1625
                   41)
                 object Label27: TLabel
-                  Left = 935
+                  Left = 1104
                   Top = 2
                   Width = 43
                   Height = 13
@@ -3844,7 +3844,7 @@ object SPBFrm: TSPBFrm
                   Caption = 'Tanggal'
                 end
                 object wwDBSpinEdit1: TwwDBSpinEdit
-                  Left = 935
+                  Left = 1104
                   Top = 18
                   Width = 41
                   Height = 21
@@ -3896,13 +3896,13 @@ object SPBFrm: TSPBFrm
               object PanelFltr: TPanel
                 Left = 0
                 Top = 0
-                Width = 1456
+                Width = 1625
                 Height = 57
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
                 DesignSize = (
-                  1456
+                  1625
                   57)
                 object Label33: TLabel
                   Left = 128
@@ -3926,7 +3926,7 @@ object SPBFrm: TSPBFrm
                   Caption = 'Tgl. Akhir'
                 end
                 object Label41: TLabel
-                  Left = 1416
+                  Left = 1585
                   Top = 16
                   Width = 43
                   Height = 13
@@ -4019,7 +4019,7 @@ object SPBFrm: TSPBFrm
                   NumGlyphs = 2
                 end
                 object wwDBSpinEdit3: TwwDBSpinEdit
-                  Left = 1646
+                  Left = 1815
                   Top = 32
                   Width = 41
                   Height = 21
@@ -4035,8 +4035,8 @@ object SPBFrm: TSPBFrm
               end
               object PanelFoot: TPanel
                 Left = 0
-                Top = 493
-                Width = 1456
+                Top = 620
+                Width = 1625
                 Height = 41
                 Align = alBottom
                 TabOrder = 1
@@ -4044,8 +4044,8 @@ object SPBFrm: TSPBFrm
               object PanelData: TPanel
                 Left = 0
                 Top = 57
-                Width = 1456
-                Height = 436
+                Width = 1625
+                Height = 563
                 Align = alClient
                 Caption = 'PanelData'
                 TabOrder = 2
@@ -4121,7 +4121,7 @@ object SPBFrm: TSPBFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 57
-        Width = 1472
+        Width = 1641
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -4130,13 +4130,13 @@ object SPBFrm: TSPBFrm
       object PanelFilter: TPanel
         Left = 0
         Top = 0
-        Width = 1472
+        Width = 1641
         Height = 57
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          1472
+          1641
           57)
         object Label2: TLabel
           Left = 128
@@ -4160,7 +4160,7 @@ object SPBFrm: TSPBFrm
           Caption = 'Tgl. Akhir'
         end
         object Label5: TLabel
-          Left = 1654
+          Left = 1823
           Top = 16
           Width = 43
           Height = 13
@@ -4251,7 +4251,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object wwDBSpinLine2: TwwDBSpinEdit
-          Left = 1646
+          Left = 1815
           Top = 32
           Width = 41
           Height = 21
@@ -4268,8 +4268,8 @@ object SPBFrm: TSPBFrm
       object PanelBrowse: TPanel
         Left = 0
         Top = 70
-        Width = 1472
-        Height = 479
+        Width = 1641
+        Height = 606
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
@@ -4342,14 +4342,14 @@ object SPBFrm: TSPBFrm
       end
       object PanelFooter2: TPanel
         Left = 0
-        Top = 549
-        Width = 1472
+        Top = 676
+        Width = 1641
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          1472
+          1641
           41)
         object wwDBNavigator1: TwwDBNavigator
           Left = 0
@@ -4441,7 +4441,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnExport: TBitBtn
-          Left = 318
+          Left = 487
           Top = 8
           Width = 75
           Height = 25
@@ -4452,7 +4452,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnPrintBrowse: TBitBtn
-          Left = 398
+          Left = 567
           Top = 8
           Width = 75
           Height = 25
@@ -4463,7 +4463,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnClose2: TBitBtn
-          Left = 478
+          Left = 647
           Top = 8
           Width = 75
           Height = 25
@@ -4482,7 +4482,7 @@ object SPBFrm: TSPBFrm
       object LabelBanner1: TLabel
         Left = 0
         Top = 57
-        Width = 1472
+        Width = 1641
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -4491,13 +4491,13 @@ object SPBFrm: TSPBFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1472
+        Width = 1641
         Height = 57
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          1472
+          1641
           57)
         object Label36: TLabel
           Left = 128
@@ -4521,7 +4521,7 @@ object SPBFrm: TSPBFrm
           Caption = 'Tgl. Akhir'
         end
         object Label39: TLabel
-          Left = 1464
+          Left = 1633
           Top = 16
           Width = 43
           Height = 13
@@ -4626,7 +4626,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object wwDBSpinEdit2: TwwDBSpinEdit
-          Left = 1702
+          Left = 1871
           Top = 32
           Width = 41
           Height = 21
@@ -4661,14 +4661,14 @@ object SPBFrm: TSPBFrm
       end
       object Panel4: TPanel
         Left = 0
-        Top = 549
-        Width = 1472
+        Top = 676
+        Width = 1641
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
         DesignSize = (
-          1472
+          1641
           41)
         object wwDBNavigator3: TwwDBNavigator
           Left = 0
@@ -4750,7 +4750,7 @@ object SPBFrm: TSPBFrm
           end
         end
         object BitBtn2: TBitBtn
-          Left = 822
+          Left = 991
           Top = 8
           Width = 75
           Height = 25
@@ -4761,7 +4761,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BitBtn3: TBitBtn
-          Left = 662
+          Left = 831
           Top = 8
           Width = 75
           Height = 25
@@ -4772,7 +4772,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BitBtn4: TBitBtn
-          Left = 742
+          Left = 911
           Top = 8
           Width = 75
           Height = 25
@@ -4796,8 +4796,8 @@ object SPBFrm: TSPBFrm
       object wwDBGrid5: TwwDBGrid
         Left = 0
         Top = 70
-        Width = 1472
-        Height = 479
+        Width = 1641
+        Height = 606
         ControlType.Strings = (
           'STATUS;URL-Link')
         Selected.Strings = (
@@ -4854,7 +4854,7 @@ object SPBFrm: TSPBFrm
       object Label26: TLabel
         Left = 0
         Top = 57
-        Width = 1472
+        Width = 1641
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -4863,7 +4863,7 @@ object SPBFrm: TSPBFrm
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1472
+        Width = 1641
         Height = 57
         Align = alTop
         BevelOuter = bvNone
@@ -4968,8 +4968,8 @@ object SPBFrm: TSPBFrm
       object wwDBGrid3: TwwDBGrid
         Left = 0
         Top = 70
-        Width = 1472
-        Height = 479
+        Width = 1641
+        Height = 606
         Selected.Strings = (
           'NAMA_REKANAN'#9'20'#9'CUSTOMER'#9'F'
           'KD_ITEM'#9'15'#9'KODE ITEM'#9'F'
@@ -5017,14 +5017,14 @@ object SPBFrm: TSPBFrm
       end
       object Panel2: TPanel
         Left = 0
-        Top = 549
-        Width = 1472
+        Top = 676
+        Width = 1641
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          1472
+          1641
           41)
         object wwDBNavigator2: TwwDBNavigator
           Left = 0
@@ -5106,7 +5106,7 @@ object SPBFrm: TSPBFrm
           end
         end
         object Btnclose: TBitBtn
-          Left = 1054
+          Left = 1223
           Top = 0
           Width = 75
           Height = 25
@@ -5117,7 +5117,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnExport1: TBitBtn
-          Left = 894
+          Left = 1063
           Top = 0
           Width = 75
           Height = 25
@@ -5128,7 +5128,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnPrint1: TBitBtn
-          Left = 974
+          Left = 1143
           Top = 0
           Width = 75
           Height = 25
@@ -6491,7 +6491,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -7467,7 +7467,7 @@ object SPBFrm: TSPBFrm
         Border.Visible = False
         DataField = 'QTY11'
         DataPipeline = ppDBPipeline3
-        DisplayFormat = '#,0.000;(#,0.000)'
+        DisplayFormat = '#,#'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Name = 'Calibri'
@@ -7653,7 +7653,7 @@ object SPBFrm: TSPBFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4586
+        mmHeight = 4022
         mmLeft = 119063
         mmTop = 1323
         mmWidth = 18838
@@ -8086,7 +8086,7 @@ object SPBFrm: TSPBFrm
         Border.Visible = False
         DataField = 'QTY11'
         DataPipeline = ppDBPipeline3
-        DisplayFormat = '#,0.000;(#,0.000)'
+        DisplayFormat = '#,#'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -8096,7 +8096,7 @@ object SPBFrm: TSPBFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBPipeline3'
-        mmHeight = 4586
+        mmHeight = 4022
         mmLeft = 117146
         mmTop = 1323
         mmWidth = 20532
@@ -9210,7 +9210,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -11309,7 +11309,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -13360,7 +13360,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -17488,7 +17488,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -18293,8 +18293,8 @@ object SPBFrm: TSPBFrm
     DataSource = dsqDetailPL
     OpenDataSource = False
     UserName = 'DBQDetail4'
-    Left = 1256
-    Top = 680
+    Left = 1248
+    Top = 640
     MasterDataPipelineName = 'ppDBMasterPackingList'
     object ppDBDetailPackingListppField1: TppField
       FieldAlias = 'NO_REG'
@@ -18387,8 +18387,8 @@ object SPBFrm: TSPBFrm
     DataSource = dsqMasterPL
     OpenDataSource = False
     UserName = 'DBQMaster1'
-    Left = 1336
-    Top = 672
+    Left = 1328
+    Top = 640
     object ppDBMasterPackingListppField1: TppField
       FieldAlias = 'NO_REG'
       FieldName = 'NO_REG'

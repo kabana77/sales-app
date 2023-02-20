@@ -1997,7 +1997,7 @@ begin
 	  	//QBrowseContrib.SetVariable('pawal',Trunc(vTglAwal.Date));
       QBrowseContrib.SetVariable('pawal',Trunc(vTglAkhir.Date));
   		QBrowseContrib.SetVariable('pakhir',Trunc(vTglAkhir.Date)+1-1/86400);
-      //ShowMessage(QBrowse.SQL.Text);
+      //ShowMessage(QBrowseContrib.SQL.Text);
       QBrowseContrib.Open;
       QBrowseContrib.EnableControls;
 

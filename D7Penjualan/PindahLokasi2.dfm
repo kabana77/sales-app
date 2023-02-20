@@ -3038,7 +3038,7 @@ object PindahLokasi2Frm: TPindahLokasi2Frm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\TransaksiOrgBukti.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -5170,7 +5170,7 @@ object PindahLokasi2Frm: TPindahLokasi2Frm
         'l a, ipisma_db2.bukti_valid b'
       
         'where a.kd_item=:item and a.no_order=:nota and a.ibukti2=b.ibukt' +
-        'i2 and b.ispost = '#39'1'#39)
+        'i2 and b.ispost = '#39'1'#39' ')
     Variables.Data = {
       0300000002000000050000003A4954454D050000000700000030333830313000
       00000000050000003A4E4F544105000000100000003938372D313830332D3050
@@ -6306,11 +6306,12 @@ object PindahLokasi2Frm: TPindahLokasi2Frm
     SQL.Strings = (
       
         'select * from ipisma_db2.bukti_detail where no_bukti=:nota and k' +
-        'd_item=:item ')
+        'd_item=:item '
+      'and keterangan_d=:ket')
     Variables.Data = {
-      0300000002000000050000003A4E4F544105000000100000003938372D313830
+      0300000003000000050000003A4E4F544105000000100000003938372D313830
       332D3050303030310000000000050000003A4954454D05000000070000003033
-      383031300000000000}
+      383031300000000000040000003A4B4554050000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
       04000000360000000D0000004942554B54495F44455441494C01000000000006
       0000004942554B5449010000000000080000004E4F5F42554B54490100000000
