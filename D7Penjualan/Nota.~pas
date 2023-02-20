@@ -1211,6 +1211,9 @@ type
     ppDBText137: TppDBText;
     QBrowseALAMAT: TStringField;
     QBrowseKOTA: TStringField;
+    ppLabel115: TppLabel;
+    ppLabel117: TppLabel;
+    ppLabel118: TppLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);

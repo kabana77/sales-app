@@ -1,5 +1,5 @@
 object NotaFrm: TNotaFrm
-  Left = 319
+  Left = 320
   Top = 212
   Width = 1270
   Height = 687
@@ -6649,7 +6649,7 @@ object NotaFrm: TNotaFrm
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
     Left = 256
-    Top = 216
+    Top = 224
     Version = '10.06'
     mmColumnWidth = 197274
     DataPipelineName = 'ppDBQDetail'
@@ -7620,7 +7620,7 @@ object NotaFrm: TNotaFrm
         Border.Visible = False
         DataField = 'QTY11'
         DataPipeline = ppDBPipeline1
-        DisplayFormat = '#,0.000;(#,0.000)'
+        DisplayFormat = '#,#'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Name = 'Arial'
@@ -7796,9 +7796,9 @@ object NotaFrm: TNotaFrm
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 12435
-        mmLeft = 113242
-        mmTop = 31485
-        mmWidth = 80169
+        mmLeft = 110331
+        mmTop = 31221
+        mmWidth = 83079
         BandType = 7
         mmBottomOffset = 0
         mmOverFlowOffset = 0
@@ -8094,7 +8094,7 @@ object NotaFrm: TNotaFrm
         ParentDataPipeline = False
         Transparent = True
         DataPipelineName = 'ppDBQMaster'
-        mmHeight = 7673
+        mmHeight = 9260
         mmLeft = 3440
         mmTop = 12435
         mmWidth = 108744
@@ -8193,7 +8193,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         DataPipelineName = 'ppDBQMaster'
         mmHeight = 3440
-        mmLeft = 79111
+        mmLeft = 76465
         mmTop = 47625
         mmWidth = 33602
         BandType = 7
@@ -8216,7 +8216,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3175
-        mmLeft = 79375
+        mmLeft = 76465
         mmTop = 36513
         mmWidth = 33338
         BandType = 7
@@ -8285,7 +8285,7 @@ object NotaFrm: TNotaFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3175
-        mmLeft = 79111
+        mmLeft = 76465
         mmTop = 51594
         mmWidth = 33602
         BandType = 7
@@ -8459,18 +8459,16 @@ object NotaFrm: TNotaFrm
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
-        Caption = 
-          'Apabila pembayaran dilakukan lewat dari tanggal jatuh tempo ters' +
-          'ebut di atas'
-        Font.Charset = DEFAULT_CHARSET
+        Caption = 'Apabila pembayaran dilakukan lewat dari tanggal jatuh tempo'
+        Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 10
+        Font.Name = 'Arial'
+        Font.Size = 8
         Font.Style = []
         Transparent = True
-        mmHeight = 4233
+        mmHeight = 3260
         mmLeft = 3440
-        mmTop = 20373
+        mmTop = 21960
         mmWidth = 108744
         BandType = 7
       end
@@ -8484,13 +8482,13 @@ object NotaFrm: TNotaFrm
         Caption = 
           'pelunasan terhadap nota penjualan yang telah jatuh tempo tersebu' +
           't di atas'
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 10
+        Font.Name = 'Arial'
+        Font.Size = 8
         Font.Style = []
         Transparent = True
-        mmHeight = 4233
+        mmHeight = 3260
         mmLeft = 3440
         mmTop = 29369
         mmWidth = 114036
@@ -8504,16 +8502,16 @@ object NotaFrm: TNotaFrm
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'maka pengiriman barang akan dilakukan kembali setelah dilakukan'
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 10
+        Font.Name = 'Arial'
+        Font.Size = 8
         Font.Style = []
         Transparent = True
-        mmHeight = 4233
+        mmHeight = 3260
         mmLeft = 3440
-        mmTop = 24871
-        mmWidth = 120386
+        mmTop = 25665
+        mmWidth = 105569
         BandType = 7
       end
       object ppDBCalc9: TppDBCalc
@@ -8524,7 +8522,7 @@ object NotaFrm: TNotaFrm
         Border.Visible = False
         DataField = 'QTY11'
         DataPipeline = ppDBPipeline1
-        DisplayFormat = '#,0.000;(#,0.000)'
+        DisplayFormat = '#,#'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Calibri'
@@ -8600,6 +8598,63 @@ object NotaFrm: TNotaFrm
         mmLeft = 41010
         mmTop = 34925
         mmWidth = 33602
+        BandType = 7
+      end
+      object ppLabel115: TppLabel
+        UserName = 'Label115'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'BCA : 238 041 0004 - Kabana Textile Industries, PT'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4022
+        mmLeft = 110331
+        mmTop = 47361
+        mmWidth = 80137
+        BandType = 7
+      end
+      object ppLabel117: TppLabel
+        UserName = 'Label117'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Cabang : Jl Diponegoro No 27-29 Pekalongan'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4022
+        mmLeft = 110331
+        mmTop = 51329
+        mmWidth = 71755
+        BandType = 7
+      end
+      object ppLabel118: TppLabel
+        UserName = 'Label118'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Untuk pembayaran, mohon transfer ke:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4022
+        mmLeft = 110331
+        mmTop = 43392
+        mmWidth = 61087
         BandType = 7
       end
     end
