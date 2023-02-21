@@ -1,6 +1,6 @@
 object NotaFrm: TNotaFrm
-  Left = 320
-  Top = 212
+  Left = 292
+  Top = 120
   Width = 1270
   Height = 687
   Caption = 'Order Marketing'
@@ -1287,7 +1287,7 @@ object NotaFrm: TNotaFrm
             Left = 728
             Top = 20
             Width = 153
-            Height = 30
+            Height = 21
             DataField = 'DIBAYAR'
             DataSource = dsQMaster
             Font.Charset = DEFAULT_CHARSET
@@ -1350,8 +1350,8 @@ object NotaFrm: TNotaFrm
           end
           object CheckBox3: TCheckBox
             Left = 757
-            Top = 56
-            Width = 113
+            Top = 43
+            Width = 68
             Height = 17
             Caption = 'Cetak Nol'
             TabOrder = 7
@@ -1388,6 +1388,14 @@ object NotaFrm: TNotaFrm
               'IDN'
               'ENG')
             TabOrder = 9
+          end
+          object CheckBox7: TCheckBox
+            Left = 757
+            Top = 60
+            Width = 124
+            Height = 17
+            Caption = 'Tampilkan rekening'
+            TabOrder = 10
           end
         end
         object PanelBand: TPanel
@@ -2681,7 +2689,7 @@ object NotaFrm: TNotaFrm
         object Label49: TLabel
           Left = 0
           Top = 0
-          Width = 896
+          Width = 3
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -18931,7 +18939,7 @@ object NotaFrm: TNotaFrm
     OpenDataSource = False
     UserName = 'DBQTotalToday'
     Left = 888
-    Top = 532
+    Top = 500
     object DBQTotalTodayppField1: TppField
       FieldAlias = 'QTY7'
       FieldName = 'QTY7'

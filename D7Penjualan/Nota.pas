@@ -1214,6 +1214,7 @@ type
     ppLabel115: TppLabel;
     ppLabel117: TppLabel;
     ppLabel118: TppLabel;
+    CheckBox7: TCheckBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -2489,6 +2490,20 @@ end;
 
 procedure TNotaFrm.BtnPrintInputClick(Sender: TObject);
 begin
+
+  if (CheckBox7.Checked) then
+  begin
+    ppLabel115.Visible:=True;
+    ppLabel117.Visible:=True;
+    ppLabel118.Visible:=True;
+  end
+  else
+  begin
+    ppLabel115.Visible:=False;
+    ppLabel117.Visible:=False;
+    ppLabel118.Visible:=False;
+  end;
+
   if wwDBComboBox1.Text = 'TANPA PPN' then ppLPPN.Visible:=False else ppLPPN.Visible:=True;
   
   if QMasterISPJK.AsInteger = 0 then
