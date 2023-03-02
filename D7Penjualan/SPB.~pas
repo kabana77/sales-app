@@ -1591,7 +1591,7 @@ begin
   begin
     ppLPPT.Visible:=False;
     ppLabel114.Visible:=True;
-    ppDBText111.Visible:=True;
+    ppDBText111.Visible:=True; { qty kg }
     ppDBCalc4.Visible:=True;
     ppDBText30.Visible:=False;
     ppDBText22.Visible:=False;
@@ -1601,7 +1601,7 @@ begin
   begin
     ppLPPT.Visible:=False;
     ppLabel114.Visible:=False;
-    ppDBText111.Visible:=False;
+    ppDBText111.Visible:=False; { qty ball }
     ppDBCalc4.Visible:=False;
     ppDBText30.Visible:=True;
     ppDBText22.Visible:=True;

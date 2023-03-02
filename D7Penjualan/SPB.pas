@@ -299,7 +299,6 @@ type
     QMasterNSUPLIER: TFloatField;
     QMasterJNS_KEMASAN: TStringField;
     QItem: TOracleDataSet;
-    QDetailNO_LOT: TStringField;
     QDetailSPINNING: TStringField;
     QItemKD_ITEM: TStringField;
     QItemNAMA_ITEM: TStringField;
@@ -1039,6 +1038,7 @@ type
     QRDBText29: TQRDBText;
     QRSysData4: TQRSysData;
     QRLabel24: TQRLabel;
+    QDetailNO_LOT: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);

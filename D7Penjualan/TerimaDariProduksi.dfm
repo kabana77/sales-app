@@ -100,7 +100,7 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
       Top = 76
       Width = 976
       Height = 534
-      ActivePage = TabSheet2
+      ActivePage = TabSheet1
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -2656,7 +2656,7 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
       'select a.*, a.rowid from bukti_detail a'
       'where a.ibukti=4363')
     QBEDefinition.QBEFieldDefs = {
-      0400000036000000070000004B445F4954454D01000000000004000000444953
+      0400000039000000070000004B445F4954454D01000000000004000000444953
       430100000000000A00000054474C5F494E534552540100000000000A0000004F
       50525F494E53455254010000000000060000004942554B54490100000000000D
       0000004942554B54495F44455441494C010000000000080000004E4F5F42554B
@@ -2686,7 +2686,9 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
       53490100000000000C0000004B45544552414E47414E5F440100000000000600
       00004852475F4B4701000000000007000000485247325F4B4701000000000005
       000000515459313101000000000007000000504F545F48524701000000000008
-      000000504F545F48524732010000000000}
+      000000504F545F4852473201000000000009000000494E535552414E43450100
+      000000000A000000434F4D4D495353494F4E0100000000000700000046524549
+      474854010000000000}
     RefreshOptions = [roAfterInsert, roAfterUpdate]
     Session = DMFrm.OS
     BeforeInsert = QMasterBeforeDelete
@@ -2742,9 +2744,6 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
       FieldName = 'KDSUBLOKASI_GJ'
       Size = 12
     end
-    object QDetailNO_LOT: TStringField
-      FieldName = 'NO_LOT'
-    end
     object QDetailKD_TRANSAKSI: TStringField
       FieldName = 'KD_TRANSAKSI'
       Size = 3
@@ -2799,6 +2798,10 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
       FieldName = 'KETERANGAN_D'
       Size = 255
     end
+    object QDetailNO_LOT: TStringField
+      FieldName = 'NO_LOT'
+      Size = 255
+    end
   end
   object dsQDetail: TwwDataSource
     DataSet = QDetail
@@ -2810,7 +2813,7 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
     DataPipeline = ppDBQDetail
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
-    PrinterSetup.PaperName = 'MIS'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Default'
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350

@@ -253,7 +253,6 @@ type
     QLokasiLOKASI: TStringField;
     QBrowseKETERANGAN: TStringField;
     QDetailKDSUBLOKASI_GJ: TStringField;
-    QDetailNO_LOT: TStringField;
     QDetailKD_TRANSAKSI: TStringField;
     QDetailSATUAN: TStringField;
     QDetailRASIO: TFloatField;
@@ -440,6 +439,7 @@ type
     Label8: TLabel;
     QProcST: TOracleQuery;
     QBrowseKETERANGAN2: TStringField;
+    QDetailNO_LOT: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);

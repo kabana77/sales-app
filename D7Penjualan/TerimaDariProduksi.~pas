@@ -439,6 +439,7 @@ type
     wwDBComboBox1: TwwDBComboBox;
     Label8: TLabel;
     QProcST: TOracleQuery;
+    QBrowseKETERANGAN2: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);

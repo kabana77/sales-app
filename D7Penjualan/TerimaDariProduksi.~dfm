@@ -1248,7 +1248,8 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
               'NO_LOT'#9'10'#9'NO LOT'#9'F'
               'SPINNING'#9'10'#9'SPINNING'#9'F'
               'NO_BUKTI'#9'15'#9'NO ORDER'#9'F'
-              'JNS_ORDER'#9'12'#9'JNS ORDER'#9'F')
+              'JNS_ORDER'#9'12'#9'JNS ORDER'#9'F'
+              'KETERANGAN2'#9'30'#9'NAMA CUSTOMER'#9'F')
             IniAttributes.Enabled = True
             IniAttributes.Delimiter = ';;'
             IniAttributes.CheckNewFields = True
@@ -1505,6 +1506,10 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
     object QBrowseJNS_ORDER: TStringField
       FieldName = 'JNS_ORDER'
       Size = 10
+    end
+    object QBrowseKETERANGAN2: TStringField
+      FieldName = 'KETERANGAN2'
+      Size = 255
     end
   end
   object dsQBrowse: TwwDataSource
@@ -2813,7 +2818,7 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 147
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
