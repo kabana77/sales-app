@@ -317,7 +317,6 @@ type
     QSPSP: TStringField;
     ppDBPipeline1: TppDBPipeline;
     ppLabel53: TppLabel;
-    ppDBText74: TppDBText;
     ppLabel54: TppLabel;
     ppDBText75: TppDBText;
     ppLabel55: TppLabel;
@@ -1039,6 +1038,7 @@ type
     QRSysData4: TQRSysData;
     QRLabel24: TQRLabel;
     QDetailNO_LOT: TStringField;
+    ppDBMemo3: TppDBMemo;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
