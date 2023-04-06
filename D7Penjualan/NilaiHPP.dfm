@@ -919,8 +919,8 @@ object NilaiHPPFrm: TNilaiHPPFrm
         object wwDBGrid2: TwwDBGrid
           Left = 0
           Top = 0
-          Width = 1075
-          Height = 299
+          Width = 1226
+          Height = 287
           Selected.Strings = (
             'TANGGAL'#9'11'#9'TANGGAL'#9'F'
             'KODE_BRG'#9'14'#9'KODE'#9'F'#9'BARANG'
@@ -1623,8 +1623,10 @@ object NilaiHPPFrm: TNilaiHPPFrm
           'KIRIM'#9'10'#9'KIRIM'#9'F'#9'QTY BALE'
           'SISA'#9'10'#9'SISA'#9'F'#9'QTY BALE'
           'HARGA'#9'13'#9'HARGA~JUAL'#9'F'
-          'HRG_DPP'#9'13'#9'DPP'#9'F'
-          'HRG_HPP'#9'13'#9'HPP'#9'F'
+          'HRG_DPP'#9'13'#9'PPN 10%'#9'F'#9'DPP'
+          'HRG_DPP2'#9'13'#9'PPN 11%'#9'F'#9'DPP'
+          'HRG_HPP'#9'13'#9'PPN 10%'#9'F'#9'HPP'
+          'HRG_HPP2'#9'13'#9'PPN 11%'#9'F'#9'HPP'
           'B00'#9'13'#9'BULAN KE 0'#9'F'#9'RENCANA PENGIRIMAN'
           'B01'#9'13'#9'BULAN KE 1'#9'F'#9'RENCANA PENGIRIMAN'
           'B02'#9'13'#9'BULAN KE 2'#9'F'#9'RENCANA PENGIRIMAN'
@@ -3020,7 +3022,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 132
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -5236,6 +5238,18 @@ object NilaiHPPFrm: TNilaiHPPFrm
     object QRealisasiB03: TFloatField
       FieldName = 'B03'
       DisplayFormat = '#,##0.###;(#,##0.###)'
+    end
+    object QRealisasiHRG_DPP2: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'HRG_DPP2'
+      DisplayFormat = '#,##0.##;(#,##0.##)'
+      Calculated = True
+    end
+    object QRealisasiHRG_HPP2: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'HRG_HPP2'
+      DisplayFormat = '#,##0.##;(#,##0.##)'
+      Calculated = True
     end
   end
   object dsQRealisasi: TwwDataSource

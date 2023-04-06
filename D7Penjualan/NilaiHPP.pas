@@ -418,6 +418,8 @@ type
     QRealisasiB01: TFloatField;
     QRealisasiB02: TFloatField;
     QRealisasiB03: TFloatField;
+    QRealisasiHRG_DPP2: TFloatField;
+    QRealisasiHRG_HPP2: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -1374,12 +1376,15 @@ begin
   begin
       QRealisasiHRG_DPP.AsFloat:=QRealisasiHARGA.AsFloat;
       QRealisasiHRG_HPP.AsFloat:=QRealisasiHRG_DPP.AsFloat-(0.05*QRealisasiHRG_DPP.AsFloat);
+      QRealisasiHRG_DPP2.AsFloat:=QRealisasiHARGA.AsFloat;
+      QRealisasiHRG_HPP2.AsFloat:=QRealisasiHRG_DPP2.AsFloat-(0.05*QRealisasiHRG_DPP2.AsFloat);
   end
   else
   begin
-    {QRealisasiHRG_DPP.AsFloat:=QRealisasiHARGA.AsFloat-(0.1*QRealisasiHARGA.AsFloat);}
     QRealisasiHRG_DPP.AsFloat:=QRealisasiHARGA.AsFloat/1.1;
     QRealisasiHRG_HPP.AsFloat:=QRealisasiHRG_DPP.AsFloat-(0.05*QRealisasiHRG_DPP.AsFloat);
+    QRealisasiHRG_DPP2.AsFloat:=QRealisasiHARGA.AsFloat/1.11;
+    QRealisasiHRG_HPP2.AsFloat:=QRealisasiHRG_DPP2.AsFloat-(0.05*QRealisasiHRG_DPP2.AsFloat);
   end;
 end;
 

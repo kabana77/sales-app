@@ -24,7 +24,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
   object DBText3: TDBText
     Left = 0
     Top = 49
-    Width = 1242
+    Width = 1234
     Height = 27
     Align = alTop
     Alignment = taRightJustify
@@ -41,8 +41,8 @@ object NilaiHPPFrm: TNilaiHPPFrm
   end
   object Label1: TLabel
     Left = 0
-    Top = 517
-    Width = 1242
+    Top = 505
+    Width = 1234
     Height = 13
     Align = alBottom
     Color = clSkyBlue
@@ -51,7 +51,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
   object PanelHeader: TPanel
     Left = 0
     Top = 0
-    Width = 1242
+    Width = 1234
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -68,8 +68,8 @@ object NilaiHPPFrm: TNilaiHPPFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 76
-    Width = 1242
-    Height = 441
+    Width = 1234
+    Height = 429
     ActivePage = TabSheet4
     Align = alClient
     Style = tsFlatButtons
@@ -82,7 +82,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object PanelMaster: TPanel
         Left = 0
         Top = 0
-        Width = 1234
+        Width = 1226
         Height = 137
         Align = alTop
         BevelOuter = bvNone
@@ -94,7 +94,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
         ParentFont = False
         TabOrder = 0
         DesignSize = (
-          1234
+          1226
           137)
         object Label6: TLabel
           Left = 8
@@ -264,16 +264,16 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object PanelDetail: TPanel
         Left = 0
         Top = 178
-        Width = 1234
-        Height = 191
+        Width = 1226
+        Height = 179
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
         object wwDBGrid1: TwwDBGrid
           Left = 0
           Top = 0
-          Width = 1234
-          Height = 191
+          Width = 1226
+          Height = 179
           ControlType.Strings = (
             'KD_SUB_LOKASI;CustomEdit;LookLokasi;F'
             'KD_ITEM;CustomEdit;LookItem;F'
@@ -458,14 +458,14 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object PanelFooter1: TPanel
         Left = 0
-        Top = 369
-        Width = 1234
+        Top = 357
+        Width = 1226
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 3
         DesignSize = (
-          1234
+          1226
           41)
         object BtnPrintInput: TBitBtn
           Left = 1049
@@ -594,14 +594,14 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object PanelBand: TPanel
         Left = 0
         Top = 137
-        Width = 1234
+        Width = 1226
         Height = 41
         Align = alTop
         BevelOuter = bvNone
         Color = clSkyBlue
         TabOrder = 1
         DesignSize = (
-          1234
+          1226
           41)
         object Label14: TLabel
           Left = 1154
@@ -757,7 +757,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 57
-        Width = 1234
+        Width = 1226
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -766,13 +766,13 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object PanelFilter: TPanel
         Left = 0
         Top = 0
-        Width = 1234
+        Width = 1226
         Height = 57
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          1234
+          1226
           57)
         object Label2: TLabel
           Left = 128
@@ -798,7 +798,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
           Visible = False
         end
         object Label5: TLabel
-          Left = 1162
+          Left = 1154
           Top = 16
           Width = 43
           Height = 13
@@ -911,16 +911,16 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object PanelBrowse: TPanel
         Left = 0
         Top = 70
-        Width = 1234
-        Height = 299
+        Width = 1226
+        Height = 287
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
         object wwDBGrid2: TwwDBGrid
           Left = 0
           Top = 0
-          Width = 1075
-          Height = 299
+          Width = 1226
+          Height = 287
           Selected.Strings = (
             'TANGGAL'#9'11'#9'TANGGAL'#9'F'
             'KODE_BRG'#9'14'#9'KODE'#9'F'#9'BARANG'
@@ -967,14 +967,14 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object PanelFooter2: TPanel
         Left = 0
-        Top = 369
-        Width = 1234
+        Top = 357
+        Width = 1226
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          1234
+          1226
           41)
         object wwDBNavigator1: TwwDBNavigator
           Left = 0
@@ -1107,7 +1107,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object Label13: TLabel
         Left = 0
         Top = 57
-        Width = 1234
+        Width = 1226
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -1116,13 +1116,13 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1234
+        Width = 1226
         Height = 57
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          1234
+          1226
           57)
         object Label10: TLabel
           Left = 8
@@ -1132,7 +1132,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
           Caption = 'Bulan'
         end
         object Label12: TLabel
-          Left = 1162
+          Left = 1154
           Top = 16
           Width = 43
           Height = 13
@@ -1245,8 +1245,8 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object wwDBGrid3: TwwDBGrid
         Left = 0
         Top = 70
-        Width = 1234
-        Height = 299
+        Width = 1226
+        Height = 287
         Selected.Strings = (
           'NO_NOTA'#9'15'#9'SALES ORDER'#9'F'
           'NO_BUKTI'#9'25'#9'SALES CONTRACT'#9'F'
@@ -1290,14 +1290,14 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object Panel2: TPanel
         Left = 0
-        Top = 369
-        Width = 1234
+        Top = 357
+        Width = 1226
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          1234
+          1226
           41)
         object wwDBNavigator2: TwwDBNavigator
           Left = 0
@@ -1429,7 +1429,7 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object LabelBanner1: TLabel
         Left = 0
         Top = 57
-        Width = 1234
+        Width = 1226
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -1438,13 +1438,13 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1234
+        Width = 1226
         Height = 57
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          1234
+          1226
           57)
         object Label36: TLabel
           Left = 128
@@ -1609,8 +1609,8 @@ object NilaiHPPFrm: TNilaiHPPFrm
       object wwDBGrid5: TwwDBGrid
         Left = 0
         Top = 70
-        Width = 1234
-        Height = 299
+        Width = 1226
+        Height = 287
         ControlType.Strings = (
           'STATUS;URL-Link')
         Selected.Strings = (
@@ -1623,8 +1623,10 @@ object NilaiHPPFrm: TNilaiHPPFrm
           'KIRIM'#9'10'#9'KIRIM'#9'F'#9'QTY BALE'
           'SISA'#9'10'#9'SISA'#9'F'#9'QTY BALE'
           'HARGA'#9'13'#9'HARGA~JUAL'#9'F'
-          'HRG_DPP'#9'13'#9'DPP'#9'F'
-          'HRG_HPP'#9'13'#9'HPP'#9'F'
+          'HRG_DPP'#9'13'#9'PPN 10%'#9'F'#9'DPP'
+          'HRG_DPP2'#9'13'#9'PPN 11%'#9'F'#9'DPP'
+          'HRG_HPP'#9'13'#9'PPN 10%'#9'F'#9'HPP'
+          'HRG_HPP2'#9'13'#9'PPN 11%'#9'F'#9'HPP'
           'B00'#9'13'#9'BULAN KE 0'#9'F'#9'RENCANA PENGIRIMAN'
           'B01'#9'13'#9'BULAN KE 1'#9'F'#9'RENCANA PENGIRIMAN'
           'B02'#9'13'#9'BULAN KE 2'#9'F'#9'RENCANA PENGIRIMAN'
@@ -1665,14 +1667,14 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object Panel4: TPanel
         Left = 0
-        Top = 369
-        Width = 1234
+        Top = 357
+        Width = 1226
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          1234
+          1226
           41)
         object wwDBNavigator3: TwwDBNavigator
           Left = 0
@@ -1833,7 +1835,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.PaperName = 'A4'
     PrinterSetup.PrinterName = 'Default'
-    PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350
     PrinterSetup.mmMarginRight = 6350
@@ -1845,28 +1846,15 @@ object NilaiHPPFrm: TNilaiHPPFrm
     Units = utMillimeters
     DeviceType = 'Screen'
     EmailSettings.ReportFormat = 'PDF'
-    LanguageID = 'Default'
     OutlineSettings.CreateNode = True
     OutlineSettings.CreatePageNodes = True
     OutlineSettings.Enabled = False
     OutlineSettings.Visible = False
-    PDFSettings.EmbedFontOptions = [efUseSubset]
-    PDFSettings.EncryptSettings.AllowCopy = True
-    PDFSettings.EncryptSettings.AllowInteract = True
-    PDFSettings.EncryptSettings.AllowModify = True
-    PDFSettings.EncryptSettings.AllowPrint = True
-    PDFSettings.EncryptSettings.Enabled = False
-    PDFSettings.FontEncoding = feAnsi
-    RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
-    RTFSettings.DefaultFont.Color = clWindowText
-    RTFSettings.DefaultFont.Height = -13
-    RTFSettings.DefaultFont.Name = 'Arial'
-    RTFSettings.DefaultFont.Style = []
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
     Left = 952
     Top = 8
-    Version = '12.03'
+    Version = '10.06'
     mmColumnWidth = 197300
     DataPipelineName = 'ppDBQBrowseDetail'
     object ppTitleBand1: TppTitleBand
@@ -1877,14 +1865,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       mmPrintPosition = 0
       object ppNamaLaporan: TppLabel
         UserName = 'NamaLaporan'
-        HyperlinkColor = clBlue
         AutoSize = False
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'Transaksi Org'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -1900,13 +1886,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel9: TppLabel
         UserName = 'Label9'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = '====================================='
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -1921,14 +1905,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppPeriode: TppLabel
         UserName = 'Periode'
-        HyperlinkColor = clBlue
         AutoSize = False
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = '01 Nop 2006 s/d 30 Nop 2006'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -1944,7 +1926,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText12: TppDBText
         UserName = 'DBText11'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -1952,7 +1933,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'PERUSAHAAN'
         DataPipeline = ppDBPerusahaan
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -1969,7 +1949,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText13: TppDBText
         UserName = 'DBText12'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -1977,7 +1956,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'ALAMAT1'
         DataPipeline = ppDBPerusahaan
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -1994,7 +1972,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText14: TppDBText
         UserName = 'DBText13'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -2002,7 +1979,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'TELEPON1'
         DataPipeline = ppDBPerusahaan
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2019,13 +1995,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppUserCetak: TppLabel
         UserName = 'UserCetak'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'SYSTEM, 17 Jan 2007 16:35'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2046,13 +2020,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       mmPrintPosition = 0
       object ppLabel2: TppLabel
         UserName = 'Label2'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'NO. NOTA'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2067,13 +2039,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel3: TppLabel
         UserName = 'Label3'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'TANGGAL'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2088,13 +2058,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel5: TppLabel
         UserName = 'Label5'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'SATUAN'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2110,13 +2078,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel6: TppLabel
         UserName = 'Label6'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'NO'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2132,13 +2098,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel8: TppLabel
         UserName = 'Label8'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'KODE'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2153,13 +2117,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel10: TppLabel
         UserName = 'Label10'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'QTY'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2175,13 +2137,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel11: TppLabel
         UserName = 'Label11'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'NAMA BARANG'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2196,13 +2156,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel12: TppLabel
         UserName = 'Label12'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'LOKASI'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2217,28 +2175,18 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
     end
     object ppDetailBand1: TppDetailBand
-      Background1.Brush.Style = bsClear
-      Background1.Gradient.EndColor = clWhite
-      Background1.Gradient.StartColor = clWhite
-      Background1.Gradient.Style = gsNone
-      Background2.Brush.Style = bsClear
-      Background2.Gradient.EndColor = clWhite
-      Background2.Gradient.StartColor = clWhite
-      Background2.Gradient.Style = gsNone
       PrintHeight = phDynamic
       mmBottomOffset = 0
       mmHeight = 5027
       mmPrintPosition = 0
       object ppDBText8: TppDBText
         UserName = 'DBText8'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'KODE_BRG'
         DataPipeline = ppDBQBrowseDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2254,7 +2202,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText10: TppDBText
         UserName = 'DBText10'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -2262,7 +2209,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         DataField = 'QTY1'
         DataPipeline = ppDBQBrowseDetail
         DisplayFormat = '#,#'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2279,14 +2225,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText5: TppDBText
         UserName = 'DBText5'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'LOKASI'
         DataPipeline = ppDBQBrowseDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2302,14 +2246,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText6: TppDBText
         UserName = 'DBText6'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'SATUAN'
         DataPipeline = ppDBQBrowseDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2325,7 +2267,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBMemo3: TppDBMemo
         UserName = 'DBMemo3'
-        SaveOrder = 0
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -2348,12 +2289,10 @@ object NilaiHPPFrm: TNilaiHPPFrm
         mmBottomOffset = 0
         mmOverFlowOffset = 0
         mmStopPosition = 0
-        mmMinHeight = 0
         mmLeading = 0
       end
       object ppNo: TppVariable
         UserName = 'No'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -2361,7 +2300,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         BlankWhenZero = False
         CalcOrder = 0
         DataType = dtInteger
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2377,14 +2315,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText1: TppDBText
         UserName = 'DBText1'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'NO_NOTA'
         DataPipeline = ppDBQBrowseDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2401,7 +2337,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText2: TppDBText
         UserName = 'DBText2'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -2409,7 +2344,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         DataField = 'TANGGAL'
         DataPipeline = ppDBQBrowseDetail
         DisplayFormat = 'dd/mm/yyyy'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2430,7 +2364,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       mmPrintPosition = 0
       object ppSystemVariable1: TppSystemVariable
         UserName = 'SystemVariable1'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -2452,20 +2385,17 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
     end
     object ppSummaryBand1: TppSummaryBand
-      AlignToBottom = False
       mmBottomOffset = 0
       mmHeight = 48419
       mmPrintPosition = 0
       object ppDBText19: TppDBText
         UserName = 'DBText19'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD1'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2483,14 +2413,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText42: TppDBText
         UserName = 'DBText42'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD2'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2508,14 +2436,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText43: TppDBText
         UserName = 'DBText43'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD3'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2533,14 +2459,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText44: TppDBText
         UserName = 'DBText44'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV3'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2558,14 +2482,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText45: TppDBText
         UserName = 'DBText45'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV2'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2583,14 +2505,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText46: TppDBText
         UserName = 'DBText46'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV1'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2608,14 +2528,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText47: TppDBText
         UserName = 'DBText47'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB3'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2633,14 +2551,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText48: TppDBText
         UserName = 'DBText48'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB2'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -2658,14 +2574,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText49: TppDBText
         UserName = 'DBText401'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB1'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3100,42 +3014,28 @@ object NilaiHPPFrm: TNilaiHPPFrm
     DataPipeline = ppDBQDetail
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
-    PrinterSetup.PaperName = 'Custom'
+    PrinterSetup.PaperName = 'ANSI E'
     PrinterSetup.PrinterName = 'Default'
-    PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350
     PrinterSetup.mmMarginRight = 6350
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 132
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
     EmailSettings.ReportFormat = 'PDF'
-    LanguageID = 'Default'
     OutlineSettings.CreateNode = True
     OutlineSettings.CreatePageNodes = True
     OutlineSettings.Enabled = False
     OutlineSettings.Visible = False
-    PDFSettings.EmbedFontOptions = [efUseSubset]
-    PDFSettings.EncryptSettings.AllowCopy = True
-    PDFSettings.EncryptSettings.AllowInteract = True
-    PDFSettings.EncryptSettings.AllowModify = True
-    PDFSettings.EncryptSettings.AllowPrint = True
-    PDFSettings.EncryptSettings.Enabled = False
-    PDFSettings.FontEncoding = feAnsi
-    RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
-    RTFSettings.DefaultFont.Color = clWindowText
-    RTFSettings.DefaultFont.Height = -13
-    RTFSettings.DefaultFont.Name = 'Arial'
-    RTFSettings.DefaultFont.Style = []
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
     Left = 200
     Top = 8
-    Version = '12.03'
+    Version = '10.06'
     mmColumnWidth = 197300
     DataPipelineName = 'ppDBQDetail'
     object ppTitleBand2: TppTitleBand
@@ -3146,7 +3046,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       mmPrintPosition = 0
       object ppDBText26: TppDBText
         UserName = 'DBText4'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -3154,7 +3053,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'NO_BUKTI'
         DataPipeline = ppDBQMaster
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3172,13 +3070,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel25: TppLabel
         UserName = 'Label25'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'Telah diterima barang-barang berikut :'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3193,7 +3089,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText23: TppDBText
         UserName = 'DBText1'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -3201,7 +3096,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'NO_NOTA'
         DataPipeline = ppDBQMaster
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial Narrow'
@@ -3220,7 +3114,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText24: TppDBText
         UserName = 'DBText2'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -3229,7 +3122,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         DataField = 'TGL'
         DataPipeline = ppDBQMaster
         DisplayFormat = 'dd mmm yyyy'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3247,13 +3139,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel17: TppLabel
         UserName = 'Label17'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'Tanggal :'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3269,13 +3159,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel14: TppLabel
         UserName = 'Label18'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'No. Nota'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3291,13 +3179,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel20: TppLabel
         UserName = 'Label20'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'No. Bukti'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3312,13 +3198,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel15: TppLabel
         UserName = 'Label202'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = ':'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3333,7 +3217,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText11: TppDBText
         UserName = 'DBText3'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -3341,7 +3224,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'KIRIM_KE'
         DataPipeline = ppDBQMaster
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3360,7 +3242,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText15: TppDBText
         UserName = 'DBText11'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -3368,7 +3249,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'PERUSAHAAN'
         DataPipeline = ppDBPerusahaan
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3385,7 +3265,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText50: TppDBText
         UserName = 'DBText50'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -3393,7 +3272,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'NAMA_TRANSAKSI'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial Narrow'
@@ -3411,14 +3289,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppVariable2: TppVariable
         UserName = 'Variable1'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         BlankWhenZero = False
         CalcOrder = 0
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3434,13 +3310,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel16: TppLabel
         UserName = 'Label16'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'No.Doc.'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3456,14 +3330,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText7: TppDBText
         UserName = 'DBText6'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DOC_ISO'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3485,13 +3357,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       mmPrintPosition = 0
       object ppLabel22: TppLabel
         UserName = 'Label2'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'ITEM'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3506,13 +3376,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel24: TppLabel
         UserName = 'Label4'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'SATUAN'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3528,13 +3396,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel26: TppLabel
         UserName = 'Label6'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'NO'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3550,13 +3416,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel27: TppLabel
         UserName = 'Label7'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'QTY'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3572,13 +3436,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel28: TppLabel
         UserName = 'Label8'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'LOKASI'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3594,28 +3456,18 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
     end
     object ppDetailBand2: TppDetailBand
-      Background1.Brush.Style = bsClear
-      Background1.Gradient.EndColor = clWhite
-      Background1.Gradient.StartColor = clWhite
-      Background1.Gradient.Style = gsNone
-      Background2.Brush.Style = bsClear
-      Background2.Gradient.EndColor = clWhite
-      Background2.Gradient.StartColor = clWhite
-      Background2.Gradient.Style = gsNone
       PrintHeight = phDynamic
       mmBottomOffset = 0
       mmHeight = 4498
       mmPrintPosition = 0
       object ppDBText18: TppDBText
         UserName = 'DBText5'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'KD_SUB_LOKASI'
         DataPipeline = ppDBQDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3633,7 +3485,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText22: TppDBText
         UserName = 'DBText101'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -3641,7 +3492,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         DataField = 'QTY1'
         DataPipeline = ppDBQDetail
         DisplayFormat = '#,##0.##;(#,##0.##)'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3659,7 +3509,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppNo2: TppVariable
         UserName = 'No'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -3667,7 +3516,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         BlankWhenZero = False
         CalcOrder = 0
         DataType = dtInteger
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3684,14 +3532,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText30: TppDBText
         UserName = 'DBText30'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'LSATUAN'
         DataPipeline = ppDBQDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3709,7 +3555,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBMemo1: TppDBMemo
         UserName = 'DBMemo1'
-        SaveOrder = 0
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -3734,12 +3579,10 @@ object NilaiHPPFrm: TNilaiHPPFrm
         mmBottomOffset = 0
         mmOverFlowOffset = 0
         mmStopPosition = 0
-        mmMinHeight = 0
         mmLeading = 0
       end
       object ppDBText3: TppDBText
         UserName = 'DBText301'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -3747,7 +3590,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'KD_ITEM'
         DataPipeline = ppDBQDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3770,13 +3612,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       mmPrintPosition = 0
       object ppUserCetak2: TppLabel
         UserName = 'UserCetak'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'SYSTEM, 17 Jan 2007 16:35'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3791,14 +3631,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText41: TppDBText
         UserName = 'DBText41'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DISTRIBUSI'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3817,19 +3655,16 @@ object NilaiHPPFrm: TNilaiHPPFrm
     end
     object ppSummaryBand2: TppSummaryBand
       PrintHeight = phDynamic
-      AlignToBottom = False
       mmBottomOffset = 0
       mmHeight = 34925
       mmPrintPosition = 0
       object ppLabel29: TppLabel
         UserName = 'Label29'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'Catatan :'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3844,7 +3679,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBMemo2: TppDBMemo
         UserName = 'DBMemo2'
-        SaveOrder = 0
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
@@ -3869,19 +3703,16 @@ object NilaiHPPFrm: TNilaiHPPFrm
         mmBottomOffset = 0
         mmOverFlowOffset = 0
         mmStopPosition = 0
-        mmMinHeight = 0
         mmLeading = 0
       end
       object ppDBText32: TppDBText
         UserName = 'DBText32'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD1'
         DataPipeline = ppDBQMaster
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3899,14 +3730,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText33: TppDBText
         UserName = 'DBText33'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD2'
         DataPipeline = ppDBQMaster
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3924,14 +3753,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText34: TppDBText
         UserName = 'DBText34'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD3'
         DataPipeline = ppDBQMaster
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3949,14 +3776,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText35: TppDBText
         UserName = 'DBText35'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV3'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3974,14 +3799,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText36: TppDBText
         UserName = 'DBText36'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV2'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3999,14 +3822,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText37: TppDBText
         UserName = 'DBText37'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV1'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -4024,14 +3845,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText38: TppDBText
         UserName = 'DBText38'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB3'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -4049,14 +3868,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText39: TppDBText
         UserName = 'DBText39'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB2'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -4074,14 +3891,12 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBText40: TppDBText
         UserName = 'DBText40'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB1'
         DataPipeline = ppDBQTransaksi
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -4099,7 +3914,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppDBCalc1: TppDBCalc
         UserName = 'DBCalc1'
-        HyperlinkColor = clBlue
         AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -4107,7 +3921,6 @@ object NilaiHPPFrm: TNilaiHPPFrm
         Border.Visible = False
         DataField = 'QTY1'
         DataPipeline = ppDBQDetail
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -4124,13 +3937,11 @@ object NilaiHPPFrm: TNilaiHPPFrm
       end
       object ppLabel1: TppLabel
         UserName = 'Label1'
-        HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
         Caption = 'TOTAL'
-        Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -5427,6 +5238,16 @@ object NilaiHPPFrm: TNilaiHPPFrm
     object QRealisasiB03: TFloatField
       FieldName = 'B03'
       DisplayFormat = '#,##0.###;(#,##0.###)'
+    end
+    object QRealisasiHRG_DPP2: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'HRG_DPP2'
+      Calculated = True
+    end
+    object QRealisasiHRG_HPP2: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'HRG_HPP2'
+      Calculated = True
     end
   end
   object dsQRealisasi: TwwDataSource
