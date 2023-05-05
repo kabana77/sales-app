@@ -128,6 +128,8 @@ type
     QRDBText19: TQRDBText;
     QRDBText20: TQRDBText;
     QRDBText21: TQRDBText;
+    QSOP: TOracleDataSet;
+    QSOPNILAI: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure wwDBGrid1TitleButtonClick(Sender: TObject;
       AFieldName: String);
@@ -162,6 +164,7 @@ type
     procedure LTitleClick(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
+    procedure QBrowseBeforeOpen(DataSet: TDataSet);
   private
     { Private declarations }
     vfilter, vorder, vfilter2 : String;
@@ -351,6 +354,12 @@ var
   i : word;
   vpertama : boolean;
 begin
+QSOP.Close;
+QSOP.SetVariable('vuser', DMFrm.QUserVUSER.AsString);
+QSOP.Open;
+
+if QSOPNILAI.AsInteger = 1 then
+begin
   vpertama:=True;
   if cbTanggal.Checked then
     vfilter:=' where (tgl_insert>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl_insert<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
@@ -384,7 +393,45 @@ begin
   QBrowse.SetVariable('myparam',vfilter+vorder);
   QBrowse.Open;
   QBrowse.EnableControls;
+end;
 
+if QSOPNILAI.AsInteger = 0 then
+begin
+  vpertama:=True;
+  if cbTanggal.Checked then
+    vfilter:=' where (tgl_insert>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl_insert<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
+  else
+    vfilter:=' where (';
+  if (QBrowse.FieldCount>=1) then
+  begin
+    for i:=0 to QBrowse.FieldCount-1 do
+    begin
+      if (QBrowse.Fields[i].FieldKind=fkData) and (UpperCase(QBrowse.Fields[i].FieldName)<>'TANGGAL') then
+      begin
+        if vpertama then
+          begin
+            vfilter:=vfilter+QBrowse.Fields[i].FieldName+' like ''%'+ECari.Text+'%''';
+            vpertama:=False;
+          end
+          else
+            vfilter:=vfilter+' or '+QBrowse.Fields[i].FieldName+' like ''%'+ECari.Text+'%''';
+      end;
+    end;
+    vfilter:=vfilter+')';
+//    vorder:=' order by '+wwDBGrid1.Columns[0].FieldName;
+    if QBrowse.Active then
+      vorder:=' order by '+wwDBGrid1.Columns[0].FieldName
+      else
+        vorder:=' order by no_tiket desc';
+
+  end;
+  vfilter2:=' and kd_transaksi in (''782'', ''783'',''785'',''786'',''796'',''784'') ';
+  QBrowse.DisableControls;
+  QBrowse.Close;
+  QBrowse.SetVariable('myparam',vfilter+vfilter2+vorder);
+  QBrowse.Open;
+  QBrowse.EnableControls;
+end;
 end;
 
 procedure TUnpostFrm.TabSheet1Show(Sender: TObject);
@@ -560,5 +607,10 @@ begin
  // QuickRep2.DataSet:=nil
   //QuickRep2.Preview;
   end;
+
+procedure TUnpostFrm.QBrowseBeforeOpen(DataSet: TDataSet);
+begin
+SHOWMESSAGE(QBrowse.SQL.Text);
+end;
 
 end.

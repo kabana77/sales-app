@@ -267,7 +267,7 @@ object UnpostFrm: TUnpostFrm
               37.041666666666670000
               0.000000000000000000
               0.000000000000000000
-              296.333333333333400000)
+              296.333333333333300000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -340,7 +340,7 @@ object UnpostFrm: TUnpostFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              859.895833333333400000
+              859.895833333333300000
               21.166666666666670000
               179.916666666666700000)
             Alignment = taCenter
@@ -386,7 +386,7 @@ object UnpostFrm: TUnpostFrm
               37.041666666666670000
               0.000000000000000000
               21.166666666666670000
-              296.333333333333400000)
+              296.333333333333300000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -413,7 +413,7 @@ object UnpostFrm: TUnpostFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333340000
+            42.333333333333330000
             1899.708333333333000000)
           BandType = rbPageFooter
           object QRSysData1: TQRSysData
@@ -481,7 +481,7 @@ object UnpostFrm: TUnpostFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333340000
+            42.333333333333330000
             1899.708333333333000000)
           BandType = rbDetail
         end
@@ -500,7 +500,7 @@ object UnpostFrm: TUnpostFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            359.833333333333400000
+            359.833333333333300000
             1899.708333333333000000)
           BandType = rbColumnHeader
           object QRLabel13: TQRLabel
@@ -1069,7 +1069,7 @@ object UnpostFrm: TUnpostFrm
               37.041666666666670000
               0.000000000000000000
               21.166666666666670000
-              296.333333333333400000)
+              296.333333333333300000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -1140,7 +1140,7 @@ object UnpostFrm: TUnpostFrm
               37.041666666666670000
               0.000000000000000000
               0.000000000000000000
-              296.333333333333400000)
+              296.333333333333300000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -1306,7 +1306,7 @@ object UnpostFrm: TUnpostFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              613.833333333333400000
+              613.833333333333300000
               44.979166666666670000
               140.229166666666700000)
             Alignment = taLeftJustify
@@ -1337,7 +1337,7 @@ object UnpostFrm: TUnpostFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              846.666666666666600000
+              846.666666666666700000
               44.979166666666670000
               113.770833333333300000)
             Alignment = taLeftJustify
@@ -1527,7 +1527,7 @@ object UnpostFrm: TUnpostFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333340000
+            42.333333333333330000
             1899.708333333333000000)
           BandType = rbDetail
           object QRDBText3: TQRDBText
@@ -1769,7 +1769,7 @@ object UnpostFrm: TUnpostFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              859.895833333333400000
+              859.895833333333300000
               21.166666666666670000
               179.916666666666700000)
             Alignment = taCenter
@@ -1798,7 +1798,7 @@ object UnpostFrm: TUnpostFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333340000
+            42.333333333333330000
             1899.708333333333000000)
           BandType = rbPageFooter
           object QRSysData2: TQRSysData
