@@ -368,7 +368,7 @@ begin
   begin
     for i:=0 to QBrowse.FieldCount-1 do
     begin
-      if (QBrowse.Fields[i].FieldKind=fkData) and (UpperCase(QBrowse.Fields[i].FieldName)<>'TANGGAL') then
+      if (QBrowse.Fields[i].FieldKind=fkData) and (UpperCase(QBrowse.Fields[i].FieldName)<>'tgl_insert') then
       begin
         if vpertama then
           begin

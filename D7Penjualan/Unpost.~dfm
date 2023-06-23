@@ -2121,7 +2121,6 @@ object UnpostFrm: TUnpostFrm
     CountAllRecords = True
     RefreshOptions = [roAfterInsert, roAfterUpdate]
     Session = DMFrm.OS
-    BeforeOpen = QBrowseBeforeOpen
     BeforeInsert = QBrowseBeforeInsert
     BeforeEdit = QBrowseBeforeEdit
     AfterEdit = QBrowseAfterEdit

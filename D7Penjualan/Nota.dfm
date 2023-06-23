@@ -1287,7 +1287,7 @@ object NotaFrm: TNotaFrm
             Left = 728
             Top = 20
             Width = 153
-            Height = 21
+            Height = 30
             DataField = 'DIBAYAR'
             DataSource = dsQMaster
             Font.Charset = DEFAULT_CHARSET
@@ -6645,7 +6645,7 @@ object NotaFrm: TNotaFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140000
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -7796,7 +7796,7 @@ object NotaFrm: TNotaFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 10
+        Font.Size = 9
         Font.Style = [fsItalic]
         Lines.Strings = (
           'Terbilang : #Seratus limapuluh juta rupiah#')
@@ -7832,10 +7832,10 @@ object NotaFrm: TNotaFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4784
-        mmLeft = 165778
+        mmHeight = 4826
+        mmLeft = 165651
         mmTop = 1058
-        mmWidth = 27432
+        mmWidth = 27559
         BandType = 7
       end
       object pp21: TppDBText
@@ -8131,7 +8131,7 @@ object NotaFrm: TNotaFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4784
+        mmHeight = 4826
         mmLeft = 149352
         mmTop = 1058
         mmWidth = 17653
@@ -8618,13 +8618,13 @@ object NotaFrm: TNotaFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 10
+        Font.Size = 9
         Font.Style = []
         Transparent = True
-        mmHeight = 4022
+        mmHeight = 3683
         mmLeft = 110331
         mmTop = 47361
-        mmWidth = 80137
+        mmWidth = 72644
         BandType = 7
       end
       object ppLabel117: TppLabel
@@ -8637,13 +8637,13 @@ object NotaFrm: TNotaFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 10
+        Font.Size = 9
         Font.Style = []
         Transparent = True
-        mmHeight = 4022
+        mmHeight = 3683
         mmLeft = 110331
         mmTop = 51329
-        mmWidth = 71755
+        mmWidth = 65532
         BandType = 7
       end
       object ppLabel118: TppLabel
@@ -8656,13 +8656,13 @@ object NotaFrm: TNotaFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 10
+        Font.Size = 9
         Font.Style = []
         Transparent = True
-        mmHeight = 4022
+        mmHeight = 3683
         mmLeft = 110331
         mmTop = 43392
-        mmWidth = 61087
+        mmWidth = 55626
         BandType = 7
       end
     end
@@ -8897,7 +8897,7 @@ object NotaFrm: TNotaFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

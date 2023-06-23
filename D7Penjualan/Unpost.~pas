@@ -164,7 +164,6 @@ type
     procedure LTitleClick(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
-    procedure QBrowseBeforeOpen(DataSet: TDataSet);
   private
     { Private declarations }
     vfilter, vorder, vfilter2 : String;
@@ -369,7 +368,7 @@ begin
   begin
     for i:=0 to QBrowse.FieldCount-1 do
     begin
-      if (QBrowse.Fields[i].FieldKind=fkData) and (UpperCase(QBrowse.Fields[i].FieldName)<>'TANGGAL') then
+      if (QBrowse.Fields[i].FieldKind=fkData) and (UpperCase(QBrowse.Fields[i].FieldName)<>'tgl_insert') then
       begin
         if vpertama then
           begin
@@ -607,10 +606,5 @@ begin
  // QuickRep2.DataSet:=nil
   //QuickRep2.Preview;
   end;
-
-procedure TUnpostFrm.QBrowseBeforeOpen(DataSet: TDataSet);
-begin
-SHOWMESSAGE(QBrowse.SQL.Text);
-end;
 
 end.
