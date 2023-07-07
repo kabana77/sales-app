@@ -1604,12 +1604,14 @@ else
       ppDBText15.Visible:=False;
       ppDBText16.Visible:=False;
       ppDBText17.Visible:=False;
+      ppLabel44.Visible:=False;
     end
     else
     begin
       ppDBText15.Visible:=True;
       ppDBText16.Visible:=True;
       ppDBText17.Visible:=True;
+      ppLabel44.Visible:=True;
     end;
     if RadioGroup1.ItemIndex=1 then
     begin

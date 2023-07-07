@@ -1,5 +1,5 @@
 object NotaFrm: TNotaFrm
-  Left = 292
+  Left = 296
   Top = 120
   Width = 1270
   Height = 687
@@ -2689,7 +2689,7 @@ object NotaFrm: TNotaFrm
         object Label49: TLabel
           Left = 0
           Top = 0
-          Width = 3
+          Width = 896
           Height = 13
           Align = alTop
           Color = clSkyBlue

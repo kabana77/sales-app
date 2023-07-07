@@ -1,5 +1,5 @@
 object Nota_wasteFrm: TNota_wasteFrm
-  Left = 211
+  Left = 215
   Top = 128
   Width = 1274
   Height = 730
@@ -98,7 +98,7 @@ object Nota_wasteFrm: TNota_wasteFrm
       Top = 76
       Width = 904
       Height = 602
-      ActivePage = TabSheet1
+      ActivePage = TabSheet6
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -2804,7 +2804,7 @@ object Nota_wasteFrm: TNota_wasteFrm
     ReadOnly = True
     Session = DMFrm.OS
     Left = 560
-    Top = 48
+    Top = 96
   end
   object dsQBrowseDetail: TwwDataSource
     DataSet = QBrowseDetail
@@ -5758,10 +5758,10 @@ object Nota_wasteFrm: TNota_wasteFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4741
-        mmLeft = 165863
+        mmHeight = 4826
+        mmLeft = 165651
         mmTop = 1058
-        mmWidth = 27347
+        mmWidth = 27559
         BandType = 7
       end
       object pp21: TppDBText
@@ -6104,10 +6104,10 @@ object Nota_wasteFrm: TNota_wasteFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4741
-        mmLeft = 149479
+        mmHeight = 4826
+        mmLeft = 149352
         mmTop = 1058
-        mmWidth = 17526
+        mmWidth = 17653
         BandType = 7
       end
       object ppDBText32: TppDBText
@@ -7646,7 +7646,7 @@ object Nota_wasteFrm: TNota_wasteFrm
     OutlineSettings.Visible = False
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
-    Left = 784
+    Left = 800
     Top = 48
     Version = '10.06'
     mmColumnWidth = 197300

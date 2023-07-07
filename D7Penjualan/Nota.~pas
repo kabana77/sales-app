@@ -2510,7 +2510,7 @@ begin
   if QMasterISPJK.AsInteger = 0 then
   begin
     ppDBText15.Visible:=False;
-    pDBText16.Visible:=False;
+    ppDBText16.Visible:=False;
     ppDBText17.Visible:=False;
     ppLabel114.Visible:=False;
   end
