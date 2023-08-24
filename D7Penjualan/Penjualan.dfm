@@ -1,6 +1,6 @@
 object PenjualanFrm: TPenjualanFrm
-  Left = 309
-  Top = 225
+  Left = 316
+  Top = 226
   Width = 807
   Height = 477
   Caption = 'Penjualan'

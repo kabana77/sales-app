@@ -1,6 +1,6 @@
 object OrganisasiItemFrm: TOrganisasiItemFrm
-  Left = 205
-  Top = 52
+  Left = 292
+  Top = 254
   Width = 1013
   Height = 659
   Caption = 'Master Barang'
@@ -24,7 +24,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
     Left = 0
     Top = 0
     Width = 57
-    Height = 632
+    Height = 603
     Align = alLeft
     BevelOuter = bvNone
     Color = 7039851
@@ -33,8 +33,8 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
   object PanelRight: TPanel
     Left = 1001
     Top = 0
-    Width = 4
-    Height = 632
+    Width = 0
+    Height = 603
     Align = alClient
     BevelOuter = bvNone
     Color = clAppWorkSpace
@@ -44,7 +44,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
     Left = 57
     Top = 0
     Width = 944
-    Height = 632
+    Height = 603
     Align = alLeft
     BevelOuter = bvNone
     Ctl3D = False
@@ -52,7 +52,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
     TabOrder = 2
     object Label1: TLabel
       Left = 0
-      Top = 619
+      Top = 590
       Width = 944
       Height = 13
       Align = alBottom
@@ -98,7 +98,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
       Left = 0
       Top = 76
       Width = 944
-      Height = 543
+      Height = 514
       ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
@@ -330,10 +330,10 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
             object Label7: TLabel
               Left = 16
               Top = 64
-              Width = 47
+              Width = 58
               Height = 13
               Cursor = crHandPoint
-              Caption = 'Blended'
+              Caption = 'Blended +'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clOlive
               Font.Height = -11
@@ -419,7 +419,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
             object wwDBLookupComboDlg1: TwwDBLookupComboDlg
               Left = 16
               Top = 40
-              Width = 57
+              Width = 27
               Height = 19
               GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
               GridColor = clWhite
@@ -444,7 +444,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
             object wwDBLookupComboDlg2: TwwDBLookupComboDlg
               Left = 16
               Top = 120
-              Width = 57
+              Width = 25
               Height = 19
               GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
               GridColor = clWhite
@@ -472,7 +472,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
             object wwDBLookupComboDlg3: TwwDBLookupComboDlg
               Left = 16
               Top = 80
-              Width = 57
+              Width = 26
               Height = 19
               GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
               GridColor = clWhite
@@ -481,8 +481,9 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
               MaxWidth = 0
               MaxHeight = 209
               Selected.Strings = (
-                'KD_CORAK'#9'6'#9'KODE'#9'F'
-                'NAMA_CORAK'#9'50'#9'NAMA BLENDED'#9'F')
+                'KD_CORAK'#9'15'#9'KODE'#9'F'
+                'NAMA_CORAK'#9'20'#9'NAMA BLENDED'#9'F'
+                'TAMBAHAN'#9'25'#9'TAMBAHAN'#9'F')
               DataField = 'KD_CORAK'
               DataSource = dsQMaster
               LookupTable = QSubKelompok
@@ -588,22 +589,23 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
           Left = 0
           Top = 324
           Width = 936
-          Height = 150
+          Height = 121
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
-            Left = 240
-            Top = 16
-            Width = 137
-            Height = 233
+            Left = 0
+            Top = 0
+            Width = 936
+            Height = 121
             Selected.Strings = (
-              'SATUAN'#9'8'#9'SATUAN'
-              'RASIO'#9'8'#9'RASIO')
+              'SATUAN'#9'8'#9'SATUAN'#9#9
+              'RASIO'#9'8'#9'RASIO'#9#9)
             IniAttributes.Delimiter = ';;'
             TitleColor = clBtnFace
             FixedCols = 0
             ShowHorzScrollBar = False
+            Align = alClient
             DataSource = dsQSatuan2
             TabOrder = 0
             TitleAlignment = taLeftJustify
@@ -618,7 +620,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 474
+          Top = 445
           Width = 936
           Height = 38
           Align = alBottom
@@ -855,7 +857,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
           Left = 0
           Top = 78
           Width = 936
-          Height = 393
+          Height = 364
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 0
@@ -863,7 +865,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
             Left = 0
             Top = 0
             Width = 936
-            Height = 393
+            Height = 364
             Selected.Strings = (
               'KD_ITEM'#9'16'#9'KODE'#9'F'
               'NAMA_ITEM'#9'33'#9'NAMA ITEM'#9'F'
@@ -909,7 +911,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 471
+          Top = 442
           Width = 936
           Height = 41
           Align = alBottom
@@ -1202,16 +1204,17 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
     SQL.Strings = (
       'select * from ipisma_db2.vitem')
     QBEDefinition.QBEFieldDefs = {
-      0400000010000000070000004B445F4954454D010000000000090000004E414D
+      0400000011000000070000004B445F4954454D010000000000090000004E414D
       415F4954454D0100000000000600000053415455414E01000000000005000000
-      524153494F0100000000000A00000054474C5F494E534552540100000000000A
-      0000004B445F4B454D4153414E010000000000090000004B445F53415455414E
-      010000000000090000004852475F504F4B4F4B01000000000008000000485247
-      5F4A55414C01000000000007000000495346495845440100000000000B000000
-      4B4C41534946494B415349010000000000070000004953414B54494601000000
-      0000060000004E4F5F4C4F540100000000000F0000004E414D415F4B4F4E5354
-      52554B53490100000000000A0000004E414D415F434F52414B0100000000000C
-      0000004E414D415F4B454D4153414E010000000000}
+      524153494F0100000000000A00000054474C5F494E5345525401000000000009
+      0000004B445F53415455414E010000000000090000004852475F504F4B4F4B01
+      0000000000080000004852475F4A55414C010000000000070000004953464958
+      45440100000000000B0000004B4C41534946494B415349010000000000070000
+      004953414B544946010000000000060000004E4F5F4C4F540100000000000F00
+      00004E414D415F4B4F4E535452554B53490100000000000A0000004E414D415F
+      434F52414B0100000000000D0000004B445F4B4F4E535452554B534901000000
+      0000080000004B445F434F52414B0100000000000800000054414D424148414E
+      010000000000}
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
@@ -1273,6 +1276,10 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
       FieldName = 'NAMA_CORAK'
       Required = True
       Size = 50
+    end
+    object QBrowseTAMBAHAN: TStringField
+      FieldName = 'TAMBAHAN'
+      Size = 255
     end
   end
   object dsQBrowse: TwwDataSource
@@ -1419,24 +1426,30 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
       'select a.*, a.rowid from ipisma_db2.corak a'
       'order by a.kd_corak')
     QBEDefinition.QBEFieldDefs = {
-      0400000002000000080000004B445F434F52414B0100000000000A0000004E41
-      4D415F434F52414B010000000000}
+      0400000004000000080000004B445F434F52414B0100000000000A0000004E41
+      4D415F434F52414B010000000000060000004B445F4B454C0100000000000800
+      000054414D424148414E010000000000}
     Session = DMFrm.OS
     Left = 48
     Top = 320
     object QSubKelompokKD_CORAK: TStringField
       DisplayLabel = 'KODE'
-      DisplayWidth = 6
+      DisplayWidth = 15
       FieldName = 'KD_CORAK'
       Required = True
       Size = 6
     end
     object QSubKelompokNAMA_CORAK: TStringField
       DisplayLabel = 'NAMA BLENDED'
-      DisplayWidth = 50
+      DisplayWidth = 20
       FieldName = 'NAMA_CORAK'
       Required = True
       Size = 50
+    end
+    object QSubKelompokTAMBAHAN: TStringField
+      DisplayWidth = 25
+      FieldName = 'TAMBAHAN'
+      Size = 255
     end
   end
   object QSatuan: TOracleDataSet
@@ -1470,7 +1483,7 @@ object OrganisasiItemFrm: TOrganisasiItemFrm
       524E41010000000000}
     BeforeQuery = QWarnaBeforeQuery
     Session = DMFrm.OS
-    Left = 120
+    Left = 144
     Top = 320
     object QWarnaKD_WARNA: TStringField
       DisplayLabel = 'KODE'

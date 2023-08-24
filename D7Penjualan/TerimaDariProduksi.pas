@@ -1242,36 +1242,41 @@ end;
 
 procedure TTerimaDariProduksiFrm.wwDBLookupComboDlg1Enter(Sender: TObject);
 begin
-if wwDBComboBox1.Text='LOKAL' then
+  if wwDBComboBox1.Text='LOKAL' then
   begin
     Qno_lot.close;
-    Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    //Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    Qno_lot.setvariable('item', '%');
     qno_lot.open;
   end;
 
-if wwDBComboBox1.Text='EKSPOR' then
+  if wwDBComboBox1.Text='EKSPOR' then
   begin
     Qno_lot.close;
-    Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    //Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    Qno_lot.setvariable('item', '%');
     qno_lot.open;
   end;
 
-if wwDBComboBox1.Text ='MAKLON' THEN// or (QMasterJNS_ORDER.AsString<>'LOKAL') then
+  if wwDBComboBox1.Text ='MAKLON' THEN// or (QMasterJNS_ORDER.AsString<>'LOKAL') then
   begin
     qnO_LOT.Close;
-    Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    //Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    Qno_lot.setvariable('item', '%');
     qno_lot.open;
   end;
-if wwDBComboBox1.Text ='TFO' THEN// or (QMasterJNS_ORDER.AsString<>'LOKAL') then
+
+  if wwDBComboBox1.Text ='TFO' THEN// or (QMasterJNS_ORDER.AsString<>'LOKAL') then
   begin
     Qno_lot.Close;
     Qno_lot.ClearVariables;
   end;
 
-if wwDBComboBox1.Text='UNSOLD' then
+  if wwDBComboBox1.Text='UNSOLD' then
   begin
     Qno_lot.close;
-    Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    //Qno_lot.setvariable('item', UPPERCASE(('%'+QItemKETERANGAN.ASstring+'%')));
+    Qno_lot.setvariable('item', '%');
     qno_lot.open;
   end;
 

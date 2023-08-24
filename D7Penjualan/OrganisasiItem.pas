@@ -182,6 +182,8 @@ type
     QBrowseNO_LOT: TStringField;
     QBrowseNAMA_KONSTRUKSI: TStringField;
     QBrowseNAMA_CORAK: TStringField;
+    QSubKelompokTAMBAHAN: TStringField;
+    QBrowseTAMBAHAN: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -463,7 +465,7 @@ begin
   begin
       EditCari.Text:=QBrowseKD_ITEM.AsString;
       LKelompok.Caption:=QBrowseNAMA_KONSTRUKSI.AsString+' ';
-      LSubKelompok.Caption:=QBrowseNAMA_CORAK.AsString+' ';
+      LSubKelompok.Caption:=QBrowseNAMA_CORAK.AsString+' '+QBrowseTAMBAHAN.AsString;
       //LMerk.Caption:=QBrowseNAMA_KEMASAN.AsString+' ';
       LSatuan.Caption:=QBrowseSATUAN.AsString+' ';
   end;
@@ -479,6 +481,8 @@ begin
     KemasanFoto2Frm.QFoto.Close;
     KemasanFoto2Frm.QFoto.Open;
   end;
+  QSatuan2.Close;
+  QSATUAN2.SetVariable('kd_satuan', QBrowseKD_SATUAN.AsString);
   QSatuan2.Open;
 end;
 
@@ -523,11 +527,8 @@ begin
   if modified then
   begin
       LKelompok.Caption:=QKelompokNAMA_KONSTRUKSI.AsString+' ';
-      QMasterDISKRIPSI.AsString:=LKelompok.Caption+
-        LSubKelompok.Caption+
-        LMerk.Caption+
-        QMasterNAMA_ITEM.AsString+' '+
-        LSatuan.Caption;
+      QMasterDISKRIPSI.AsString:=LKelompok.Caption+LSubKelompok.Caption+LMerk.Caption+QMasterNAMA_ITEM.AsString+' '+LSatuan.Caption;
+      QMasterNAMA_ITEM.AsString:=LKelompok.Caption+LSubKelompok.Caption+QSubKelompokTAMBAHAN.AsString;
   end;
 end;
 
@@ -536,14 +537,10 @@ procedure TOrganisasiItemFrm.wwDBLookupComboDlg3CloseUp(Sender: TObject;
 begin
   if modified then
   begin
-      LSubKelompok.Caption:=QSubKelompokNAMA_CORAK.AsString+' ';
-      QMasterDISKRIPSI.AsString:=LKelompok.Caption+
-        LSubKelompok.Caption+
-        LMerk.Caption+
-        QMasterNAMA_ITEM.AsString+' '+
-        LSatuan.Caption;
+      LSubKelompok.Caption:=QSubKelompokNAMA_CORAK.AsString+' '+QSubKelompokTAMBAHAN.AsString;
+      QMasterDISKRIPSI.AsString:=LKelompok.Caption+LSubKelompok.Caption+LMerk.Caption+QMasterNAMA_ITEM.AsString+' '+LSatuan.Caption;
+      QMasterNAMA_ITEM.AsString:=LKelompok.Caption+LSubKelompok.Caption;
   end;
-
 end;
 
 procedure TOrganisasiItemFrm.wwDBLookupComboDlg2CloseUp(Sender: TObject;
@@ -638,10 +635,8 @@ begin
     end
     else
       vkode:='001';
-    QMasterKD_ITEM.AsString:=QMasterKD_KONSTRUKSI.AsString+
-      QMasterKD_CORAK.AsString;//+vkode;//+QMerkKD_KEMASAN.AsString+
-      //QMasterKD_SATUAN.AsString+vkode;
-     //QMasterKD_ITEM.AsString:=qmaster
+
+    QMasterKD_ITEM.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
   end;
 end;
 

@@ -100,7 +100,7 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
       Top = 76
       Width = 976
       Height = 534
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -2821,7 +2821,7 @@ object TerimaDariProduksiFrm: TTerimaDariProduksiFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

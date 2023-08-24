@@ -240,6 +240,45 @@ type
     Label19: TLabel;
     Label20: TLabel;
     wwDBEdit5: TwwDBEdit;
+    TabSheet5: TTabSheet;
+    Panel1: TPanel;
+    DBText1: TDBText;
+    Label27: TLabel;
+    GroupBox2: TGroupBox;
+    Label29: TLabel;
+    Label30: TLabel;
+    Label32: TLabel;
+    Label33: TLabel;
+    Label34: TLabel;
+    Label38: TLabel;
+    Label40: TLabel;
+    wwDBLookupComboDlg7: TwwDBLookupComboDlg;
+    wwDBLookupComboDlg9: TwwDBLookupComboDlg;
+    wwDBEdit10: TwwDBEdit;
+    DBCheckBox2: TDBCheckBox;
+    Panel2: TPanel;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    wwDBNavigator2: TwwDBNavigator;
+    wwNavButton1: TwwNavButton;
+    wwNavButton2: TwwNavButton;
+    wwNavButton3: TwwNavButton;
+    wwNavButton4: TwwNavButton;
+    wwNavButton5: TwwNavButton;
+    wwNavButton6: TwwNavButton;
+    BitBtn3: TBitBtn;
+    Label22: TLabel;
+    wwDBEdit6: TwwDBEdit;
+    LTahunUnit: TLabel;
+    LNe: TLabel;
+    wwDBEdit7: TwwDBEdit;
+    Label21: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Label26: TLabel;
+    DBText2: TDBText;
+    DBText4: TDBText;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -288,6 +327,12 @@ type
     procedure TabSheet4Show(Sender: TObject);
     procedure wwDBLookupComboDlg5Enter(Sender: TObject);
     procedure Label19Click(Sender: TObject);
+    procedure wwDBLookupComboDlg7CloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure wwDBLookupComboDlg9CloseUp(Sender: TObject; LookupTable,
+      FillTable: TDataSet; modified: Boolean);
+    procedure QMasterBeforePost(DataSet: TDataSet);
+    procedure TabSheet5Show(Sender: TObject);
   private
     { Private declarations }
     vorder, SelectedFont, vjns, vbrg : String;
@@ -577,6 +622,12 @@ begin
   wwDBLookupComboDlg3.Text:='';
   Label18.Caption:='';
 
+  //new
+  QMasterISAKTIF.AsString:='0';
+  QMasterKD_KONSTRUKSI.AsString:='000';
+  QMasterNO_LOT.AsString:='NULL';
+  QMasterOPR_INSERT.AsString:=DMFrm.QTimeVUSER.AsString;
+  QMasterTGL_INSERT.AsDateTime:=DMFrm.QTimeJAM.AsDateTime;
 end;
 
 procedure TOrganisasiItemLOTFrm.wwDBLookupComboDlg1Enter(Sender: TObject);
@@ -713,49 +764,41 @@ begin
       vnomer:=StrToInt(vkode)+1;
       vkode:=FormatFloat('000',vnomer);
     end
-    else
-      vkode:='001';
-   // QMasterKD_LOT.AsString:=QMasterKD_KONSTRUKSI.AsString+
-    //  QMasterKD_CORAK.AsString;//+QMerkKD_KEMASAN.rAsString+
-      //QMasterKD_SATUAN.AsString+vkode;
-      //QMasterNO_LOT.Post;
-      QCekItem.Close;
-QCekItem.SetVariable('item', QMasterTHN.AsString+QMasterUNIT.AsString+
-      QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString+QMasterNO_LOT.AsString
-      +QMasterKD_KEMASAN.AsString);
-QCekItem.Open;
-//ShowMessage(QMasterTHN.AsString+QMasterUNIT.AsString+
-  //    QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString);
-if QCekItem.RecordCount>0 then
-  begin
-    ShowMessage('item sudah ada cuy!!!');
-    Abort;
-  end
-  ELSE
-  IF QMasterNO_LOT.AsString='NULL' THEN
-  BEGIN
-    if QMasterKD_KEMASAN.AsString='NULL' then
+    else vkode:='001';
+
+    QCekItem.Close;
+    //QCekItem.SetVariable('item', QMasterTHN.AsString+QMasterUNIT.AsString+QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString+QMasterNO_LOT.AsString+QMasterKD_KEMASAN.AsString);
+    QCekItem.SetVariable('item', LTahunUnit.Caption+'/'+LNe.Caption+'/'+wwDBEdit7.Text);
+    QCekItem.Open;
+    if QCekItem.RecordCount>0 then
+    begin
+      ShowMessage('item sudah ada cuy!!!');
+      Abort;
+    end
+    ELSE IF QMasterNO_LOT.AsString='NULL' THEN
+    BEGIN
+      if QMasterKD_KEMASAN.AsString='NULL' then
       begin
-      QMasterKD_ITEM.AsString:=QMasterTHN.AsString+QMasterUNIT.AsString+
-      QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString
-      {QMasterNO_LOT.AsString+' '+};
-      QMasterKD_LOT.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
+        //QMasterKD_ITEM.AsString:=QMasterTHN.AsString+QMasterUNIT.AsString+QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString;
+        //QMasterKD_ITEM.AsString:=QMasterTHN.AsString+'/'+QMasterUNIT.AsString+'/'+LNe.Caption+'/'+QMasterLOT_NUMBER.AsString;
+        QMasterKD_ITEM.AsString:=LTahunUnit.Caption+'/'+LNe.Caption+'/'+wwDBEdit7.Text;
+        QMasterKD_LOT.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
       end
       else
       begin
-      QMasterKD_ITEM.AsString:=QMasterTHN.AsString+QMasterUNIT.AsString+
-      QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString+' '+
-      {QMasterNO_LOT.AsString+' '+}QMasterKD_KEMASAN.AsString;
-      QMasterKD_LOT.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
+        //QMasterKD_ITEM.AsString:=QMasterTHN.AsString+QMasterUNIT.AsString+QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString+' '+QMasterKD_KEMASAN.AsString;
+        //QMasterKD_ITEM.AsString:=QMasterTHN.AsString+'/'+QMasterUNIT.AsString+'/'+LNe.Caption+'/'+QMasterLOT_NUMBER.AsString;
+        QMasterKD_ITEM.AsString:=LTahunUnit.Caption+'/'+LNe.Caption+'/'+wwDBEdit7.Text;
+        QMasterKD_LOT.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
       end
-  END
-  ELSE
-  BEGIN
-      QMasterKD_ITEM.AsString:=QMasterTHN.AsString+QMasterUNIT.AsString+
-      QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString+' '+
-      QMasterNO_LOT.AsString+' '+QMasterKD_KEMASAN.AsString;
+    END
+    ELSE
+    BEGIN
+      //QMasterKD_ITEM.AsString:=QMasterTHN.AsString+QMasterUNIT.AsString+QMasterKD_KEL.AsString+LMerk.Caption+QMasterLOT_NUMBER.AsString+' '+QMasterNO_LOT.AsString+' '+QMasterKD_KEMASAN.AsString;
+      //QMasterKD_ITEM.AsString:=QMasterTHN.AsString+'/'+QMasterUNIT.AsString+'/'+LNe.Caption+'/'+QMasterLOT_NUMBER.AsString;
+      QMasterKD_ITEM.AsString:=LTahunUnit.Caption+'/'+LNe.Caption+'/'+wwDBEdit7.Text;
       QMasterKD_LOT.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
-  END;
+    END;
   end;
 end;
 
@@ -783,7 +826,8 @@ end;
 
 procedure TOrganisasiItemLOTFrm.wwDBGrid2DblClick(Sender: TObject);
 begin
-  TabSheet1.Show;
+//  TabSheet1.Show;
+  TabSheet5.Show;
 end;
 
 procedure TOrganisasiItemLOTFrm.Label5Click(Sender: TObject);
@@ -874,6 +918,61 @@ QLot.Open;
     [dgAlwaysShowSelection];
   wwDBLookupComboDlg5.DropDown;
   
+end;
+
+procedure TOrganisasiItemLOTFrm.wwDBLookupComboDlg7CloseUp(Sender: TObject;
+  LookupTable, FillTable: TDataSet; modified: Boolean);
+begin
+  if modified then
+  begin
+    QMasterKD_SATUAN.AsString:='7';
+    QMasterUNIT.AsString:=QThn_unitUNIT.AsString;
+    LTahunUnit.Caption:=QThn_unitTHN.AsString+'/'+QThn_unitUNIT.AsString;
+  end;
+end;
+
+procedure TOrganisasiItemLOTFrm.wwDBLookupComboDlg9CloseUp(Sender: TObject;
+  LookupTable, FillTable: TDataSet; modified: Boolean);
+begin
+  if modified then
+  begin
+    QMasterKD_KEL.AsString:=QSubKelompokKD_KEL.AsString;
+    LNe.Caption:=QSubKelompokNAMA_CORAK.AsString;
+  end;
+end;
+
+procedure TOrganisasiItemLOTFrm.QMasterBeforePost(DataSet: TDataSet);
+var vkemas : String;
+begin
+  //if QMasterKD_KEMASAN.AsString<>'' then vkemas:=' '+QMasterKD_KEMASAN.AsString else vkemas:='';
+  if QMasterISAKTIF.AsString='1' then
+  begin
+    {QMasterNAMA_ITEM.AsString:=LTahunUnit.Caption+'/'+LNe.Caption+'/'+QMasterLOT_NUMBER.AsString;
+    QMasterDISKRIPSI.AsString:=LTahunUnit.Caption+'/'+LNe.Caption+'/'+QMasterLOT_NUMBER.AsString; }
+    QMasterNAMA_ITEM.AsString:=LTahunUnit.Caption+'/'+LNe.Caption+'/'+wwDBEdit7.Text;
+    QMasterDISKRIPSI.AsString:=LTahunUnit.Caption+'/'+LNe.Caption+'/'+wwDBEdit7.Text;
+  end;
+end;
+
+procedure TOrganisasiItemLOTFrm.TabSheet5Show(Sender: TObject);
+begin
+  if (QBrowseKD_ITEM.AsString<>'') then
+  begin
+      LTahunUnit.Caption:=QBrowseTHN.AsString+'/'+QBrowseUNIT.AsString;;
+      LNe.Caption:=QBrowseNAMA_CORAK.AsString;
+  end;
+  QKelompok.Open;
+  QThn_unit.Open;
+  QSubKelompok.Open;
+  QMaster.Close;
+  QMaster.DeclareVariable('kd_lot',otString);
+  QMaster.SQL.Text:='select trim(a.kd_item) as kd_item,a.kd_satuan,a.kd_parent,a.nama_item,a.diskripsi,a.isfixed,'+
+  'a.lead_time,a.min_stok,a.kd_lama,a.kd_konstruksi,a.kd_corak,a.kd_warna,a.rasio,a.hrg_pokok,a.hrg_jual,a.margin,'+
+  'a.kd_kemasan,a.tgl_insert,a.opr_insert,a.jns_customer,a.isaktif,a.no_lot,a.kd_lot,a.thn,a.unit,a.lot_number,'+
+  'a.kd_kel, a.rowid from '+cUserTabel+'no_lot a'+
+   ' where a.kd_ITEM=:kd_LOT';
+  QMaster.SetVariable('kd_lot', QBrowseKD_ITEM.AsString);
+  QMaster.Open;
 end;
 
 end.
