@@ -3038,7 +3038,7 @@ object PindahLokasi2Frm: TPindahLokasi2Frm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 147
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\TransaksiOrgBukti.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

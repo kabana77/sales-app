@@ -1,5 +1,5 @@
 object NotaFrm: TNotaFrm
-  Left = 292
+  Left = 296
   Top = 120
   Width = 1270
   Height = 687
@@ -82,7 +82,7 @@ object NotaFrm: TNotaFrm
       Top = 76
       Width = 904
       Height = 559
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -236,23 +236,6 @@ object NotaFrm: TNotaFrm
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clOlive
             Font.Height = -12
-            Font.Name = 'MS Sans Serif'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
-          object LBarcode: TDBText
-            Left = 798
-            Top = 0
-            Width = 90
-            Height = 24
-            Alignment = taRightJustify
-            Anchors = [akTop, akRight, akBottom]
-            AutoSize = True
-            DataField = 'NO_NOTA'
-            DataSource = dsQMaster
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -19
             Font.Name = 'MS Sans Serif'
             Font.Style = [fsBold]
             ParentFont = False
@@ -486,6 +469,19 @@ object NotaFrm: TNotaFrm
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clOlive
             Font.Height = -12
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object LSuplier: TLabel
+            Left = 608
+            Top = 0
+            Width = 67
+            Height = 20
+            Caption = 'LSuplier'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlue
+            Font.Height = -16
             Font.Name = 'MS Sans Serif'
             Font.Style = [fsBold]
             ParentFont = False
@@ -2689,7 +2685,7 @@ object NotaFrm: TNotaFrm
         object Label49: TLabel
           Left = 0
           Top = 0
-          Width = 3
+          Width = 896
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -3034,7 +3030,7 @@ object NotaFrm: TNotaFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              66.145833333333330000
+              66.145833333333340000
               2910.416666666667000000)
             BandType = rbDetail
             object QRDBText1: TQRDBText
@@ -3051,7 +3047,7 @@ object NotaFrm: TNotaFrm
                 44.979166666666670000
                 15.875000000000000000
                 10.583333333333330000
-                66.145833333333330000)
+                66.145833333333320000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -3101,7 +3097,7 @@ object NotaFrm: TNotaFrm
               Frame.DrawRight = False
               Size.Values = (
                 44.979166666666670000
-                957.791666666666700000
+                957.791666666666800000
                 10.583333333333330000
                 55.562500000000000000)
               Alignment = taLeftJustify
@@ -3405,7 +3401,7 @@ object NotaFrm: TNotaFrm
                 44.979166666666670000
                 1576.916666666667000000
                 10.583333333333330000
-                97.895833333333330000)
+                97.895833333333320000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -3498,7 +3494,7 @@ object NotaFrm: TNotaFrm
                 44.979166666666670000
                 2323.041666666667000000
                 31.750000000000000000
-                74.083333333333330000)
+                74.083333333333320000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -4708,8 +4704,8 @@ object NotaFrm: TNotaFrm
     DataSource = dsQBrowseDetail
     OpenDataSource = False
     UserName = 'DBQBrowseDetail'
-    Left = 752
-    Top = 88
+    Left = 736
+    Top = 144
   end
   object ppDesigner1: TppDesigner
     AllowDataSettingsChange = True
@@ -4728,7 +4724,7 @@ object NotaFrm: TNotaFrm
     WindowTop = 50
     WindowWidth = 600
     Left = 696
-    Top = 64
+    Top = 144
   end
   object QBrowseDetail: TOracleDataSet
     SQL.Strings = (
@@ -4879,7 +4875,7 @@ object NotaFrm: TNotaFrm
       0300000001000000090000003A504E4F5F4E4F5441050000000F000000393835
       2D303730332D30303030310000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000036000000070000004E4F5F4E4F54410100000000000C0000004B445F
+      0400000041000000070000004E4F5F4E4F54410100000000000C0000004B445F
       5452414E53414B53490100000000000A0000004B445F52454B414E414E010000
       0000000300000054474C0100000000000A0000004B45544552414E47414E0100
       000000000A00000054474C5F494E534552540100000000000A0000004F50525F
@@ -4909,8 +4905,14 @@ object NotaFrm: TNotaFrm
       4F53454E544153450100000000000B00000044455354494E4152494F4E010000
       0000000800000044454C495641524901000000000009000000434F4D4D495349
       4F4E010000000000050000004953504A4B0100000000000B0000004B45544552
-      414E47414E32010000000000}
+      414E47414E32010000000000040000004147454E01000000000004000000504F
+      5254010000000000060000004C4F44494E4701000000000005000000425F5045
+      4C0100000000000700000045585F434F53540100000000000300000043494601
+      000000000009000000494E535552414E4345010000000000070000004B445F54
+      52554B01000000000008000000545255434B494E470100000000000400000050
+      524F53010000000000090000004E4F5F42554B544932010000000000}
     Session = DMFrm.OS
+    AfterOpen = QMasterAfterOpen
     BeforeInsert = QMasterBeforeInsert
     BeforeEdit = QMasterBeforeDelete
     BeforePost = QMasterBeforePost
@@ -5147,6 +5149,9 @@ object NotaFrm: TNotaFrm
     object QMasterPROSENTASE: TFloatField
       FieldName = 'PROSENTASE'
       DisplayFormat = '#,##0.00;(#,##0.00)'
+    end
+    object QMasterAGEN: TFloatField
+      FieldName = 'AGEN'
     end
   end
   object dsQMaster: TwwDataSource
@@ -7300,6 +7305,26 @@ object NotaFrm: TNotaFrm
         mmLeft = 2910
         mmTop = 23813
         mmWidth = 142346
+        BandType = 1
+      end
+      object ppLabel119: TppLabel
+        UserName = 'Label119'
+        Anchors = [atTop]
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'PERUSAHAAN'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 5027
+        mmLeft = 3704
+        mmTop = 4233
+        mmWidth = 28840
         BandType = 1
       end
     end
@@ -9939,8 +9964,8 @@ object NotaFrm: TNotaFrm
     OutlineSettings.Visible = False
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
-    Left = 856
-    Top = 80
+    Left = 784
+    Top = 144
     Version = '10.06'
     mmColumnWidth = 197300
     DataPipelineName = 'ppDBQBrowseDetail'

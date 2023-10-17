@@ -113,7 +113,6 @@ type
     QDetailSUB_TOTAL: TCurrencyField;
     Label14: TLabel;
     wwDBSpinLine1: TwwDBSpinEdit;
-    LBarcode: TDBText;
     EditCari: TEdit;
     Label15: TLabel;
     QTotalInput: TOracleDataSet;
@@ -1216,6 +1215,9 @@ type
     ppLabel117: TppLabel;
     ppLabel118: TppLabel;
     CheckBox7: TCheckBox;
+    ppLabel119: TppLabel;
+    QMasterAGEN: TFloatField;
+    LSuplier: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -1346,6 +1348,7 @@ type
     procedure BitBtn15Click(Sender: TObject);
     procedure wwDBSpinEdit4Change(Sender: TObject);
     procedure Label55Click(Sender: TObject);
+    procedure QMasterAfterOpen(DataSet: TDataSet);
   private
     { Private declarations }
     vfilter,vorder, SelectedFont, vkode, vitem, vjenis, vjenis1, vjenis2, vcaption, vcaption2: String;
@@ -1445,7 +1448,7 @@ begin
      DMFrm.BType := 'C128';
      DMFrm.FontToUse.Size := 12;
      DMFrm.FontToUse.Name := SelectedFont;
-     LBarcode.Font := DMFrm.FontToUse;
+//     LBarcode.Font := DMFrm.FontToUse;
 //     QRBarcode11.Font := LoginFrm.FontToUse;
      DMFrm.BType := DMFrm.BType + '-';
      DMFrm.BType := DMFrm.BType + DMFrm.Format;
@@ -1953,6 +1956,7 @@ end;
 
 procedure TNotaFrm.TabSheet1Show(Sender: TObject);
 begin
+  
   if (EditCari.Text='') and (QBrowseNO_NOTA.AsString<>'') then
       EditCari.Text:=QBrowseNO_NOTA.AsString;
 
@@ -2491,7 +2495,6 @@ end;
 
 procedure TNotaFrm.BtnPrintInputClick(Sender: TObject);
 begin
-
   if (CheckBox7.Checked) then
   begin
     ppLabel115.Visible:=True;
@@ -2516,10 +2519,26 @@ begin
   end
   else
   begin
-    ppDBText15.Visible:=True;
+
+    if QMasterAGEN.AsFloat=1 then
+    begin
+      ppdbtext15.Visible:=False;
+      ppLabel119.Caption:='PT WASTRA KARYA NUSANTARA';
+      ppLabel114.Visible:=False;
+    end
+    else
+    begin
+      ppLabel119.Caption:='';
+      ppDBText15.Visible:=True;
+      ppDBText16.Visible:=True;
+      ppDBText17.Visible:=True;
+      ppLabel114.Visible:=True;
+    end;
+
+    {ppDBText15.Visible:=True;
     ppDBText16.Visible:=True;
     ppDBText17.Visible:=True;
-    ppLabel114.Visible:=True;
+    ppLabel114.Visible:=True;}
   end;
 
   {ball unit}
@@ -3171,31 +3190,32 @@ end;
 
 procedure TNotaFrm.QMasterAfterPost(DataSet: TDataSet);
 begin
+  if QMasterAGEN.AsFloat=1 then LSuplier.Caption:='PT. WASTRA KARYA NUSANTARA' else LSuplier.Caption:='PT. KABANA TEXTILE';
   PageControl1.Pages[1].TabVisible:=QMaster.IsEmpty or (QMasterISPOST.AsString='1');
   PageControl1.Pages[2].TabVisible:=QMaster.IsEmpty or (QMasterISPOST.AsString='1');
-if QMasterDISKON.AsFloat>0 then
-begin
-  if QMasterMU.AsString='USD' then //wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
+  if QMasterDISKON.AsFloat>0 then
   begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  QTotalInput.Close;
+    if QMasterMU.AsString='USD' then //wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
+    begin
+      vdiskon:=0;
+      vdpp:=0;
+      vppn:=0;
+      vakhir:=0;
+      vsub_total:=0;
+      QTotalInput.Close;
 
-  QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
+      QTotalInput.SQL.Text:='select sum(qty7) as qty, sum(qty6) as kg, sum(((hrg2_kg+(freight+commission+insurance)+subtotal))*(1-disc/100)*(qty11)) as sub_total from '+cUserTabel+'bukti_detail a'+
+      ' where a.ibukti=:pibukti';
 
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
-	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
-	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
-	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
-  if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
-  vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
-  if QMasterINC_PPN.AsString<>'' then
+    QTotalInput.DeclareVariable('pibukti',otInteger);
+    QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+    QTotalInput.Open;
+  	wwDBGrid1.ColumnByName('KETERANGAN').FooterValue:='Total = '+FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('KG').AsFloat)+' Kg';
+  	wwDBGrid1.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('QTY').AsFloat);
+  	wwDBGrid1.ColumnByName('SUB_TOTAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##)',QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat);
+    if QTotalInput.FieldByName('SUB_TOTAL').AsString<>'' then vsub_total:=QTotalInput.FieldByName('SUB_TOTAL').AsFloat-QMasterUM.AsFloat;
+      vdiskon:=(qMASTER.FieldByName('DISKON').AsFloat);
+    if QMasterINC_PPN.AsString<>'' then
     case QMasterINC_PPN.AsInteger of
       0 : begin
         vdpp:=vsub_total-vdiskon;
@@ -4718,6 +4738,11 @@ begin
     wwDBGrid10.Font.Color:=DMFrm.FontDialog1.Font.Color;
     wwDBGrid10.Font.Style:=DMFrm.FontDialog1.Font.Style;
   end;
+end;
+
+procedure TNotaFrm.QMasterAfterOpen(DataSet: TDataSet);
+begin
+  if QMasterAGEN.AsFloat=1 then LSuplier.Caption:='PT. WASTRA KARYA NUSANTARA' else LSuplier.Caption:='PT. KABANA TEXTILE';
 end;
 
 end.

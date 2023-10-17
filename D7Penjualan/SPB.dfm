@@ -1,6 +1,6 @@
 object SPBFrm: TSPBFrm
-  Left = 272
-  Top = 62
+  Left = 269
+  Top = 186
   Width = 1497
   Height = 872
   Caption = 'PO Non Bahan Baku'
@@ -350,11 +350,24 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label6: TLabel
-              Left = 6
+              Left = 206
               Top = 3
               Width = 71
               Height = 13
               Caption = 'Packing List'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clOlive
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label42: TLabel
+              Left = 6
+              Top = 3
+              Width = 49
+              Height = 13
+              Caption = 'Pengirim'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clOlive
               Font.Height = -11
@@ -635,7 +648,7 @@ object SPBFrm: TSPBFrm
               WordWrap = False
             end
             object wwDBLookupComboDlg2: TwwDBLookupComboDlg
-              Left = 6
+              Left = 206
               Top = 20
               Width = 121
               Height = 19
@@ -667,6 +680,26 @@ object SPBFrm: TSPBFrm
               AllowClearKey = False
               OnCloseUp = wwDBLookupComboDlg2CloseUp
               OnEnter = wwDBLookupComboDlg2Enter
+            end
+            object wwDBComboBox3: TwwDBComboBox
+              Left = 6
+              Top = 19
+              Width = 177
+              Height = 21
+              ShowButton = True
+              Style = csDropDown
+              MapList = True
+              AllowClearKey = False
+              DataField = 'NSUPLIER'
+              DataSource = dsQMaster
+              DropDownCount = 8
+              ItemHeight = 0
+              Items.Strings = (
+                'PT. KABANATEX'#9'0'
+                'PT. WASTRA KARYA'#9'1')
+              Sorted = False
+              TabOrder = 14
+              UnboundDataType = wwDefault
             end
           end
           object PanelDetail: TPanel
@@ -962,7 +995,7 @@ object SPBFrm: TSPBFrm
               TabOrder = 5
             end
             object RGFormat: TRadioGroup
-              Left = 775
+              Left = 1055
               Top = 0
               Width = 177
               Height = 68
@@ -972,12 +1005,13 @@ object SPBFrm: TSPBFrm
               Items.Strings = (
                 'Normal'
                 'Tanpa Kop'
-                'Kop PPT')
+                'Kop PT. Wastra')
               TabOrder = 6
+              Visible = False
             end
             object BtnPrintInput: TBitBtn
-              Left = 868
-              Top = 27
+              Left = 879
+              Top = 28
               Width = 71
               Height = 25
               Anchors = [akTop, akRight]
@@ -2334,7 +2368,7 @@ object SPBFrm: TSPBFrm
                     Frame.DrawRight = False
                     Size.Values = (
                       50.270833333333330000
-                      806.979166666666700000
+                      806.979166666666600000
                       2.645833333333333000
                       280.458333333333300000)
                     Alignment = taCenter
@@ -2369,7 +2403,7 @@ object SPBFrm: TSPBFrm
                   ForceNewColumn = False
                   ForceNewPage = False
                   Size.Values = (
-                    66.145833333333330000
+                    66.145833333333340000
                     1897.062500000000000000)
                   BandType = rbColumnHeader
                   object QRLabel6: TQRLabel
@@ -4276,8 +4310,8 @@ object SPBFrm: TSPBFrm
         object wwDBGrid2: TwwDBGrid
           Left = 0
           Top = 0
-          Width = 1472
-          Height = 479
+          Width = 1473
+          Height = 602
           Selected.Strings = (
             'NO_NOTA'#9'14'#9'NO. NOTA'#9'F'
             'TANGGAL'#9'11'#9'TANGGAL'#9'F'
@@ -4303,7 +4337,8 @@ object SPBFrm: TSPBFrm
             'COUNTRY'#9'20'#9'NEGARA'#9'F'#9'DESTINASI'
             'PORT'#9'15'#9'PORT'#9'F'#9'DESTINASI'
             'JML_KEMASAN'#9'10'#9'QTY'#9'F'#9'KEMASAN'
-            'JNS_KEMASAN'#9'10'#9'JENIS'#9'F'#9'KEMASAN')
+            'JNS_KEMASAN'#9'10'#9'JENIS'#9'F'#9'KEMASAN'
+            'SUPLIER'#9'29'#9'SUPLIER'#9'F')
           IniAttributes.Enabled = True
           IniAttributes.Delimiter = ';;'
           IniAttributes.CheckNewFields = True
@@ -5144,7 +5179,7 @@ object SPBFrm: TSPBFrm
     SQL.Strings = (
       'select * from ipisma_db2.vspbfrm')
     QBEDefinition.QBEFieldDefs = {
-      040000001A000000070000004E4F5F4E4F54410100000000000700000054414E
+      040000001B000000070000004E4F5F4E4F54410100000000000700000054414E
       4747414C010000000000060000005354415455530100000000000C0000004B44
       5F5452414E53414B53490100000000000900000054474C5F4B4952494D010000
       000000040000004B4F44450100000000000C0000004E414D415F52454B414E41
@@ -5159,7 +5194,7 @@ object SPBFrm: TSPBFrm
       52010000000000090000004B454E44415241414E01000000000004000000504F
       525401000000000007000000434F554E5452590100000000000B0000004A4D4C
       5F4B454D4153414E0100000000000B0000004A4E535F4B454D4153414E010000
-      000000}
+      000000070000005355504C494552010000000000}
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
@@ -5275,6 +5310,10 @@ object SPBFrm: TSPBFrm
     object QBrowseJNS_KEMASAN: TStringField
       FieldName = 'JNS_KEMASAN'
       Size = 10
+    end
+    object QBrowseSUPLIER: TStringField
+      FieldName = 'SUPLIER'
+      Size = 29
     end
   end
   object dsQBrowse: TwwDataSource
@@ -6495,7 +6534,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -7133,7 +7172,7 @@ object SPBFrm: TSPBFrm
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
-        Caption = 'PT. PISMAPUTRA TEXTILE INDUSTRY'
+        Caption = 'PT WASTRA KARYA NUSANTARA'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -7141,10 +7180,10 @@ object SPBFrm: TSPBFrm
         Font.Style = [fsBold]
         Transparent = True
         Visible = False
-        mmHeight = 5165
+        mmHeight = 4953
         mmLeft = 3440
         mmTop = 794
-        mmWidth = 77047
+        mmWidth = 66675
         BandType = 1
       end
     end
@@ -7246,7 +7285,7 @@ object SPBFrm: TSPBFrm
         Font.Style = [fsBold]
         Transparent = True
         mmHeight = 4233
-        mmLeft = 65617
+        mmLeft = 85196
         mmTop = 265
         mmWidth = 17463
         BandType = 0
@@ -7389,7 +7428,7 @@ object SPBFrm: TSPBFrm
         mmHeight = 4233
         mmLeft = 11377
         mmTop = 265
-        mmWidth = 52123
+        mmWidth = 72231
         BandType = 4
         mmBottomOffset = 0
         mmOverFlowOffset = 0
@@ -7504,9 +7543,9 @@ object SPBFrm: TSPBFrm
         Transparent = True
         DataPipelineName = 'ppDBQDetail'
         mmHeight = 4233
-        mmLeft = 64823
+        mmLeft = 84931
         mmTop = 265
-        mmWidth = 50271
+        mmWidth = 30163
         BandType = 4
         mmBottomOffset = 0
         mmOverFlowOffset = 0
@@ -7663,7 +7702,7 @@ object SPBFrm: TSPBFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4784
+        mmHeight = 4826
         mmLeft = 119983
         mmTop = 1058
         mmWidth = 17653
@@ -8106,10 +8145,10 @@ object SPBFrm: TSPBFrm
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppDBPipeline3'
-        mmHeight = 4784
-        mmLeft = 117570
+        mmHeight = 4826
+        mmLeft = 117528
         mmTop = 1058
-        mmWidth = 19643
+        mmWidth = 19685
         BandType = 7
       end
     end
@@ -9220,7 +9259,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -11319,7 +11358,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -13370,7 +13409,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -17498,7 +17537,7 @@ object SPBFrm: TSPBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 140053
     PrinterSetup.mmPaperWidth = 209974
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 120
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\OM2.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -18397,8 +18436,8 @@ object SPBFrm: TSPBFrm
     DataSource = dsqMasterPL
     OpenDataSource = False
     UserName = 'DBQMaster1'
-    Left = 1328
-    Top = 640
+    Left = 1320
+    Top = 608
     object ppDBMasterPackingListppField1: TppField
       FieldAlias = 'NO_REG'
       FieldName = 'NO_REG'

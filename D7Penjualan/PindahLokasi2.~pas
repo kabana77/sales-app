@@ -917,193 +917,184 @@ end;
 procedure TPindahLokasi2Frm.QMasterBeforePost(DataSet: TDataSet);
 begin
   if QMasterTGL.AsString='' then
-     begin
-        ShowMessage('TANGGAL harus diisi !');
-        Abort;
-     end;
+  begin
+    ShowMessage('TANGGAL harus diisi !');
+    Abort;
+  end;
   if wwDBComboBox2.Text='JUAL' THEN
-    BEGIN
-      QCekPPN.Close;
-      QCekPPN.SetVariable('no_nota', QMasterNO_BUKTI.AsString);
-      QCekPPN.Open;
-      QMasterISPJK.AsString:=QCekPPNISPJK.AsString;
-    // if QMasterTGL_KIRIM.AsString='' then
+  BEGIN
+   QCekPPN.Close;
+   QCekPPN.SetVariable('no_nota', QMasterNO_BUKTI.AsString);
+   QCekPPN.Open;
+   QMasterISPJK.AsString:=QCekPPNISPJK.AsString;
+   // if QMasterTGL_KIRIM.AsString='' then
    //   Begin
-      QBukti.Close ;
-      QBukti.SetVariable('nota', QMasterNO_BUKTI.AsString);
-      QBukti.Open   ;
-      QMasterTGL_KIRIM.AsDateTime:=QBuktiTGL_KIRIM.AsDateTime;
-      QMasterLOT.AsString:=QBuktiNO_BUKTI.AsString;
-      QMasterTGL_JTH_TEMPO.AsDateTime:=QBuktiTGL.AsDateTime;
-      QMasterKD_REKANAN.AsString:=QBuktiKD_REKANAN.AsString;
-    //  end;
-    END;
+   QBukti.Close ;
+   QBukti.SetVariable('nota', QMasterNO_BUKTI.AsString);
+   QBukti.Open   ;
+   QMasterTGL_KIRIM.AsDateTime:=QBuktiTGL_KIRIM.AsDateTime;
+   QMasterLOT.AsString:=QBuktiNO_BUKTI.AsString;
+   QMasterTGL_JTH_TEMPO.AsDateTime:=QBuktiTGL.AsDateTime;
+   QMasterKD_REKANAN.AsString:=QBuktiKD_REKANAN.AsString;
+   //  end;
+  END;
 
-if QSOMU.AsString='USD' then //wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
+  if QSOMU.AsString='USD' then //wwDBComboBox4.Text='KG' then //QMasterLOT.AsString='KG' then
   begin
-  //vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
+    vdpp:=0;
+    vppn:=0;
+    vakhir:=0;
+    vsub_total:=0;
 
-  QTotalInput.Close;
-  QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, sum(((hrg2))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
+    QTotalInput.Close;
+    QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, sum(((hrg2))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
     ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
-
-
-
+    QTotalInput.DeclareVariable('pibukti',otInteger);
+    QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+    QTotalInput.Open;
     vsub_total:=QTotalInputSUB_TOTAL.AsFloat;
 
- if QSOPPN.AsString = '-' then
-  begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
- if QSOPPN.AsString = 'INC' then
-  begin
-        vdpp:=vsub_total/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon-vpot)+vppn;
-      end;
- if QSOPPN.AsString = 'EXC' then
-  begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-  end;
-//  end;
-  //QMasterPROSENTASE.AsFloat:=vpot;
+    if QSOPPN.AsString = '-' then
+    begin
+      vdpp:=vsub_total-vdiskon-vpot;
+      vppn:=0;
+      vakhir:=vdpp;   // -vdiskon
+    end;
+    if QSOPPN.AsString = 'INC' then
+    begin
+      vdpp:=vsub_total/1.1;
+      vppn:=vsub_total-vdpp-vdiskon-vpot;
+      vakhir:=(vdpp-vdiskon-vpot)+vppn;
+    end;
+    if QSOPPN.AsString = 'EXC' then
+    begin
+      vdpp:=vsub_total-vdiskon-vpot;
+      vppn:=vdpp*0.1-vdiskon-vpot;
+      vakhir:=vdpp+vppn; //-vdiskon
+    end;
   end
-else
-if (QSOMU.AsString='IDR') and (QSOKODE.AsString='100037') then //wwDBComboBox4.Text='BALE' then
+  else
+  if (QSOMU.AsString='IDR') and (QSOKODE.AsString='100037') then //wwDBComboBox4.Text='BALE' then
   begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-
-  QTotalInput.Close;
-  QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, sum(((hrg2))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
+    vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+    QTotalInput.Close;
+    QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, sum(((hrg2))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
     ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+    QTotalInput.DeclareVariable('pibukti',otInteger);
+    QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
 
     vsub_total:=QTotalInputSUB_TOTAL.AsFloat;
 
- if QSOPPN.AsString = '-' then
-  begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=0;
-        vakhir:=vdpp;   // -vdiskon
-      end;
- if QSOPPN.AsString = 'INC' then
-  begin
-        vdpp:=vsub_total/1.1;
-        vppn:=vsub_total-vdpp-vdiskon-vpot;
-        vakhir:=(vdpp-vdiskon-vpot)+vppn;
-      end;
- if QSOPPN.AsString = 'EXC' then
-  begin
-        vdpp:=vsub_total-vdiskon-vpot;
-        vppn:=vdpp*0.1-vdiskon-vpot;
-        vakhir:=vdpp+vppn; //-vdiskon
-  end;
-
-end
+    if QSOPPN.AsString = '-' then
+    begin
+      vdpp:=vsub_total-vdiskon-vpot;
+      vppn:=0;
+      vakhir:=vdpp;   // -vdiskon
+    end;
+    if QSOPPN.AsString = 'INC' then
+    begin
+      vdpp:=vsub_total/1.1;
+      vppn:=vsub_total-vdpp-vdiskon-vpot;
+      vakhir:=(vdpp-vdiskon-vpot)+vppn;
+    end;
+    if QSOPPN.AsString = 'EXC' then
+    begin
+      vdpp:=vsub_total-vdiskon-vpot;
+      vppn:=vdpp*0.1-vdiskon-vpot;
+      vakhir:=vdpp+vppn; //-vdiskon
+    end;
+  end
   ELSE
-if QSOMU.AsString='IDR' then //wwDBComboBox4.Text='BALE' then
-begin
-//ShowMessage('tekan lho');
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-  //ShowMessage('tekan bale');
-  QTotalInput.Close;
-  QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, nvl(sum(((hrg))*(1-disc/100)*(qty3)),0) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-  QTotalInput.Open;
-
-//ShowMessage(QTotalInputSUB_TOTAL.AsString);
-//ShowMessage(QMasterSISA_KREDIT.AsString);
-
-    vsub_total:=QTotalInputSUB_TOTAL.AsFloat;
- if QSOPPN.AsString = '-' then
-  begin
+    if QSOMU.AsString='IDR' then //wwDBComboBox4.Text='BALE' then
+    begin
+      //ShowMessage('tekan lho');
+      vdiskon:=0; vdpp:=0; vppn:=0; vakhir:=0; vsub_total:=0; vpot:=0;
+      //ShowMessage('tekan bale');
+      QTotalInput.Close;
+      QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, nvl(sum(((hrg))*(1-disc/100)*(qty3)),0) as sub_total from '+cUserTabel+'bukti_detail a'+
+      ' where a.ibukti=:pibukti';
+      QTotalInput.DeclareVariable('pibukti',otInteger);
+      QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+      QTotalInput.Open;
+      vsub_total:=QTotalInputSUB_TOTAL.AsFloat;
+      if QSOPPN.AsString = '-' then
+      begin
         vdpp:=vsub_total-vdiskon-vpot;
         vppn:=0;
         vakhir:=vdpp;   // -vdiskon
       end;
- if QSOPPN.AsString = 'INC' then
-  begin
+      if QSOPPN.AsString = 'INC' then
+      begin
         vdpp:=vsub_total/1.1;
         vppn:=vsub_total-vdpp-vdiskon-vpot;
         vakhir:=(vdpp-vdiskon-vpot)+vppn;
       end;
- if QSOPPN.AsString = 'EXC' then
-  begin
+      if QSOPPN.AsString = 'EXC' then
+      begin
         vdpp:=vsub_total-vdiskon-vpot;
         vppn:=vdpp*0.1-vdiskon-vpot;
         vakhir:=vdpp+vppn; //-vdiskon
-  end;
- // ShowMessage('tekan lho 2');
-
-end
-
-else
-begin
-  vdiskon:=0;
-  vdpp:=0;
-  vppn:=0;
-  vakhir:=0;
-  vsub_total:=0;
-  vpot:=0;
-  //ShowMessage('tekan terakhir');
-  QTotalInput.Close;
-  QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, sum(((hrg2))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
-    ' where a.ibukti=:pibukti';
-  QTotalInput.DeclareVariable('pibukti',otInteger);
-  QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
-//  ShowMessage(QTotalInput.SQL.Text);
-  QTotalInput.Open;
-
-    vsub_total:=QTotalInputSUB_TOTAL.AsFloat;
-
- if QSOPPN.AsString = '-' then
+      end;
+      // ShowMessage('tekan lho 2');
+    end
+  else
   begin
+    vdiskon:=0;
+    vdpp:=0;
+    vppn:=0;
+    vakhir:=0;
+    vsub_total:=0;
+    vpot:=0;
+    //ShowMessage('tekan terakhir');
+    QTotalInput.Close;
+    QTotalInput.SQL.Text:='select sum(qty3) as qty, sum(qty7) as kg, sum(((hrg2))*(1-disc/100)*(qty7)) as sub_total from '+cUserTabel+'bukti_detail a'+
+    ' where a.ibukti=:pibukti';
+    QTotalInput.DeclareVariable('pibukti',otInteger);
+    QTotalInput.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
+    //ShowMessage(QTotalInput.SQL.Text);
+    QTotalInput.Open;
+    vsub_total:=QTotalInputSUB_TOTAL.AsFloat;
+    if QSOPPN.AsString = '-' then
+    begin
         vdpp:=vsub_total-vdiskon-vpot;
         vppn:=0;
         vakhir:=vdpp;   // -vdiskon
-      end;
- if QSOPPN.AsString = 'INC' then
-  begin
+    end;
+    if QSOPPN.AsString = 'INC' then
+    begin
         vdpp:=vsub_total/1.1;
         vppn:=vsub_total-vdpp-vdiskon-vpot;
         vakhir:=(vdpp-vdiskon-vpot)+vppn;
-      end;
- if QSOPPN.AsString = 'EXC' then
-  begin
+    end;
+    if QSOPPN.AsString = 'EXC' then
+    begin
         vdpp:=vsub_total-vdiskon-vpot;
         vppn:=vdpp*0.1-vdiskon-vpot;
         vakhir:=vdpp+vppn; //-vdiskon
+    end;
   end;
-end;
 
-   { if  QSOPPN.AsString = '-' then
-    begin  }
-  {    if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
-        begin
+  QBatas_Kirim.Close;
+  QBatas_Kirim.SetVariable('kd_rekanan2', QMasterKD_REKANAN.AsInteger);
+  QBatas_Kirim.Open;
+
+  QMasternitip.AsFloat:=vakhir;
+
+  //ShowMessage(QMasternitip.AsString);
+  if  ((QSOPPN.AsString = 'INC') or (QSOPPN.AsString = 'EXC') or (QSOPPN.AsString = '-')) then
+  begin   //6
+    //ShowMessage(QMasterSISA_KREDIT.AsString);
+    if vakhir<=QBatas_KirimSISA_KIRIM.AsFloat then
+    begin  //4
+      if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
+      begin //3
+        if QMasterKD_REKANAN.AsString='' then
+        begin   //1
+            ShowMessage('CUSTOMER harus diisi !');
+            Abort;
+        end    //1
+        else
+        begin  //2
           DMFrm.FNoUrut.Close;
           DMFrm.FNoUrut.SetVariable(0,vkode);
           DMFrm.FNoUrut.SetVariable(1,'-');
@@ -1112,92 +1103,26 @@ end;
           DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
           DMFrm.FNoUrut.Open;
           QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-          //QMasterSUB_TOTAL.AsFloat:=vsub_total;
-          //QMasterDPP.AsFloat:=vdpp;
-          //QMasterPPN.AsFloat:=vppn;
-          //QMasterAKHIR.AsFloat:=vakhir;
-         // QMasterNhari.AsFloat:=0;
-        end;  }
-   // end;
-     //ELSE
-//begin       //7
-QBatas_Kirim.Close;
-QBatas_Kirim.SetVariable('kd_rekanan2', QMasterKD_REKANAN.AsInteger);
-QBatas_Kirim.Open;
-
-QMasternitip.AsFloat:=vakhir;
-{IF QMasterKD_REKANAN.AsInteger=100011 THEN
-  begin
-    if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
-    begin
-      DMFrm.FNoUrut.Close;
-      DMFrm.FNoUrut.SetVariable(0,vkode);
-      DMFrm.FNoUrut.SetVariable(1,'-');
-      DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
-      DMFrm.FNoUrut.SetVariable(3,'P');
-      DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
-      DMFrm.FNoUrut.Open;
-      QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-    end;
-  end
-else }
-
-//ShowMessage(QMasternitip.AsString);
-  if  ((QSOPPN.AsString = 'INC') or (QSOPPN.AsString = 'EXC') or (QSOPPN.AsString = '-')) then
-    begin   //6
-    //ShowMessage(QMasterSISA_KREDIT.AsString);
-    if vakhir<=QBatas_KirimSISA_KIRIM.AsFloat then
-      begin  //4
-      if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
-        begin //3
-        if QMasterKD_REKANAN.AsString='' then
-          begin   //1
-            ShowMessage('CUSTOMER harus diisi !');
-            Abort;
-          end    //1
-        else
-          begin  //2
-            DMFrm.FNoUrut.Close;
-            DMFrm.FNoUrut.SetVariable(0,vkode);
-            DMFrm.FNoUrut.SetVariable(1,'-');
-            DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
-            DMFrm.FNoUrut.SetVariable(3,'P');
-            DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
-            DMFrm.FNoUrut.Open;
-            QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-
-{     QMasterSUB_TOTAL.AsFloat:=vsub_total;
-     QMasterDPP.AsFloat:=vdpp;
-     QMasterPPN.AsFloat:=vppn;
-     QMasterAKHIR.AsFloat:=vakhir;  }
-          end;   //2
-        end;     //3
-     //QMasterSUB_TOTAL.AsFloat:=vsub_total;
-     //QMasterDPP.AsFloat:=vdpp;
-    // QMasterPPN.AsFloat:=vppn;
-    // QMasterAKHIR.AsFloat:=vakhir;
-     //QMasterPROSENTASE.AsFloat:=vpot;
-
-     end  //4
-  else
+        end;   //2
+      end;     //3
+    end  //4
+    else
     begin  //5
       ShowMessage('Maaf, melampaui BATAS KIRIM, hubungi Bag. Keuangan !');
       Abort;
     end;   //5
-     end;
-   if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
-   begin
-     DMFrm.FNoUrut.Close;
-     DMFrm.FNoUrut.SetVariable(0,vkode);
-     DMFrm.FNoUrut.SetVariable(1,'-');
-     DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
-     DMFrm.FNoUrut.SetVariable(3,'P');
-     DMFrm.FNoUrut.SetVariable(4,QMasterISPJK.AsString);
-     DMFrm.FNoUrut.Open;
-     QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-   end;
-
-
+  end;
+  if (Dataset.State=dsEdit) and (copy(QMasterNO_NOTA.AsString,1,1)='#') and (QMasterISPOST.AsString='1') then
+  begin
+    DMFrm.FNoUrut.Close;
+    DMFrm.FNoUrut.SetVariable(0,vkode);
+    DMFrm.FNoUrut.SetVariable(1,'-');
+    DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+    DMFrm.FNoUrut.SetVariable(3,'P');
+    DMFrm.FNoUrut.SetVariable(4,QMasterISPJK.AsString);
+    DMFrm.FNoUrut.Open;
+    QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
+  end;
 end;
 
 procedure TPindahLokasi2Frm.wwDBGrid1Enter(Sender: TObject);
