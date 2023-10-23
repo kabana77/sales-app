@@ -2972,7 +2972,7 @@ object NotaFrm: TNotaFrm
               Size.Values = (
                 52.916666666666670000
                 1240.895833333333000000
-                42.333333333333340000
+                42.333333333333330000
                 425.979166666666700000)
               Alignment = taCenter
               AlignToBand = True
@@ -3031,7 +3031,7 @@ object NotaFrm: TNotaFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              66.145833333333340000
+              66.145833333333330000
               2910.416666666667000000)
             BandType = rbDetail
             object QRDBText1: TQRDBText

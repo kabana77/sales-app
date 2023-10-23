@@ -2517,6 +2517,7 @@ begin
     ppDBText16.Visible:=False;
     ppDBText17.Visible:=False;
     ppLabel114.Visible:=False;
+    ppLabel119.Caption:='';
   end
   else
   begin
@@ -2977,6 +2978,7 @@ begin
               DMFrm.FNoUrut.SetVariable(0,vkode);
               DMFrm.FNoUrut.SetVariable(1,'-');
               DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+              //if QMasterAGEN.AsFloat=1 then  DMFrm.FNoUrut.SetVariable(3,'W') else DMFrm.FNoUrut.SetVariable(3,'P');
               DMFrm.FNoUrut.SetVariable(3,'P');
               DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
               DMFrm.FNoUrut.Open;
@@ -2996,6 +2998,7 @@ begin
               DMFrm.FNoUrut.SetVariable(0,vkode);
               DMFrm.FNoUrut.SetVariable(1,'-');
               DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+              //if QMasterAGEN.AsFloat=1 then  DMFrm.FNoUrut.SetVariable(3,'W') else DMFrm.FNoUrut.SetVariable(3,'P');
               DMFrm.FNoUrut.SetVariable(3,'P');
               DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
               DMFrm.FNoUrut.Open;
@@ -3015,6 +3018,7 @@ begin
              DMFrm.FNoUrut.SetVariable(0,vkode);
              DMFrm.FNoUrut.SetVariable(1,'-');
              DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+             //if QMasterAGEN.AsFloat=1 then  DMFrm.FNoUrut.SetVariable(3,'W') else DMFrm.FNoUrut.SetVariable(3,'P');
              DMFrm.FNoUrut.SetVariable(3,'P');
              DMFrm.FNoUrut.SetVariable(4, QMasterISPJK.AsString);
              DMFrm.FNoUrut.Open;

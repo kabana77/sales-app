@@ -1042,6 +1042,8 @@ type
     Label42: TLabel;
     wwDBComboBox3: TwwDBComboBox;
     QBrowseSUPLIER: TStringField;
+    ppLAlamatWastra: TppLabel;
+    ppLTeleponWastra: TppLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -1629,10 +1631,14 @@ begin
 
   if QMasterNSUPLIER.AsFloat = 1 then
   begin
-    ppLPPT.Visible:=True;
-    ppDBText15.Visible:=False;
-    ppDBText16.Visible:=True;
-    ppDBText17.Visible:=True;
+    ppLPPT.Visible:=True;           //PERUSAHAAN WASTRA
+    ppLAlamatWastra.Visible:=True;  //ALAMAT WASTRA
+    ppLTeleponWastra.Visible:=True; //TELEPON WASTRA
+
+    ppDBText15.Visible:=False;  //PERUSAHAAN
+    ppDBText16.Visible:=False;  //ALAMAT
+    ppDBText17.Visible:=False;  //TELEPON
+
     ppLine17.Visible:=True;
     ppNo2.AsInteger:=0;
 
@@ -1641,10 +1647,13 @@ begin
   end
   else
   begin
-    ppLPPT.Visible:=False;
-    ppDBText15.Visible:=True;
-    ppDBText16.Visible:=True;
-    ppDBText17.Visible:=True;
+    ppLPPT.Visible:=False;           //PERUSAHAAN WASTRA
+    ppLAlamatWastra.Visible:=False;  //ALAMAT WASTRA
+    ppLTeleponWastra.Visible:=False; //TELEPON WASTRA
+
+    ppDBText15.Visible:=True;    //PERUSAHAAN
+    ppDBText16.Visible:=True;    //ALAMAT
+    ppDBText17.Visible:=True;    //TELEPON
     ppLine17.Visible:=True;
     ppNo2.AsInteger:=0;
 
@@ -1726,6 +1735,7 @@ QMasterISPJK.AsString:=QCekPPNISPJK.AsString;
      DMFrm.FNoUrut.SetVariable(0,vkode);
      DMFrm.FNoUrut.SetVariable(1,'-');
      DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
+     //if QMasterNSUPLIER.AsFloat=1 then DMFrm.FNoUrut.SetVariable(3,'W') else DMFrm.FNoUrut.SetVariable(3,'P');
      DMFrm.FNoUrut.SetVariable(3,'P');
      DMFrm.FNoUrut.SetVariable(4,QMasterISPJK.AsString);
      DMFrm.FNoUrut.Open;

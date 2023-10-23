@@ -82,7 +82,7 @@ object NotaFrm: TNotaFrm
       Top = 76
       Width = 904
       Height = 559
-      ActivePage = TabSheet2
+      ActivePage = TabSheet1
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -1834,7 +1834,8 @@ object NotaFrm: TNotaFrm
               'STATUS'#9'8'#9'STATUS'#9'F'
               'KETERANGAN'#9'30'#9'KETERANGAN'#9'F'
               'TGL_INSERT'#9'18'#9'TANGGAL~INSERT'#9'F'
-              'NEGARA'#9'30'#9'NEGARA'#9'F')
+              'NEGARA'#9'30'#9'NEGARA'#9'F'
+              'SUPLIER'#9'29'#9'SUPLIER'#9'F')
             IniAttributes.Enabled = True
             IniAttributes.Delimiter = ';;'
             IniAttributes.CheckNewFields = True
@@ -2685,7 +2686,7 @@ object NotaFrm: TNotaFrm
         object Label49: TLabel
           Left = 0
           Top = 0
-          Width = 896
+          Width = 3
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -3030,7 +3031,7 @@ object NotaFrm: TNotaFrm
             ForceNewColumn = False
             ForceNewPage = False
             Size.Values = (
-              66.145833333333340000
+              66.145833333333330000
               2910.416666666667000000)
             BandType = rbDetail
             object QRDBText1: TQRDBText
@@ -4584,7 +4585,7 @@ object NotaFrm: TNotaFrm
     SQL.Strings = (
       'select * from ipisma_db2.vnotafrm')
     QBEDefinition.QBEFieldDefs = {
-      0400000021000000070000004E4F5F4E4F54410100000000000700000054414E
+      0400000022000000070000004E4F5F4E4F54410100000000000700000054414E
       4747414C010000000000040000004B4F44450100000000000C0000004E414D41
       5F52454B414E414E010000000000050000004E494C4149010000000000030000
       0050504E0100000000000900000054474C5F4B4952494D010000000000060000
@@ -4602,7 +4603,8 @@ object NotaFrm: TNotaFrm
       0000000000090000004A4E535F4F52444552010000000000060000004E454741
       524101000000000006000000414C414D4154010000000000040000004B4F5441
       01000000000007000000465245494748540100000000000A000000434F4D4D49
-      5353494F4E01000000000009000000494E535552414E4345010000000000}
+      5353494F4E01000000000009000000494E535552414E43450100000000000700
+      00005355504C494552010000000000}
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
@@ -4685,6 +4687,10 @@ object NotaFrm: TNotaFrm
     object QBrowseKOTA: TStringField
       FieldName = 'KOTA'
       Size = 50
+    end
+    object QBrowseSUPLIER: TStringField
+      FieldName = 'SUPLIER'
+      Size = 29
     end
   end
   object dsQBrowse: TwwDataSource
