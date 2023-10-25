@@ -2520,6 +2520,8 @@ begin
     ppDBText17.Visible:=False;
     ppLabel114.Visible:=False;
     ppLabel119.Caption:='';
+    ppLabel120.Caption:='';
+    ppLabel121.Caption:='';
   end
   else
   begin

@@ -2686,7 +2686,7 @@ object NotaFrm: TNotaFrm
         object Label49: TLabel
           Left = 0
           Top = 0
-          Width = 896
+          Width = 3
           Height = 13
           Align = alTop
           Color = clSkyBlue

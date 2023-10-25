@@ -7348,8 +7348,8 @@ object NotaFrm: TNotaFrm
         Font.Style = []
         Transparent = True
         mmHeight = 3175
-        mmLeft = 18521
-        mmTop = 11642
+        mmLeft = 3969
+        mmTop = 10319
         mmWidth = 46302
         BandType = 1
       end
@@ -7368,8 +7368,8 @@ object NotaFrm: TNotaFrm
         Font.Style = []
         Transparent = True
         mmHeight = 3302
-        mmLeft = 20373
-        mmTop = 15875
+        mmLeft = 3969
+        mmTop = 14023
         mmWidth = 16002
         BandType = 1
       end
