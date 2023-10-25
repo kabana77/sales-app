@@ -273,6 +273,7 @@ type
     QItemJNS_KEMASAN: TStringField;
     QItemQTY_KEMASAN: TFloatField;
     QDetailQTY8: TFloatField;
+    QMasterISPJK: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -651,6 +652,7 @@ end;
 
 procedure TPindahLokasiFrm.QMasterBeforePost(DataSet: TDataSet);
 begin
+QMasterISPJK.AsString:='0';
   if QMasterTGL.AsString='' then
      begin
         ShowMessage('TANGGAL harus diisi !');
@@ -663,6 +665,7 @@ begin
      DMFrm.FNoUrut.SetVariable(1,'-');
      DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
      DMFrm.FNoUrut.SetVariable(3,'P');
+     DMFrm.FNoUrut.SetVariable(4,QMasterISPJK.AsString);
      DMFrm.FNoUrut.Open;
      QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
    end;

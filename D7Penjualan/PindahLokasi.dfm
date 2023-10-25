@@ -779,7 +779,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
             Left = 0
             Top = 0
             Width = 792
-            Height = 401
+            Height = 389
             Selected.Strings = (
               'NO_NOTA'#9'14'#9'NO. NOTA'#9'F'
               'TANGGAL'#9'11'#9'TANGGAL'#9'F'
@@ -1080,7 +1080,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4 210 x 297 mm'
+    PrinterSetup.PaperName = 'A4'
     PrinterSetup.PrinterName = 'Default'
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350
@@ -1910,8 +1910,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
     DataSource = dsQBrowse
     OpenDataSource = False
     UserName = 'DBQBrowseDetail'
-    Left = 744
-    Top = 104
+    Left = 480
+    Top = 88
     object ppDBQBrowseDetailppField1: TppField
       FieldAlias = 'NO_NOTA'
       FieldName = 'NO_NOTA'
@@ -2398,7 +2398,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 139700
     PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 147
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\TransaksiOrgBukti.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -3446,7 +3446,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
     DataSource = dsQMaster
     OpenDataSource = False
     UserName = 'DBQMaster'
-    Left = 112
+    Left = 104
     Top = 40
     object ppDBQMasterppField1: TppField
       FieldAlias = 'IBUKTI'
@@ -3573,8 +3573,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
     DataSource = dsQDetail
     OpenDataSource = False
     UserName = 'DBQDetail'
-    Left = 112
-    Top = 80
+    Left = 56
+    Top = 88
     MasterDataPipelineName = 'ppDBQMaster'
     object ppDBQDetailppField1: TppField
       FieldAlias = 'IBUKTI_DETAIL'

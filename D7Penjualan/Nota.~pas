@@ -1219,6 +1219,8 @@ type
     QMasterAGEN: TFloatField;
     LSuplier: TLabel;
     QBrowseSUPLIER: TStringField;
+    ppLabel120: TppLabel;
+    ppLabel121: TppLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -2527,6 +2529,10 @@ begin
       ppdbtext15.Visible:=False;
       ppLabel119.Caption:='PT WASTRA KARYA NUSANTARA';
       ppLabel114.Visible:=False;
+      ppDBText16.Visible:=False;
+      ppDBText17.Visible:=False;
+      ppLabel120.Visible:=True;
+      ppLabel121.Visible:=True;
     end
     else
     begin
@@ -2535,6 +2541,8 @@ begin
       ppDBText16.Visible:=True;
       ppDBText17.Visible:=True;
       ppLabel114.Visible:=True;
+      ppLabel120.Visible:=False;
+      ppLabel121.Visible:=False;
     end;
 
     {ppDBText15.Visible:=True;

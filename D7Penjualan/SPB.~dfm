@@ -139,7 +139,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label9: TLabel
-              Left = 1035
+              Left = 707
               Top = 43
               Width = 23
               Height = 13
@@ -153,7 +153,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Bevel1: TBevel
-              Left = 1034
+              Left = 706
               Top = 64
               Width = 202
               Height = 10
@@ -161,7 +161,7 @@ object SPBFrm: TSPBFrm
               Shape = bsBottomLine
             end
             object LBarcode: TDBText
-              Left = 1138
+              Left = 810
               Top = 0
               Width = 90
               Height = 24
@@ -234,7 +234,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label8: TLabel
-              Left = 1035
+              Left = 707
               Top = 83
               Width = 54
               Height = 13
@@ -261,7 +261,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label11: TLabel
-              Left = 971
+              Left = 643
               Top = 147
               Width = 86
               Height = 13
@@ -275,7 +275,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object Label12: TLabel
-              Left = 971
+              Left = 643
               Top = 171
               Width = 30
               Height = 13
@@ -376,7 +376,7 @@ object SPBFrm: TSPBFrm
               ParentFont = False
             end
             object wwDBDateTimePicker1: TwwDBDateTimePicker
-              Left = 1139
+              Left = 811
               Top = 40
               Width = 97
               Height = 19
@@ -500,7 +500,7 @@ object SPBFrm: TSPBFrm
               WordWrap = False
             end
             object wwDBDateTimePicker2: TwwDBDateTimePicker
-              Left = 1139
+              Left = 811
               Top = 80
               Width = 97
               Height = 19
@@ -519,7 +519,7 @@ object SPBFrm: TSPBFrm
               TabOrder = 6
             end
             object wwDBEdit1: TwwDBEdit
-              Left = 1074
+              Left = 746
               Top = 168
               Width = 161
               Height = 19
@@ -534,7 +534,7 @@ object SPBFrm: TSPBFrm
               WordWrap = False
             end
             object wwDBEdit3: TwwDBEdit
-              Left = 1074
+              Left = 746
               Top = 144
               Width = 161
               Height = 19
@@ -4310,8 +4310,8 @@ object SPBFrm: TSPBFrm
         object wwDBGrid2: TwwDBGrid
           Left = 0
           Top = 0
-          Width = 1473
-          Height = 602
+          Width = 1638
+          Height = 539
           Selected.Strings = (
             'NO_NOTA'#9'14'#9'NO. NOTA'#9'F'
             'TANGGAL'#9'11'#9'TANGGAL'#9'F'

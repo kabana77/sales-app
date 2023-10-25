@@ -2686,7 +2686,7 @@ object NotaFrm: TNotaFrm
         object Label49: TLabel
           Left = 0
           Top = 0
-          Width = 3
+          Width = 896
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -7331,6 +7331,46 @@ object NotaFrm: TNotaFrm
         mmLeft = 3704
         mmTop = 4233
         mmWidth = 28840
+        BandType = 1
+      end
+      object ppLabel120: TppLabel
+        UserName = 'Label120'
+        Anchors = [atTop]
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Jl. WR Supratman no. 112 Surabaya'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 3969
+        mmTop = 10319
+        mmWidth = 46302
+        BandType = 1
+      end
+      object ppLabel121: TppLabel
+        UserName = 'Label1201'
+        Anchors = [atTop]
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = '031 5688818'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 3969
+        mmTop = 14023
+        mmWidth = 16002
         BandType = 1
       end
     end

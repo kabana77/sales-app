@@ -1,6 +1,6 @@
 object PindahLokasi2Frm: TPindahLokasi2Frm
-  Left = 365
-  Top = 274
+  Left = 270
+  Top = 223
   Width = 1024
   Height = 637
   Caption = 'PO Non Bahan Baku'
