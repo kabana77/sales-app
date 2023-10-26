@@ -184,6 +184,9 @@ type
     QBrowseNAMA_CORAK: TStringField;
     QSubKelompokTAMBAHAN: TStringField;
     QBrowseTAMBAHAN: TStringField;
+    wwDBComboBox2: TwwDBComboBox;
+    Label17: TLabel;
+    LKlasifikasi: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -230,6 +233,10 @@ type
     procedure QMaxKodeBeforeQuery(Sender: TOracleDataSet);
     procedure QSATUAN2NewRecord(DataSet: TDataSet);
     procedure TabSheet4Show(Sender: TObject);
+    procedure QMasterBeforePost(DataSet: TDataSet);
+    procedure wwDBEdit1Change(Sender: TObject);
+    procedure wwDBComboBox2Change(Sender: TObject);
+    procedure wwDBLookupComboDlg3Enter(Sender: TObject);
   private
     { Private declarations }
     vorder, SelectedFont, vjns, vbrg : String;
@@ -503,6 +510,7 @@ begin
   QMasterISFIXED.AsString:='0';
   QMasterRASIO.AsFloat:=1;
   LKelompok.Caption:='';
+  LKlasifikasi.Caption:='';
   LSubKelompok.Caption:='';
   LMerk.Caption:='';
   LSatuan.Caption:='';
@@ -526,9 +534,12 @@ procedure TOrganisasiItemFrm.wwDBLookupComboDlg1CloseUp(Sender: TObject;
 begin
   if modified then
   begin
-      LKelompok.Caption:=QKelompokNAMA_KONSTRUKSI.AsString+' ';
-      QMasterDISKRIPSI.AsString:=LKelompok.Caption+LSubKelompok.Caption+LMerk.Caption+QMasterNAMA_ITEM.AsString+' '+LSatuan.Caption;
-      QMasterNAMA_ITEM.AsString:=LKelompok.Caption+LSubKelompok.Caption+QSubKelompokTAMBAHAN.AsString;
+      //LKelompok.Caption:=QKelompokNAMA_KONSTRUKSI.AsString+' ';
+      //QMasterDISKRIPSI.AsString:=LKelompok.Caption+LSubKelompok.Caption+LMerk.Caption+QMasterNAMA_ITEM.AsString+' '+LSatuan.Caption;
+      //QMasterNAMA_ITEM.AsString:=LKelompok.Caption+LSubKelompok.Caption+QSubKelompokTAMBAHAN.AsString;
+
+      LKelompok.Caption:=QKelompokNAMA_KONSTRUKSI.AsString;
+      QMasterNAMA_ITEM.AsString:=LKlasifikasi.Caption+' '+LKelompok.Caption+' '+LSubKelompok.Caption;
   end;
 end;
 
@@ -537,9 +548,12 @@ procedure TOrganisasiItemFrm.wwDBLookupComboDlg3CloseUp(Sender: TObject;
 begin
   if modified then
   begin
+      //LSubKelompok.Caption:=QSubKelompokNAMA_CORAK.AsString+' '+QSubKelompokTAMBAHAN.AsString;
+      //QMasterDISKRIPSI.AsString:=LKelompok.Caption+LSubKelompok.Caption+LMerk.Caption+QMasterNAMA_ITEM.AsString+' '+LSatuan.Caption;
+      //QMasterNAMA_ITEM.AsString:=LKelompok.Caption+LSubKelompok.Caption;
+
       LSubKelompok.Caption:=QSubKelompokNAMA_CORAK.AsString+' '+QSubKelompokTAMBAHAN.AsString;
-      QMasterDISKRIPSI.AsString:=LKelompok.Caption+LSubKelompok.Caption+LMerk.Caption+QMasterNAMA_ITEM.AsString+' '+LSatuan.Caption;
-      QMasterNAMA_ITEM.AsString:=LKelompok.Caption+LSubKelompok.Caption;
+      QMasterNAMA_ITEM.AsString:=LKlasifikasi.Caption+' '+LKelompok.Caption+' '+LSubKelompok.Caption;
   end;
 end;
 
@@ -564,11 +578,11 @@ begin
   if modified then
   begin
       LSatuan.Caption:=QSatuanSATUAN.AsString;
-      QMasterDISKRIPSI.AsString:=LKelompok.Caption+
+     { QMasterDISKRIPSI.AsString:=LKelompok.Caption+
         LSubKelompok.Caption+
         LMerk.Caption+
         QMasterNAMA_ITEM.AsString+' '+
-        LSatuan.Caption;
+        LSatuan.Caption; }
   end;
 end;
 
@@ -590,7 +604,6 @@ begin
     [dgRowSelect]-
     [dgAlwaysShowSelection];
   wwDBLookupComboDlg3.DropDown;
-
 end;
 
 procedure TOrganisasiItemFrm.Label10Click(Sender: TObject);
@@ -636,7 +649,14 @@ begin
     else
       vkode:='001';
 
-    QMasterKD_ITEM.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
+    //QMasterKD_ITEM.AsString:=QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
+    if QMasterKD_LAMA.AsString='BENANG' then QMasterKD_ITEM.AsString:='B'+QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
+    if QMasterKD_LAMA.AsString='MAKLON' then QMasterKD_ITEM.AsString:='M'+QMasterKD_KONSTRUKSI.AsString+QMasterKD_CORAK.AsString;
+    if QMasterKD_LAMA.AsString='' then
+    begin
+       ShowMessage('Klasifikasi harus diisi!');
+       Abort;
+    end;
   end;
 end;
 
@@ -732,6 +752,37 @@ begin
  vorder:='';
   QDetail2.Close;
   QDetail2.Open;
+end;
+
+procedure TOrganisasiItemFrm.QMasterBeforePost(DataSet: TDataSet);
+begin
+  if QMasterKD_LAMA.AsString='' then
+  begin
+    ShowMessage('Klasifikasi BENANG/MAKLON harus diisi!');
+    abort;
+  end;
+end;
+
+procedure TOrganisasiItemFrm.wwDBEdit1Change(Sender: TObject);
+begin
+  QMasterDISKRIPSI.AsString:=QMasterNAMA_ITEM.AsString;
+end;
+
+procedure TOrganisasiItemFrm.wwDBComboBox2Change(Sender: TObject);
+begin
+  LKlasifikasi.Caption:=wwDBComboBox2.Value;
+  QMasterNAMA_ITEM.AsString:=LKlasifikasi.Caption+' '+LKelompok.Caption+' '+LSubKelompok.Caption;
+end;
+
+procedure TOrganisasiItemFrm.wwDBLookupComboDlg3Enter(Sender: TObject);
+begin
+  (sender as TwwDBLookupComboDlg).GridOptions:=(sender as TwwDBLookupComboDlg).GridOptions-
+    [dgEditing]-
+    [dgAlwaysShowEditor]+
+    [dgRowSelect]+
+    [dgAlwaysShowSelection];
+  if not ((sender as TwwDBLookupComboDlg).LookupTable.Active) then
+    (sender as TwwDBLookupComboDlg).LookupTable.Open;
 end;
 
 end.

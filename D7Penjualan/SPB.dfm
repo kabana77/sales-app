@@ -1,7 +1,7 @@
 object SPBFrm: TSPBFrm
-  Left = 259
-  Top = 229
-  Width = 1662
+  Left = 295
+  Top = 121
+  Width = 1486
   Height = 809
   Caption = 'PO Non Bahan Baku'
   Color = clBtnFace
@@ -24,7 +24,7 @@ object SPBFrm: TSPBFrm
   object DBText3: TDBText
     Left = 0
     Top = 49
-    Width = 1646
+    Width = 1470
     Height = 27
     Align = alTop
     Alignment = taRightJustify
@@ -42,7 +42,7 @@ object SPBFrm: TSPBFrm
   object Label1: TLabel
     Left = 0
     Top = 757
-    Width = 1646
+    Width = 1470
     Height = 13
     Align = alBottom
     Color = clSkyBlue
@@ -51,7 +51,7 @@ object SPBFrm: TSPBFrm
   object PanelHeader: TPanel
     Left = 0
     Top = 0
-    Width = 1646
+    Width = 1470
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -68,7 +68,7 @@ object SPBFrm: TSPBFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 76
-    Width = 1646
+    Width = 1470
     Height = 681
     ActivePage = TabSheet1
     Align = alClient
@@ -81,7 +81,7 @@ object SPBFrm: TSPBFrm
       object PageControl2: TPageControl
         Left = 0
         Top = 0
-        Width = 1638
+        Width = 1462
         Height = 650
         ActivePage = tbManual
         Align = alClient
@@ -89,10 +89,10 @@ object SPBFrm: TSPBFrm
         object tbManual: TTabSheet
           Caption = 'Mode Manual'
           DesignSize = (
-            1630
+            1454
             622)
           object DBText5: TDBText
-            Left = 1780
+            Left = 1604
             Top = 0
             Width = 80
             Height = 24
@@ -111,7 +111,7 @@ object SPBFrm: TSPBFrm
           object PanelMaster: TPanel
             Left = 0
             Top = 0
-            Width = 1630
+            Width = 1454
             Height = 201
             Align = alTop
             BevelOuter = bvNone
@@ -122,590 +122,599 @@ object SPBFrm: TSPBFrm
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 0
-            DesignSize = (
-              1630
-              201)
-            object Label7: TLabel
-              Left = 8
-              Top = 48
-              Width = 53
-              Height = 13
-              Caption = 'Customer'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label9: TLabel
-              Left = 707
-              Top = 43
-              Width = 23
-              Height = 13
-              Anchors = [akTop, akRight]
-              Caption = 'Tgl.'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Bevel1: TBevel
-              Left = 706
-              Top = 64
-              Width = 202
-              Height = 10
-              Anchors = [akTop, akRight]
-              Shape = bsBottomLine
-            end
-            object LBarcode: TDBText
-              Left = 810
+            object PanelMasterC1: TPanel
+              Left = 0
               Top = 0
-              Width = 90
-              Height = 24
-              Alignment = taRightJustify
-              Anchors = [akTop, akRight, akBottom]
-              AutoSize = True
-              DataField = 'NO_NOTA'
-              DataSource = dsQMaster
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -19
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object DBText1: TDBText
-              Left = 8
-              Top = 88
-              Width = 393
-              Height = 16
-              DataField = 'LREKANAN'
-              DataSource = dsQMaster
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlue
-              Font.Height = -13
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object DBText2: TDBText
-              Left = 8
-              Top = 104
-              Width = 393
-              Height = 25
-              DataField = 'LALAMAT'
-              DataSource = dsQMaster
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clMaroon
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-              WordWrap = True
-            end
-            object DBText9: TDBText
-              Left = 470
-              Top = 151
-              Width = 225
-              Height = 16
-              DataField = 'LEKSPEDISI'
-              DataSource = dsQMaster
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlue
-              Font.Height = -13
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label31: TLabel
-              Left = 335
-              Top = 153
-              Width = 55
-              Height = 13
-              Caption = 'Ekspedisi'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label8: TLabel
-              Left = 707
-              Top = 83
-              Width = 54
-              Height = 13
-              Anchors = [akTop, akRight]
-              Caption = 'Tgl. Kirim'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label10: TLabel
-              Left = 8
-              Top = 130
-              Width = 66
-              Height = 13
-              Caption = 'Dikirim Ke :'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label11: TLabel
-              Left = 643
-              Top = 147
-              Width = 86
-              Height = 13
-              Anchors = [akTop, akRight]
-              Caption = 'No. Kendaraan'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label12: TLabel
-              Left = 643
-              Top = 171
-              Width = 30
-              Height = 13
-              Anchors = [akTop, akRight]
-              Caption = 'Sopir'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label13: TLabel
-              Left = 80
-              Top = 48
-              Width = 86
-              Height = 13
-              Caption = 'No. Bukti Muat'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object DBText4: TDBText
-              Left = 208
-              Top = 64
-              Width = 50
-              Height = 13
-              AutoSize = True
-              DataField = 'TGL_MUAT'
-              DataSource = dsQMaster
-            end
-            object Label16: TLabel
-              Left = 208
-              Top = 48
-              Width = 80
-              Height = 13
-              Caption = 'Tanggal Bukti'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label18: TLabel
-              Left = 176
-              Top = 130
-              Width = 66
-              Height = 13
-              Caption = 'Keterangan'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label19: TLabel
-              Left = 334
-              Top = 179
-              Width = 65
-              Height = 13
-              Caption = 'Jenis Order'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label6: TLabel
-              Left = 206
-              Top = 3
-              Width = 71
-              Height = 13
-              Caption = 'Packing List'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object Label42: TLabel
-              Left = 6
-              Top = 3
-              Width = 49
-              Height = 13
-              Caption = 'Pengirim'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clOlive
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentFont = False
-            end
-            object wwDBDateTimePicker1: TwwDBDateTimePicker
-              Left = 811
-              Top = 40
-              Width = 97
-              Height = 19
-              TabStop = False
-              Anchors = [akTop, akRight]
-              BorderStyle = bsNone
-              CalendarAttributes.Font.Charset = DEFAULT_CHARSET
-              CalendarAttributes.Font.Color = clWindowText
-              CalendarAttributes.Font.Height = -11
-              CalendarAttributes.Font.Name = 'MS Sans Serif'
-              CalendarAttributes.Font.Style = []
-              DataField = 'TGL'
-              DataSource = dsQMaster
-              Epoch = 1950
-              ShowButton = True
-              TabOrder = 5
-            end
-            object DBMemo1: TDBMemo
-              Left = 8
-              Top = 151
-              Width = 153
-              Height = 46
-              Ctl3D = False
-              DataField = 'KETERANGAN'
-              DataSource = dsQMaster
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlue
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentCtl3D = False
-              ParentFont = False
-              TabOrder = 10
-            end
-            object LookSuplier: TwwDBLookupComboDlg
-              Left = 8
-              Top = 64
-              Width = 57
-              Height = 19
-              Ctl3D = False
-              GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
-              GridColor = clWhite
-              GridTitleAlignment = taLeftJustify
-              Caption = 'Lookup'
-              MaxWidth = 0
-              MaxHeight = 209
-              Selected.Strings = (
-                'KD_REKANAN'#9'10'#9'KODE'#9'F'
-                'NAMA_REKANAN'#9'30'#9'NAMA REKANAN'#9'F'
-                'KOTA'#9'20'#9'KOTA'#9'F'
-                'TELEPON'#9'20'#9'TELEPON'#9'F'
-                'NO_PP'#9'16'#9'NO PP'#9'F'
-                'TGL_KEBUTUHAN'#9'12'#9'KEBUTUHAN'#9'F')
-              DataField = 'KD_REKANAN'
-              DataSource = dsQMaster
-              LookupTable = QCalonSuplier
-              LookupField = 'KD_REKANAN'
-              ParentCtl3D = False
-              TabOrder = 3
-              AutoDropDown = False
-              ShowButton = True
-              AllowClearKey = False
-              UseTFields = False
-              OnEnter = LookSuplierEnter
-            end
-            object wwDBEdit2: TwwDBEdit
-              Left = 8
-              Top = 64
-              Width = 41
-              Height = 19
-              Ctl3D = False
-              DataField = 'KD_REKANAN'
-              DataSource = dsQMaster
-              ParentCtl3D = False
-              TabOrder = 1
-              UnboundDataType = wwDefault
-              WantReturns = False
-              WordWrap = False
-            end
-            object wwDBLookupComboDlg3: TwwDBLookupComboDlg
-              Left = 406
-              Top = 150
-              Width = 57
-              Height = 19
-              Ctl3D = False
-              GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
-              GridColor = clWhite
-              GridTitleAlignment = taLeftJustify
-              Caption = 'Lookup'
-              MaxWidth = 0
-              MaxHeight = 209
-              Selected.Strings = (
-                'KD_REKANAN'#9'10'#9'KODE'#9'F'
-                'NAMA_REKANAN'#9'30'#9'NAMA REKANAN'#9'F'
-                'KOTA'#9'20'#9'KOTA'#9'F'
-                'TELEPON'#9'20'#9'TELEPON'#9'F')
-              DataField = 'KD_REKANAN3'
-              DataSource = dsQMaster
-              LookupTable = DMFrm.QEkspedisi
-              LookupField = 'KD_REKANAN'
-              ParentCtl3D = False
-              TabOrder = 9
-              AutoDropDown = False
-              ShowButton = True
-              AllowClearKey = False
-              UseTFields = False
-              OnEnter = wwDBLookupComboDlg3Enter
-            end
-            object wwDBEdit6: TwwDBEdit
-              Left = 406
-              Top = 150
-              Width = 41
-              Height = 19
-              Ctl3D = False
-              DataField = 'KD_REKANAN3'
-              DataSource = dsQMaster
-              ParentCtl3D = False
+              Width = 753
+              Height = 201
+              Align = alLeft
               TabOrder = 0
-              UnboundDataType = wwDefault
-              WantReturns = False
-              WordWrap = False
-            end
-            object wwDBDateTimePicker2: TwwDBDateTimePicker
-              Left = 811
-              Top = 80
-              Width = 97
-              Height = 19
-              TabStop = False
-              Anchors = [akTop, akRight]
-              BorderStyle = bsNone
-              CalendarAttributes.Font.Charset = DEFAULT_CHARSET
-              CalendarAttributes.Font.Color = clWindowText
-              CalendarAttributes.Font.Height = -11
-              CalendarAttributes.Font.Name = 'MS Sans Serif'
-              CalendarAttributes.Font.Style = []
-              DataField = 'TGL_KIRIM'
-              DataSource = dsQMaster
-              Epoch = 1950
-              ShowButton = True
-              TabOrder = 6
-            end
-            object wwDBEdit1: TwwDBEdit
-              Left = 746
-              Top = 168
-              Width = 161
-              Height = 19
-              Anchors = [akTop, akRight]
-              Ctl3D = False
-              DataField = 'SOPIR'
-              DataSource = dsQMaster
-              ParentCtl3D = False
-              TabOrder = 8
-              UnboundDataType = wwDefault
-              WantReturns = False
-              WordWrap = False
-            end
-            object wwDBEdit3: TwwDBEdit
-              Left = 746
-              Top = 144
-              Width = 161
-              Height = 19
-              Anchors = [akTop, akRight]
-              Ctl3D = False
-              DataField = 'KENDARAAN'
-              DataSource = dsQMaster
-              ParentCtl3D = False
-              TabOrder = 7
-              UnboundDataType = wwDefault
-              WantReturns = False
-              WordWrap = False
-            end
-            object LookOM: TwwDBLookupComboDlg
-              Left = 80
-              Top = 64
-              Width = 121
-              Height = 19
-              Ctl3D = False
-              GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
-              GridColor = clWhite
-              GridTitleAlignment = taLeftJustify
-              Caption = 'Lookup'
-              MaxWidth = 0
-              MaxHeight = 209
-              Selected.Strings = (
-                'NO_NOTA'#9'16'#9'NO BUKTI MUAT'#9'F'
-                'TANGGAL'#9'12'#9'TANGGAL'#9'F'
-                'KODE'#9'6'#9'KODE'#9'F'
-                'NAMA_REKANAN'#9'25'#9'CUSTOMER'#9'F')
-              DataField = 'NO_BUKTI'
-              DataSource = dsQMaster
-              LookupTable = QOM
-              LookupField = 'NO_NOTA'
-              ParentCtl3D = False
-              TabOrder = 4
-              AutoDropDown = False
-              ShowButton = True
-              AllowClearKey = False
-              OnCloseUp = LookOMCloseUp
-              OnEnter = LookOMEnter
-            end
-            object GroupBox1: TGroupBox
-              Left = 512
-              Top = 32
-              Width = 129
-              Height = 65
-              Caption = 'Filter Tanggal SPKB'
-              TabOrder = 2
-              object Label17: TLabel
-                Left = 64
-                Top = 43
-                Width = 52
-                Height = 13
-                Caption = 'Hari Lalu'
-              end
-              object wwDbSpin: TwwDBSpinEdit
-                Left = 8
-                Top = 40
+              object Label42: TLabel
+                Left = 6
+                Top = 3
                 Width = 49
-                Height = 19
-                Increment = 1.000000000000000000
-                Value = 2.000000000000000000
-                Ctl3D = False
-                ParentCtl3D = False
+                Height = 13
+                Caption = 'Pengirim'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label6: TLabel
+                Left = 206
+                Top = 3
+                Width = 71
+                Height = 13
+                Caption = 'Packing List'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label7: TLabel
+                Left = 8
+                Top = 48
+                Width = 53
+                Height = 13
+                Caption = 'Customer'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label13: TLabel
+                Left = 80
+                Top = 48
+                Width = 86
+                Height = 13
+                Caption = 'No. Bukti Muat'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label16: TLabel
+                Left = 208
+                Top = 48
+                Width = 80
+                Height = 13
+                Caption = 'Tanggal Bukti'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object DBText4: TDBText
+                Left = 208
+                Top = 64
+                Width = 50
+                Height = 13
+                AutoSize = True
+                DataField = 'TGL_MUAT'
+                DataSource = dsQMaster
+              end
+              object DBText1: TDBText
+                Left = 8
+                Top = 88
+                Width = 393
+                Height = 16
+                DataField = 'LREKANAN'
+                DataSource = dsQMaster
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlue
+                Font.Height = -13
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object DBText2: TDBText
+                Left = 8
+                Top = 104
+                Width = 393
+                Height = 25
+                DataField = 'LALAMAT'
+                DataSource = dsQMaster
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clMaroon
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+                WordWrap = True
+              end
+              object Label10: TLabel
+                Left = 8
+                Top = 130
+                Width = 66
+                Height = 13
+                Caption = 'Dikirim Ke :'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label18: TLabel
+                Left = 176
+                Top = 130
+                Width = 66
+                Height = 13
+                Caption = 'Keterangan'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label31: TLabel
+                Left = 335
+                Top = 153
+                Width = 55
+                Height = 13
+                Caption = 'Ekspedisi'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label19: TLabel
+                Left = 334
+                Top = 179
+                Width = 65
+                Height = 13
+                Caption = 'Jenis Order'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object DBText9: TDBText
+                Left = 472
+                Top = 151
+                Width = 225
+                Height = 16
+                DataField = 'LEKSPEDISI'
+                DataSource = dsQMaster
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlue
+                Font.Height = -13
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object wwDBComboBox3: TwwDBComboBox
+                Left = 6
+                Top = 19
+                Width = 177
+                Height = 21
+                ShowButton = True
+                Style = csDropDown
+                MapList = True
+                AllowClearKey = False
+                DataField = 'NSUPLIER'
+                DataSource = dsQMaster
+                DropDownCount = 8
+                ItemHeight = 0
+                Items.Strings = (
+                  'PT. KABANATEX'#9'0'
+                  'PT. WASTRA KARYA'#9'1')
+                Sorted = False
                 TabOrder = 0
                 UnboundDataType = wwDefault
               end
-              object CheckBox1: TCheckBox
-                Left = 8
-                Top = 16
-                Width = 97
-                Height = 17
-                Caption = 'Filter'
-                Checked = True
-                State = cbChecked
+              object wwDBLookupComboDlg2: TwwDBLookupComboDlg
+                Left = 206
+                Top = 20
+                Width = 121
+                Height = 19
+                Ctl3D = False
+                GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+                GridColor = clWhite
+                GridTitleAlignment = taLeftJustify
+                Caption = 'Lookup'
+                MaxWidth = 0
+                MaxHeight = 209
+                Selected.Strings = (
+                  'KD_REKANAN'#9'10'#9'KD_REKANAN'#9'F'
+                  'NO_REG'#9'10'#9'NO_REG'#9'F'
+                  'NO_SO'#9'16'#9'NO_SO'#9'F'
+                  'NO_SPK'#9'16'#9'NO_SPK'#9'F'
+                  'REKANAN'#9'20'#9'REKANAN'#9'F'
+                  'TANGGAL'#9'12'#9'TANGGAL'#9'F'
+                  'VUSER'#9'20'#9'VUSER'#9'F'
+                  'ISPOST'#9'5'#9'ISPOST'#9'F'
+                  'JNS_ORDER'#9'10'#9'JNS_ORDER'#9'F')
+                DataField = 'NO_REG_PL'
+                DataSource = dsQMaster
+                LookupTable = QPackingList
+                LookupField = 'NO_REG'
+                ParentCtl3D = False
                 TabOrder = 1
-                OnClick = CheckBox1Click
+                AutoDropDown = False
+                ShowButton = True
+                AllowClearKey = False
+                OnCloseUp = wwDBLookupComboDlg2CloseUp
+                OnEnter = wwDBLookupComboDlg2Enter
+              end
+              object GroupBox1: TGroupBox
+                Left = 392
+                Top = 16
+                Width = 129
+                Height = 65
+                Caption = 'Filter Tanggal SPKB'
+                TabOrder = 2
+                object Label17: TLabel
+                  Left = 64
+                  Top = 43
+                  Width = 52
+                  Height = 13
+                  Caption = 'Hari Lalu'
+                end
+                object wwDbSpin: TwwDBSpinEdit
+                  Left = 8
+                  Top = 40
+                  Width = 49
+                  Height = 19
+                  Increment = 1.000000000000000000
+                  Value = 2.000000000000000000
+                  Ctl3D = False
+                  ParentCtl3D = False
+                  TabOrder = 0
+                  UnboundDataType = wwDefault
+                end
+                object CheckBox1: TCheckBox
+                  Left = 8
+                  Top = 16
+                  Width = 97
+                  Height = 17
+                  Caption = 'Filter'
+                  Checked = True
+                  State = cbChecked
+                  TabOrder = 1
+                  OnClick = CheckBox1Click
+                end
+              end
+              object LookOM: TwwDBLookupComboDlg
+                Left = 80
+                Top = 64
+                Width = 121
+                Height = 19
+                Ctl3D = False
+                GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+                GridColor = clWhite
+                GridTitleAlignment = taLeftJustify
+                Caption = 'Lookup'
+                MaxWidth = 0
+                MaxHeight = 209
+                Selected.Strings = (
+                  'NO_NOTA'#9'16'#9'NO BUKTI MUAT'#9'F'
+                  'TANGGAL'#9'12'#9'TANGGAL'#9'F'
+                  'KODE'#9'6'#9'KODE'#9'F'
+                  'NAMA_REKANAN'#9'25'#9'CUSTOMER'#9'F')
+                DataField = 'NO_BUKTI'
+                DataSource = dsQMaster
+                LookupTable = QOM
+                LookupField = 'NO_NOTA'
+                ParentCtl3D = False
+                TabOrder = 3
+                AutoDropDown = False
+                ShowButton = True
+                AllowClearKey = False
+                OnCloseUp = LookOMCloseUp
+                OnEnter = LookOMEnter
+              end
+              object DBMemo1: TDBMemo
+                Left = 8
+                Top = 151
+                Width = 153
+                Height = 46
+                Ctl3D = False
+                DataField = 'KETERANGAN'
+                DataSource = dsQMaster
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlue
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentCtl3D = False
+                ParentFont = False
+                TabOrder = 5
+              end
+              object DBMemo2: TDBMemo
+                Left = 176
+                Top = 151
+                Width = 153
+                Height = 46
+                Ctl3D = False
+                DataField = 'KETERANGAN2'
+                DataSource = dsQMaster
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlue
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentCtl3D = False
+                ParentFont = False
+                TabOrder = 6
+              end
+              object wwDBEdit4: TwwDBEdit
+                Left = 406
+                Top = 174
+                Width = 89
+                Height = 19
+                Ctl3D = False
+                DataField = 'JNS_KEMASAN'
+                DataSource = dsQMaster
+                ParentCtl3D = False
+                ReadOnly = True
+                TabOrder = 8
+                UnboundDataType = wwDefault
+                WantReturns = False
+                WordWrap = False
+              end
+              object LookSuplier: TwwDBLookupComboDlg
+                Left = 8
+                Top = 64
+                Width = 57
+                Height = 19
+                Ctl3D = False
+                GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+                GridColor = clWhite
+                GridTitleAlignment = taLeftJustify
+                Caption = 'Lookup'
+                MaxWidth = 0
+                MaxHeight = 209
+                Selected.Strings = (
+                  'KD_REKANAN'#9'10'#9'KODE'#9'F'
+                  'NAMA_REKANAN'#9'30'#9'NAMA REKANAN'#9'F'
+                  'KOTA'#9'20'#9'KOTA'#9'F'
+                  'TELEPON'#9'20'#9'TELEPON'#9'F'
+                  'NO_PP'#9'16'#9'NO PP'#9'F'
+                  'TGL_KEBUTUHAN'#9'12'#9'KEBUTUHAN'#9'F')
+                DataField = 'KD_REKANAN'
+                DataSource = dsQMaster
+                LookupTable = QCalonSuplier
+                LookupField = 'KD_REKANAN'
+                ParentCtl3D = False
+                TabOrder = 9
+                AutoDropDown = False
+                ShowButton = True
+                AllowClearKey = False
+                UseTFields = False
+                OnEnter = LookSuplierEnter
+              end
+              object wwDBLookupComboDlg3: TwwDBLookupComboDlg
+                Left = 406
+                Top = 150
+                Width = 57
+                Height = 19
+                Ctl3D = False
+                GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+                GridColor = clWhite
+                GridTitleAlignment = taLeftJustify
+                Caption = 'Lookup'
+                MaxWidth = 0
+                MaxHeight = 209
+                Selected.Strings = (
+                  'KD_REKANAN'#9'10'#9'KODE'#9'F'
+                  'NAMA_REKANAN'#9'30'#9'NAMA REKANAN'#9'F'
+                  'KOTA'#9'20'#9'KOTA'#9'F'
+                  'TELEPON'#9'20'#9'TELEPON'#9'F')
+                DataField = 'KD_REKANAN3'
+                DataSource = dsQMaster
+                LookupTable = DMFrm.QEkspedisi
+                LookupField = 'KD_REKANAN'
+                ParentCtl3D = False
+                TabOrder = 10
+                AutoDropDown = False
+                ShowButton = True
+                AllowClearKey = False
+                UseTFields = False
+                OnEnter = wwDBLookupComboDlg3Enter
+              end
+              object wwDBEdit2: TwwDBEdit
+                Left = 8
+                Top = 64
+                Width = 41
+                Height = 19
+                Ctl3D = False
+                DataField = 'KD_REKANAN'
+                DataSource = dsQMaster
+                ParentCtl3D = False
+                TabOrder = 4
+                UnboundDataType = wwDefault
+                WantReturns = False
+                WordWrap = False
+              end
+              object wwDBEdit6: TwwDBEdit
+                Left = 406
+                Top = 150
+                Width = 41
+                Height = 19
+                Ctl3D = False
+                DataField = 'KD_REKANAN3'
+                DataSource = dsQMaster
+                ParentCtl3D = False
+                TabOrder = 7
+                UnboundDataType = wwDefault
+                WantReturns = False
+                WordWrap = False
               end
             end
-            object DBMemo2: TDBMemo
-              Left = 176
-              Top = 151
-              Width = 153
-              Height = 46
-              Ctl3D = False
-              DataField = 'KETERANGAN2'
-              DataSource = dsQMaster
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlue
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = [fsBold]
-              ParentCtl3D = False
-              ParentFont = False
-              TabOrder = 11
-            end
-            object wwDBEdit4: TwwDBEdit
-              Left = 406
-              Top = 174
-              Width = 89
-              Height = 19
-              Ctl3D = False
-              DataField = 'JNS_KEMASAN'
-              DataSource = dsQMaster
-              ParentCtl3D = False
-              ReadOnly = True
-              TabOrder = 12
-              UnboundDataType = wwDefault
-              WantReturns = False
-              WordWrap = False
-            end
-            object wwDBLookupComboDlg2: TwwDBLookupComboDlg
-              Left = 206
-              Top = 20
-              Width = 121
-              Height = 19
-              Ctl3D = False
-              GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
-              GridColor = clWhite
-              GridTitleAlignment = taLeftJustify
-              Caption = 'Lookup'
-              MaxWidth = 0
-              MaxHeight = 209
-              Selected.Strings = (
-                'KD_REKANAN'#9'10'#9'KD_REKANAN'#9'F'
-                'NO_REG'#9'10'#9'NO_REG'#9'F'
-                'NO_SO'#9'16'#9'NO_SO'#9'F'
-                'NO_SPK'#9'16'#9'NO_SPK'#9'F'
-                'REKANAN'#9'20'#9'REKANAN'#9'F'
-                'TANGGAL'#9'12'#9'TANGGAL'#9'F'
-                'VUSER'#9'20'#9'VUSER'#9'F'
-                'ISPOST'#9'5'#9'ISPOST'#9'F'
-                'JNS_ORDER'#9'10'#9'JNS_ORDER'#9'F')
-              DataField = 'NO_REG_PL'
-              DataSource = dsQMaster
-              LookupTable = QPackingList
-              LookupField = 'NO_REG'
-              ParentCtl3D = False
-              TabOrder = 13
-              AutoDropDown = False
-              ShowButton = True
-              AllowClearKey = False
-              OnCloseUp = wwDBLookupComboDlg2CloseUp
-              OnEnter = wwDBLookupComboDlg2Enter
-            end
-            object wwDBComboBox3: TwwDBComboBox
-              Left = 6
-              Top = 19
-              Width = 177
-              Height = 21
-              ShowButton = True
-              Style = csDropDown
-              MapList = True
-              AllowClearKey = False
-              DataField = 'NSUPLIER'
-              DataSource = dsQMaster
-              DropDownCount = 8
-              ItemHeight = 0
-              Items.Strings = (
-                'PT. KABANATEX'#9'0'
-                'PT. WASTRA KARYA'#9'1')
-              Sorted = False
-              TabOrder = 14
-              UnboundDataType = wwDefault
+            object PanelMasterC2: TPanel
+              Left = 753
+              Top = 0
+              Width = 701
+              Height = 201
+              Align = alClient
+              TabOrder = 1
+              DesignSize = (
+                701
+                201)
+              object LBarcode: TDBText
+                Left = 9
+                Top = 6
+                Width = 90
+                Height = 24
+                AutoSize = True
+                DataField = 'NO_NOTA'
+                DataSource = dsQMaster
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -19
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label9: TLabel
+                Left = 10
+                Top = 43
+                Width = 23
+                Height = 13
+                Caption = 'Tgl.'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label8: TLabel
+                Left = 10
+                Top = 83
+                Width = 54
+                Height = 13
+                Caption = 'Tgl. Kirim'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label12: TLabel
+                Left = 9
+                Top = 177
+                Width = 30
+                Height = 16
+                Caption = 'Sopir'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Label11: TLabel
+                Left = 9
+                Top = 155
+                Width = 86
+                Height = 13
+                Caption = 'No. Kendaraan'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clOlive
+                Font.Height = -11
+                Font.Name = 'MS Sans Serif'
+                Font.Style = [fsBold]
+                ParentFont = False
+              end
+              object Bevel1: TBevel
+                Left = 9
+                Top = 64
+                Width = 202
+                Height = 10
+                Shape = bsBottomLine
+              end
+              object wwDBDateTimePicker1: TwwDBDateTimePicker
+                Left = 121
+                Top = 40
+                Width = 97
+                Height = 19
+                TabStop = False
+                Anchors = [akTop]
+                BorderStyle = bsNone
+                CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+                CalendarAttributes.Font.Color = clWindowText
+                CalendarAttributes.Font.Height = -11
+                CalendarAttributes.Font.Name = 'MS Sans Serif'
+                CalendarAttributes.Font.Style = []
+                DataField = 'TGL'
+                DataSource = dsQMaster
+                Epoch = 1950
+                ShowButton = True
+                TabOrder = 0
+              end
+              object wwDBEdit3: TwwDBEdit
+                Left = 112
+                Top = 149
+                Width = 161
+                Height = 19
+                Anchors = [akTop]
+                Ctl3D = False
+                DataField = 'KENDARAAN'
+                DataSource = dsQMaster
+                ParentCtl3D = False
+                TabOrder = 1
+                UnboundDataType = wwDefault
+                WantReturns = False
+                WordWrap = False
+              end
+              object wwDBEdit1: TwwDBEdit
+                Left = 112
+                Top = 177
+                Width = 161
+                Height = 19
+                Anchors = [akTop]
+                Ctl3D = False
+                DataField = 'SOPIR'
+                DataSource = dsQMaster
+                ParentCtl3D = False
+                TabOrder = 2
+                UnboundDataType = wwDefault
+                WantReturns = False
+                WordWrap = False
+              end
+              object wwDBDateTimePicker2: TwwDBDateTimePicker
+                Left = 121
+                Top = 80
+                Width = 97
+                Height = 19
+                TabStop = False
+                Anchors = [akTop]
+                BorderStyle = bsNone
+                CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+                CalendarAttributes.Font.Color = clWindowText
+                CalendarAttributes.Font.Height = -11
+                CalendarAttributes.Font.Name = 'MS Sans Serif'
+                CalendarAttributes.Font.Style = []
+                DataField = 'TGL_KIRIM'
+                DataSource = dsQMaster
+                Epoch = 1950
+                ShowButton = True
+                TabOrder = 3
+              end
             end
           end
           object PanelDetail: TPanel
             Left = 0
             Top = 242
-            Width = 1630
+            Width = 1454
             Height = 311
             Align = alClient
             BevelOuter = bvNone
@@ -713,7 +722,7 @@ object SPBFrm: TSPBFrm
             object wwDBGrid1: TwwDBGrid
               Left = 0
               Top = 0
-              Width = 1630
+              Width = 1454
               Height = 311
               ControlType.Strings = (
                 'NO_LOT;CustomEdit;LookItem;F'
@@ -834,220 +843,235 @@ object SPBFrm: TSPBFrm
           object PanelFooter1: TPanel
             Left = 0
             Top = 553
-            Width = 1630
+            Width = 1454
             Height = 69
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 2
-            DesignSize = (
-              1630
-              69)
-            object BtnClose1: TBitBtn
-              Left = 1125
-              Top = 27
-              Width = 75
-              Height = 25
-              Anchors = [akTop, akRight]
-              Caption = '&Close'
-              TabOrder = 1
-              OnClick = BtnClose1Click
-              NumGlyphs = 2
-            end
-            object wwDBNavigatorInput: TwwDBNavigator
+            object PanelFooterC1: TPanel
               Left = 0
               Top = 0
-              Width = 249
+              Width = 209
               Height = 69
-              AutosizeStyle = asSizeNavButtons
-              DataSource = dsQMaster
-              RepeatInterval.InitialDelay = 500
-              RepeatInterval.Interval = 100
               Align = alLeft
-              object wwDBNavigatorInputButton: TwwNavButton
-                Left = 0
-                Top = 0
-                Width = 50
-                Height = 69
-                Hint = 'Move to prior record'
-                ImageIndex = -1
-                NumGlyphs = 2
-                ShowText = True
-                Spacing = 4
-                Transparent = False
-                Caption = 'Pre&v'
-                Enabled = False
-                DisabledTextColors.ShadeColor = clGray
-                DisabledTextColors.HighlightColor = clBtnHighlight
-                Index = 0
-                Style = nbsPrior
-              end
-              object wwDBNavigatorInputNext: TwwNavButton
-                Left = 50
-                Top = 0
-                Width = 50
-                Height = 69
-                Hint = 'Move to next record'
-                ImageIndex = -1
-                NumGlyphs = 2
-                ShowText = True
-                Spacing = 4
-                Transparent = False
-                Caption = '&Next'
-                Enabled = False
-                DisabledTextColors.ShadeColor = clGray
-                DisabledTextColors.HighlightColor = clBtnHighlight
-                Index = 1
-                Style = nbsNext
-              end
-              object wwDBNavigatorInputCancel: TwwNavButton
-                Left = 100
-                Top = 0
-                Width = 50
-                Height = 69
-                Hint = 'Cancel changes made to current record'
-                ImageIndex = -1
-                NumGlyphs = 2
-                ShowText = True
-                Spacing = 4
-                Transparent = False
-                Caption = 'Ba&tal'
-                Enabled = False
-                DisabledTextColors.ShadeColor = clGray
-                DisabledTextColors.HighlightColor = clBtnHighlight
-                Index = 2
-                Style = nbsCancel
-              end
-              object wwDBNavigatorInputButton1: TwwNavButton
-                Left = 150
-                Top = 0
-                Width = 50
-                Height = 69
-                Hint = 'Insert new record'
-                ImageIndex = -1
-                NumGlyphs = 2
-                ShowText = True
-                Spacing = 4
-                Transparent = False
-                Caption = '&Baru'
-                Enabled = False
-                DisabledTextColors.ShadeColor = clGray
-                DisabledTextColors.HighlightColor = clBtnHighlight
-                Index = 3
-                Style = nbsInsert
-              end
-              object wwDBNavigatorInputButton2: TwwNavButton
-                Left = 200
-                Top = 0
-                Width = 49
-                Height = 69
-                Hint = 'Post changes of current record'
-                ImageIndex = -1
-                NumGlyphs = 2
-                ShowText = True
-                Spacing = 4
-                Transparent = False
-                Caption = '&Simpan'
-                Enabled = False
-                DisabledTextColors.ShadeColor = clGray
-                DisabledTextColors.HighlightColor = clBtnHighlight
-                Index = 4
-                Style = nbsPost
-              end
-            end
-            object RGKertas: TRadioGroup
-              Left = 736
-              Top = 0
-              Width = 89
-              Height = 41
-              Anchors = [akTop, akRight]
-              Caption = 'Kertas'
-              Columns = 2
-              ItemIndex = 1
-              Items.Strings = (
-                'A4'
-                'A5')
-              TabOrder = 3
-            end
-            object BtnPrintInputNS: TBitBtn
-              Left = 589
-              Top = 6
-              Width = 102
-              Height = 25
-              Anchors = [akTop, akRight]
-              Caption = '&Print Non Sarong'
-              TabOrder = 4
-              Visible = False
-              OnClick = BtnPrintInputNSClick
-              NumGlyphs = 2
-            end
-            object RGSatuan: TRadioGroup
-              Left = 831
-              Top = 0
-              Width = 100
-              Height = 41
-              Anchors = [akTop, akRight]
-              Caption = 'Satuan'
-              Columns = 2
-              ItemIndex = 1
-              Items.Strings = (
-                'Kg'
-                'Bale')
-              TabOrder = 5
-            end
-            object RGFormat: TRadioGroup
-              Left = 1220
-              Top = 0
-              Width = 177
-              Height = 68
-              Anchors = [akTop, akRight]
-              Caption = ' Print Format '
-              ItemIndex = 0
-              Items.Strings = (
-                'Normal'
-                'Tanpa Kop'
-                'Kop PT. Wastra')
-              TabOrder = 6
-              Visible = False
-            end
-            object BtnPrintInput: TBitBtn
-              Left = 1044
-              Top = 28
-              Width = 71
-              Height = 25
-              Anchors = [akTop, akRight]
-              Caption = '&Print'
+              Caption = 'PanelFooterC1'
               TabOrder = 0
-              OnClick = BtnPrintInputClick
-              Glyph.Data = {
-                76010000424D7601000000000000760000002800000020000000100000000100
-                04000000000000010000130B0000130B00001000000000000000000000000000
-                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
-                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
-                00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
-                8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
-                8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
-                8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
-                03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
-                03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
-                33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
-                33333337FFFF7733333333300000033333333337777773333333}
-              NumGlyphs = 2
+              object wwDBNavigatorInput: TwwDBNavigator
+                Left = 1
+                Top = 1
+                Width = 207
+                Height = 67
+                AutosizeStyle = asSizeNavButtons
+                DataSource = dsQMaster
+                RepeatInterval.InitialDelay = 500
+                RepeatInterval.Interval = 100
+                Align = alClient
+                object wwDBNavigatorInputButton: TwwNavButton
+                  Left = 0
+                  Top = 0
+                  Width = 42
+                  Height = 67
+                  Hint = 'Move to prior record'
+                  ImageIndex = -1
+                  NumGlyphs = 2
+                  ShowText = True
+                  Spacing = 4
+                  Transparent = False
+                  Caption = 'Pre&v'
+                  Enabled = False
+                  DisabledTextColors.ShadeColor = clGray
+                  DisabledTextColors.HighlightColor = clBtnHighlight
+                  Index = 0
+                  Style = nbsPrior
+                end
+                object wwDBNavigatorInputNext: TwwNavButton
+                  Left = 42
+                  Top = 0
+                  Width = 42
+                  Height = 67
+                  Hint = 'Move to next record'
+                  ImageIndex = -1
+                  NumGlyphs = 2
+                  ShowText = True
+                  Spacing = 4
+                  Transparent = False
+                  Caption = '&Next'
+                  Enabled = False
+                  DisabledTextColors.ShadeColor = clGray
+                  DisabledTextColors.HighlightColor = clBtnHighlight
+                  Index = 1
+                  Style = nbsNext
+                end
+                object wwDBNavigatorInputCancel: TwwNavButton
+                  Left = 84
+                  Top = 0
+                  Width = 41
+                  Height = 67
+                  Hint = 'Cancel changes made to current record'
+                  ImageIndex = -1
+                  NumGlyphs = 2
+                  ShowText = True
+                  Spacing = 4
+                  Transparent = False
+                  Caption = 'Ba&tal'
+                  Enabled = False
+                  DisabledTextColors.ShadeColor = clGray
+                  DisabledTextColors.HighlightColor = clBtnHighlight
+                  Index = 2
+                  Style = nbsCancel
+                end
+                object wwDBNavigatorInputButton1: TwwNavButton
+                  Left = 125
+                  Top = 0
+                  Width = 41
+                  Height = 67
+                  Hint = 'Insert new record'
+                  ImageIndex = -1
+                  NumGlyphs = 2
+                  ShowText = True
+                  Spacing = 4
+                  Transparent = False
+                  Caption = '&Baru'
+                  Enabled = False
+                  DisabledTextColors.ShadeColor = clGray
+                  DisabledTextColors.HighlightColor = clBtnHighlight
+                  Index = 3
+                  Style = nbsInsert
+                end
+                object wwDBNavigatorInputButton2: TwwNavButton
+                  Left = 166
+                  Top = 0
+                  Width = 41
+                  Height = 67
+                  Hint = 'Post changes of current record'
+                  ImageIndex = -1
+                  NumGlyphs = 2
+                  ShowText = True
+                  Spacing = 4
+                  Transparent = False
+                  Caption = '&Simpan'
+                  Enabled = False
+                  DisabledTextColors.ShadeColor = clGray
+                  DisabledTextColors.HighlightColor = clBtnHighlight
+                  Index = 4
+                  Style = nbsPost
+                end
+              end
+            end
+            object PanelFooterC2: TPanel
+              Left = 209
+              Top = 0
+              Width = 1245
+              Height = 69
+              Align = alClient
+              TabOrder = 1
+              DesignSize = (
+                1245
+                69)
+              object BtnPrintInputNS: TBitBtn
+                Left = -283
+                Top = 30
+                Width = 102
+                Height = 25
+                Anchors = [akTop, akRight]
+                Caption = '&Print Non Sarong'
+                TabOrder = 0
+                Visible = False
+                OnClick = BtnPrintInputNSClick
+                NumGlyphs = 2
+              end
+              object BtnPrintInput: TBitBtn
+                Left = 308
+                Top = 28
+                Width = 71
+                Height = 25
+                Anchors = [akTop, akRight]
+                Caption = '&Print'
+                TabOrder = 1
+                OnClick = BtnPrintInputClick
+                Glyph.Data = {
+                  76010000424D7601000000000000760000002800000020000000100000000100
+                  04000000000000010000130B0000130B00001000000000000000000000000000
+                  800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                  FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+                  00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+                  8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+                  8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+                  8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+                  03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+                  03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+                  33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+                  33333337FFFF7733333333300000033333333337777773333333}
+                NumGlyphs = 2
+              end
+              object BtnClose1: TBitBtn
+                Left = 389
+                Top = 27
+                Width = 75
+                Height = 25
+                Anchors = [akTop, akRight]
+                Caption = '&Close'
+                TabOrder = 2
+                OnClick = BtnClose1Click
+                NumGlyphs = 2
+              end
+              object RGFormat: TRadioGroup
+                Left = 108
+                Top = 4
+                Width = 177
+                Height = 55
+                Anchors = [akTop, akRight]
+                Caption = ' Print Format '
+                ItemIndex = 0
+                Items.Strings = (
+                  'Normal'
+                  'Tanpa Kop')
+                TabOrder = 3
+              end
+              object RGSatuan: TRadioGroup
+                Left = -9
+                Top = 16
+                Width = 100
+                Height = 41
+                Anchors = [akTop, akRight]
+                Caption = 'Satuan'
+                Columns = 2
+                ItemIndex = 1
+                Items.Strings = (
+                  'Kg'
+                  'Bale')
+                TabOrder = 4
+              end
+              object RGKertas: TRadioGroup
+                Left = -104
+                Top = 16
+                Width = 89
+                Height = 41
+                Anchors = [akTop, akRight]
+                Caption = 'Kertas'
+                Columns = 2
+                ItemIndex = 1
+                Items.Strings = (
+                  'A4'
+                  'A5')
+                TabOrder = 5
+              end
             end
           end
           object PanelBand: TPanel
             Left = 0
             Top = 201
-            Width = 1630
+            Width = 1454
             Height = 41
             Align = alTop
             BevelOuter = bvNone
             Color = clSkyBlue
             TabOrder = 3
             DesignSize = (
-              1630
+              1454
               41)
             object Label14: TLabel
-              Left = 1195
+              Left = 1019
               Top = 2
               Width = 43
               Height = 13
@@ -1113,7 +1137,7 @@ object SPBFrm: TSPBFrm
               Caption = 'Tgl_Insert'
             end
             object wwDBSpinLine1: TwwDBSpinEdit
-              Left = 1195
+              Left = 1019
               Top = 18
               Width = 41
               Height = 21
@@ -1182,7 +1206,7 @@ object SPBFrm: TSPBFrm
           object PageControl3: TPageControl
             Left = 0
             Top = 0
-            Width = 1630
+            Width = 1454
             Height = 622
             ActivePage = TabSheet7
             Align = alClient
@@ -2368,9 +2392,9 @@ object SPBFrm: TSPBFrm
                     Frame.DrawRight = False
                     Size.Values = (
                       50.270833333333330000
-                      806.979166666666700000
+                      806.979166666666800000
                       2.645833333333333000
-                      280.458333333333300000)
+                      280.458333333333400000)
                     Alignment = taCenter
                     AlignToBand = True
                     AutoSize = True
@@ -2403,7 +2427,7 @@ object SPBFrm: TSPBFrm
                   ForceNewColumn = False
                   ForceNewPage = False
                   Size.Values = (
-                    66.145833333333330000
+                    66.145833333333340000
                     1897.062500000000000000)
                   BandType = rbColumnHeader
                   object QRLabel6: TQRLabel
@@ -3345,7 +3369,7 @@ object SPBFrm: TSPBFrm
               object Panel5: TPanel
                 Left = 0
                 Top = 0
-                Width = 1622
+                Width = 1446
                 Height = 185
                 Align = alTop
                 TabOrder = 0
@@ -3566,7 +3590,7 @@ object SPBFrm: TSPBFrm
               object Panel7: TPanel
                 Left = 0
                 Top = 226
-                Width = 1622
+                Width = 1446
                 Height = 327
                 Align = alClient
                 TabOrder = 1
@@ -3684,7 +3708,7 @@ object SPBFrm: TSPBFrm
               object Panel6: TPanel
                 Left = 0
                 Top = 553
-                Width = 1622
+                Width = 1446
                 Height = 41
                 Align = alBottom
                 TabOrder = 2
@@ -3802,17 +3826,17 @@ object SPBFrm: TSPBFrm
               object Panel8: TPanel
                 Left = 0
                 Top = 185
-                Width = 1622
+                Width = 1446
                 Height = 41
                 Align = alTop
                 BevelOuter = bvNone
                 Color = clSkyBlue
                 TabOrder = 3
                 DesignSize = (
-                  1622
+                  1446
                   41)
                 object Label27: TLabel
-                  Left = 1101
+                  Left = 925
                   Top = 2
                   Width = 43
                   Height = 13
@@ -3878,7 +3902,7 @@ object SPBFrm: TSPBFrm
                   Caption = 'Tanggal'
                 end
                 object wwDBSpinEdit1: TwwDBSpinEdit
-                  Left = 1101
+                  Left = 925
                   Top = 18
                   Width = 41
                   Height = 21
@@ -3930,13 +3954,13 @@ object SPBFrm: TSPBFrm
               object PanelFltr: TPanel
                 Left = 0
                 Top = 0
-                Width = 1622
+                Width = 1446
                 Height = 57
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
                 DesignSize = (
-                  1622
+                  1446
                   57)
                 object Label33: TLabel
                   Left = 128
@@ -3960,7 +3984,7 @@ object SPBFrm: TSPBFrm
                   Caption = 'Tgl. Akhir'
                 end
                 object Label41: TLabel
-                  Left = 1582
+                  Left = 1406
                   Top = 16
                   Width = 43
                   Height = 13
@@ -4053,7 +4077,7 @@ object SPBFrm: TSPBFrm
                   NumGlyphs = 2
                 end
                 object wwDBSpinEdit3: TwwDBSpinEdit
-                  Left = 1812
+                  Left = 1636
                   Top = 32
                   Width = 41
                   Height = 21
@@ -4070,7 +4094,7 @@ object SPBFrm: TSPBFrm
               object PanelFoot: TPanel
                 Left = 0
                 Top = 553
-                Width = 1622
+                Width = 1446
                 Height = 41
                 Align = alBottom
                 TabOrder = 1
@@ -4078,7 +4102,7 @@ object SPBFrm: TSPBFrm
               object PanelData: TPanel
                 Left = 0
                 Top = 57
-                Width = 1622
+                Width = 1446
                 Height = 496
                 Align = alClient
                 Caption = 'PanelData'
@@ -4155,7 +4179,7 @@ object SPBFrm: TSPBFrm
       object LabelBanner: TLabel
         Left = 0
         Top = 57
-        Width = 1638
+        Width = 1462
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -4164,13 +4188,13 @@ object SPBFrm: TSPBFrm
       object PanelFilter: TPanel
         Left = 0
         Top = 0
-        Width = 1638
+        Width = 1462
         Height = 57
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          1638
+          1462
           57)
         object Label2: TLabel
           Left = 128
@@ -4194,7 +4218,7 @@ object SPBFrm: TSPBFrm
           Caption = 'Tgl. Akhir'
         end
         object Label5: TLabel
-          Left = 1820
+          Left = 1644
           Top = 16
           Width = 43
           Height = 13
@@ -4285,7 +4309,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object wwDBSpinLine2: TwwDBSpinEdit
-          Left = 1812
+          Left = 1636
           Top = 32
           Width = 41
           Height = 21
@@ -4302,7 +4326,7 @@ object SPBFrm: TSPBFrm
       object PanelBrowse: TPanel
         Left = 0
         Top = 70
-        Width = 1638
+        Width = 1462
         Height = 539
         Align = alClient
         BevelOuter = bvNone
@@ -4378,13 +4402,13 @@ object SPBFrm: TSPBFrm
       object PanelFooter2: TPanel
         Left = 0
         Top = 609
-        Width = 1638
+        Width = 1462
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          1638
+          1462
           41)
         object wwDBNavigator1: TwwDBNavigator
           Left = 0
@@ -4476,7 +4500,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnExport: TBitBtn
-          Left = 484
+          Left = 308
           Top = 8
           Width = 75
           Height = 25
@@ -4487,7 +4511,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnPrintBrowse: TBitBtn
-          Left = 564
+          Left = 388
           Top = 8
           Width = 75
           Height = 25
@@ -4498,7 +4522,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnClose2: TBitBtn
-          Left = 644
+          Left = 468
           Top = 8
           Width = 75
           Height = 25
@@ -4517,7 +4541,7 @@ object SPBFrm: TSPBFrm
       object LabelBanner1: TLabel
         Left = 0
         Top = 57
-        Width = 1638
+        Width = 1462
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -4526,13 +4550,13 @@ object SPBFrm: TSPBFrm
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1638
+        Width = 1462
         Height = 57
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
         DesignSize = (
-          1638
+          1462
           57)
         object Label36: TLabel
           Left = 128
@@ -4556,7 +4580,7 @@ object SPBFrm: TSPBFrm
           Caption = 'Tgl. Akhir'
         end
         object Label39: TLabel
-          Left = 1630
+          Left = 1454
           Top = 16
           Width = 43
           Height = 13
@@ -4661,7 +4685,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object wwDBSpinEdit2: TwwDBSpinEdit
-          Left = 1868
+          Left = 1692
           Top = 32
           Width = 41
           Height = 21
@@ -4697,13 +4721,13 @@ object SPBFrm: TSPBFrm
       object Panel4: TPanel
         Left = 0
         Top = 609
-        Width = 1638
+        Width = 1462
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
         DesignSize = (
-          1638
+          1462
           41)
         object wwDBNavigator3: TwwDBNavigator
           Left = 0
@@ -4785,7 +4809,7 @@ object SPBFrm: TSPBFrm
           end
         end
         object BitBtn2: TBitBtn
-          Left = 988
+          Left = 812
           Top = 8
           Width = 75
           Height = 25
@@ -4796,7 +4820,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BitBtn3: TBitBtn
-          Left = 828
+          Left = 652
           Top = 8
           Width = 75
           Height = 25
@@ -4807,7 +4831,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BitBtn4: TBitBtn
-          Left = 908
+          Left = 732
           Top = 8
           Width = 75
           Height = 25
@@ -4831,7 +4855,7 @@ object SPBFrm: TSPBFrm
       object wwDBGrid5: TwwDBGrid
         Left = 0
         Top = 70
-        Width = 1638
+        Width = 1462
         Height = 539
         ControlType.Strings = (
           'STATUS;URL-Link')
@@ -4889,7 +4913,7 @@ object SPBFrm: TSPBFrm
       object Label26: TLabel
         Left = 0
         Top = 57
-        Width = 1638
+        Width = 1462
         Height = 13
         Align = alTop
         Color = clSkyBlue
@@ -4898,7 +4922,7 @@ object SPBFrm: TSPBFrm
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1638
+        Width = 1462
         Height = 57
         Align = alTop
         BevelOuter = bvNone
@@ -5003,7 +5027,7 @@ object SPBFrm: TSPBFrm
       object wwDBGrid3: TwwDBGrid
         Left = 0
         Top = 70
-        Width = 1638
+        Width = 1462
         Height = 539
         Selected.Strings = (
           'NAMA_REKANAN'#9'20'#9'CUSTOMER'#9'F'
@@ -5053,13 +5077,13 @@ object SPBFrm: TSPBFrm
       object Panel2: TPanel
         Left = 0
         Top = 609
-        Width = 1638
+        Width = 1462
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 2
         DesignSize = (
-          1638
+          1462
           41)
         object wwDBNavigator2: TwwDBNavigator
           Left = 0
@@ -5141,7 +5165,7 @@ object SPBFrm: TSPBFrm
           end
         end
         object Btnclose: TBitBtn
-          Left = 1220
+          Left = 1044
           Top = 0
           Width = 75
           Height = 25
@@ -5152,7 +5176,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnExport1: TBitBtn
-          Left = 1060
+          Left = 884
           Top = 0
           Width = 75
           Height = 25
@@ -5163,7 +5187,7 @@ object SPBFrm: TSPBFrm
           NumGlyphs = 2
         end
         object BtnPrint1: TBitBtn
-          Left = 1140
+          Left = 964
           Top = 0
           Width = 75
           Height = 25
@@ -15274,8 +15298,8 @@ object SPBFrm: TSPBFrm
   end
   object dsQRealisasi: TwwDataSource
     DataSet = QRealisasi
-    Left = 1208
-    Top = 168
+    Left = 1264
+    Top = 104
   end
   object QRealisasi: TOracleDataSet
     SQL.Strings = (
