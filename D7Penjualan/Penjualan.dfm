@@ -230,6 +230,11 @@ object PenjualanFrm: TPenjualanFrm
         GroupIndex = 1
         OnClick = BarangJadi1Click
       end
+      object Sarong1: TMenuItem
+        Caption = 'Sarong'
+        GroupIndex = 1
+        OnClick = Sarong1Click
+      end
       object N5: TMenuItem
         Caption = '-'
         GroupIndex = 1
@@ -482,6 +487,15 @@ object PenjualanFrm: TPenjualanFrm
         Caption = 'Info Mutasi Stok Maklon Cust'
         GroupIndex = 1
         OnClick = InfoMutasiStokMaklonCust1Click
+      end
+      object N11: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+      end
+      object erimaSarong1: TMenuItem
+        Caption = '770. Terima Sarong'
+        GroupIndex = 1
+        OnClick = erimaSarong1Click
       end
     end
     object Doubling1: TMenuItem

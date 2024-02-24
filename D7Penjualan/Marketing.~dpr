@@ -95,7 +95,9 @@ uses
   PriceRM123 in 'PriceRM123.pas' {PriceRM123Frm},
   Agen in 'Agen.pas' {AgenFrm},
   RencProd in 'RencProd.pas' {RencProdFrm},
-  Penimbangan in 'Penimbangan.pas' {PenimbanganFrm};
+  Penimbangan in 'Penimbangan.pas' {PenimbanganFrm},
+  Sarong in 'Sarong.pas' {SarongFrm},
+  TerimaSarong in 'TerimaSarong.pas' {TerimaSarongFrm};
 
 {$R *.res}
 
@@ -105,5 +107,6 @@ begin
   Application.CreateForm(TDMFrm, DMFrm);
   Application.CreateForm(TPenjualanFrm, PenjualanFrm);
   Application.CreateForm(TKriteria_Tanggal1_FRM, Kriteria_Tanggal1_FRM);
+  Application.CreateForm(TTerimaSarongFrm, TerimaSarongFrm);
   Application.Run;
 end.

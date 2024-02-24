@@ -95,7 +95,9 @@ uses
   PriceRM123 in 'PriceRM123.pas' {PriceRM123Frm},
   Agen in 'Agen.pas' {AgenFrm},
   RencProd in 'RencProd.pas' {RencProdFrm},
-  Penimbangan in 'Penimbangan.pas' {PenimbanganFrm};
+  Penimbangan in 'Penimbangan.pas' {PenimbanganFrm},
+  Sarong in 'Sarong.pas' {SarongFrm},
+  TerimaSarong in 'TerimaSarong.pas' {TerimaSarongFrm};
 
 {$R *.res}
 

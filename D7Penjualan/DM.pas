@@ -187,6 +187,7 @@ type
     iniFile: TIniFile;
   public
     { Public declarations }
+    vclGridRead, vclGridEdit, vclGridReadFont, vclGridEditFont : TColor;
 {azmi}
     vuser : string;
     vdatetime  : TDateTime;
@@ -392,9 +393,15 @@ begin
 end;
 
 procedure TDMFrm.DataModuleCreate(Sender: TObject);
+Const
+  SECTION = 'Grid Default';
 begin
   sAppPath := ExtractFileDir(Application.ExeName)+'\';
   iniFile := TIniFile.Create(sAppPath+Application.Title+'.ini');
+  vclGridEdit := iniFile.ReadInteger(SECTION, 'vclGridEdit', clYellow);
+  vclGridEditFont := iniFile.ReadInteger(SECTION, 'vclGridEditFont', clBlack);
+  vclGridRead := iniFile.ReadInteger(SECTION, 'vclGridRead', clRed);
+  vclGridReadFont := iniFile.ReadInteger(SECTION, 'vclGridReadFont', clWhite);
 end;
 
 procedure TDMFrm.DataModuleDestroy(Sender: TObject);

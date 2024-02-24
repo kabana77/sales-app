@@ -1,6 +1,6 @@
 object NotaFrm: TNotaFrm
-  Left = 296
-  Top = 120
+  Left = 294
+  Top = 252
   Width = 1270
   Height = 687
   Caption = 'Order Marketing'
@@ -517,7 +517,7 @@ object NotaFrm: TNotaFrm
             Font.Name = 'MS Sans Serif'
             Font.Style = [fsBold]
             ParentFont = False
-            TabOrder = 12
+            TabOrder = 11
           end
           object wwDBComboBox1: TwwDBComboBox
             Left = 791
@@ -560,7 +560,7 @@ object NotaFrm: TNotaFrm
             DataSource = dsQMaster
             Epoch = 1950
             ShowButton = True
-            TabOrder = 13
+            TabOrder = 12
           end
           object wwDBDateTimePicker3: TwwDBDateTimePicker
             Left = 791
@@ -579,30 +579,7 @@ object NotaFrm: TNotaFrm
             Epoch = 1950
             Enabled = False
             ShowButton = True
-            TabOrder = 10
-          end
-          object wwDBComboBox2: TwwDBComboBox
-            Left = 790
-            Top = 128
-            Width = 66
-            Height = 19
-            Anchors = [akTop, akRight]
-            ShowButton = True
-            Style = csDropDown
-            MapList = False
-            AllowClearKey = False
-            DataField = 'CARA_BAYAR'
-            DataSource = dsQMaster
-            DropDownCount = 8
-            ItemHeight = 0
-            Items.Strings = (
-              'TUNAI'
-              'KREDIT'
-              'LC')
-            Sorted = False
-            TabOrder = 8
-            UnboundDataType = wwDefault
-            OnChange = wwDBComboBox2Change
+            TabOrder = 9
           end
           object wwDBSpinEdit3: TwwDBSpinEdit
             Left = 855
@@ -614,7 +591,7 @@ object NotaFrm: TNotaFrm
             DataField = 'NHARI'
             DataSource = dsQMaster
             ReadOnly = True
-            TabOrder = 9
+            TabOrder = 8
             UnboundDataType = wwDefault
           end
           object wwDBEdit2: TwwDBEdit
@@ -625,7 +602,7 @@ object NotaFrm: TNotaFrm
             DataField = 'KD_REKANAN'
             DataSource = dsQMaster
             ReadOnly = True
-            TabOrder = 14
+            TabOrder = 13
             UnboundDataType = wwDefault
             WantReturns = False
             WordWrap = False
@@ -670,7 +647,7 @@ object NotaFrm: TNotaFrm
             Anchors = [akTop, akRight]
             DataField = 'UM'
             DataSource = dsQMaster
-            TabOrder = 11
+            TabOrder = 10
             UnboundDataType = wwDefault
             WantReturns = False
             WordWrap = False
@@ -714,7 +691,7 @@ object NotaFrm: TNotaFrm
             Height = 19
             DataField = 'KD_REKANAN2'
             DataSource = dsQMaster
-            TabOrder = 15
+            TabOrder = 14
             UnboundDataType = wwDefault
             WantReturns = False
             WordWrap = False
@@ -787,7 +764,7 @@ object NotaFrm: TNotaFrm
             Height = 19
             DataField = 'KD_REKANAN3'
             DataSource = dsQMaster
-            TabOrder = 16
+            TabOrder = 15
             UnboundDataType = wwDefault
             WantReturns = False
             WordWrap = False
@@ -800,10 +777,32 @@ object NotaFrm: TNotaFrm
             Anchors = [akTop, akRight]
             DataField = 'JNS_ORDER'
             DataSource = dsQMaster
-            TabOrder = 17
+            TabOrder = 16
             UnboundDataType = wwDefault
             WantReturns = False
             WordWrap = False
+          end
+          object wwDBComboBox2: TwwDBComboBox
+            Left = 791
+            Top = 128
+            Width = 62
+            Height = 19
+            ShowButton = True
+            Style = csDropDown
+            MapList = False
+            AllowClearKey = False
+            DataField = 'CARA_BAYAR'
+            DataSource = dsQMaster
+            DropDownCount = 8
+            ItemHeight = 0
+            Items.Strings = (
+              'TUNAI'
+              'KREDIT'
+              'LC')
+            Sorted = False
+            TabOrder = 17
+            UnboundDataType = wwDefault
+            OnChange = wwDBComboBox2Change
           end
         end
         object PanelDetail: TPanel
@@ -2686,7 +2685,7 @@ object NotaFrm: TNotaFrm
         object Label49: TLabel
           Left = 0
           Top = 0
-          Width = 3
+          Width = 896
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -3048,7 +3047,7 @@ object NotaFrm: TNotaFrm
                 44.979166666666670000
                 15.875000000000000000
                 10.583333333333330000
-                66.145833333333320000)
+                66.145833333333330000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -3098,7 +3097,7 @@ object NotaFrm: TNotaFrm
               Frame.DrawRight = False
               Size.Values = (
                 44.979166666666670000
-                957.791666666666800000
+                957.791666666666700000
                 10.583333333333330000
                 55.562500000000000000)
               Alignment = taLeftJustify
@@ -3402,7 +3401,7 @@ object NotaFrm: TNotaFrm
                 44.979166666666670000
                 1576.916666666667000000
                 10.583333333333330000
-                97.895833333333320000)
+                97.895833333333330000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -3495,7 +3494,7 @@ object NotaFrm: TNotaFrm
                 44.979166666666670000
                 2323.041666666667000000
                 31.750000000000000000
-                74.083333333333320000)
+                74.083333333333330000)
               Alignment = taLeftJustify
               AlignToBand = False
               AutoSize = True
@@ -4878,8 +4877,8 @@ object NotaFrm: TNotaFrm
       'select a.*, a.rowid from ipisma_db2.bukti a'
       'where a.no_nota=:pno_nota')
     Variables.Data = {
-      0300000001000000090000003A504E4F5F4E4F5441050000000F000000393835
-      2D303730332D30303030310000000000}
+      0300000001000000090000003A504E4F5F4E4F54410500000010000000393935
+      2D323331302D3150303038370000000000}
     QBEDefinition.QBEFieldDefs = {
       0400000041000000070000004E4F5F4E4F54410100000000000C0000004B445F
       5452414E53414B53490100000000000A0000004B445F52454B414E414E010000
@@ -4953,10 +4952,6 @@ object NotaFrm: TNotaFrm
     object QMasterISPOST: TStringField
       FieldName = 'ISPOST'
       Size = 1
-    end
-    object QMasterCARA_BAYAR: TStringField
-      FieldName = 'CARA_BAYAR'
-      Size = 10
     end
     object QMasterNHARI: TFloatField
       FieldName = 'NHARI'
@@ -5062,6 +5057,10 @@ object NotaFrm: TNotaFrm
     end
     object QMasterCARA_AMBIL: TStringField
       FieldName = 'CARA_AMBIL'
+      Size = 6
+    end
+    object QMasterCARA_BAYAR: TStringField
+      FieldName = 'CARA_BAYAR'
       Size = 6
     end
     object QMasterKIRIM_KE: TStringField
@@ -13689,8 +13688,8 @@ object NotaFrm: TNotaFrm
     OutlineSettings.Visible = False
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
-    Left = 864
-    Top = 232
+    Left = 912
+    Top = 176
     Version = '10.06'
     mmColumnWidth = 284300
     DataPipelineName = 'DBQReportRO'

@@ -76,9 +76,7 @@ type
     QMasterTGL: TDateTimeField;
     QMasterKETERANGAN: TStringField;
     QMasterISPOST: TStringField;
-    QMasterCARA_BAYAR: TStringField;
     QMasterNHARI: TFloatField;
-    QMasterTGL_JTH_TEMPO: TDateTimeField;
     QMasterINC_PPN: TStringField;
     QMasterUM: TFloatField;
     QMasterNO_BUKTI: TStringField;
@@ -100,7 +98,6 @@ type
     wwDBDateTimePicker2: TwwDBDateTimePicker;
     wwDBDateTimePicker3: TwwDBDateTimePicker;
     Label12: TLabel;
-    wwDBComboBox2: TwwDBComboBox;
     Label13: TLabel;
     wwDBSpinEdit3: TwwDBSpinEdit;
     DBText3: TDBText;
@@ -122,7 +119,6 @@ type
     QItemKD_ITEM: TStringField;
     QItemSATUAN: TStringField;
     QMasterIBUKTI: TFloatField;
-    QMasterTTD1: TStringField;
     QMasterTTD2: TStringField;
     QMasterTTD3: TStringField;
     QMasterTTD4: TStringField;
@@ -1221,6 +1217,10 @@ type
     QBrowseSUPLIER: TStringField;
     ppLabel120: TppLabel;
     ppLabel121: TppLabel;
+    QMasterTTD1: TStringField;
+    QMasterTGL_JTH_TEMPO: TDateTimeField;
+    QMasterCARA_BAYAR: TStringField;
+    wwDBComboBox2: TwwDBComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -1570,24 +1570,6 @@ end;
           ShowMessage('Tabel belum di-OPEN !');
 end;
 END;
-
-{    DMFrm.SaveDialog1.FileName:=PanelHeader.Caption+' '+
-      vTglAwal.Text+' sd '+vTglAkhir.Text+'.html';
-    if DMFrm.SaveDialog1.Execute then
-    begin
-      try
-        wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-        wwDBGrid2.ExportOptions.TitleName:='<font size=4>'+PanelHeader.Caption+'</font><br><font size=1>'+vTglAwal.Text+' sd '+vTglAkhir.Text+'</font>';
-        wwDBGrid2.ExportOptions.Save;
-        if MessageDlg('Ekspor Data Sukses, Lihat Hasil ?',mtWarning,[mbYes, mbNo],0)=mrYes then
-        begin
-          DMFrm.LMDStarter1.Command:=DMFrm.SaveDialog1.FileName;
-          DMFrm.LMDStarter1.Execute;
-        end;
-  		Except
-    	  ShowMessage('Ekspor Data Gagal !');
-  		end;
-    end; }
 end;
 
 procedure TNotaFrm.BtnOkClick(Sender: TObject);
@@ -1959,7 +1941,7 @@ end;
 
 procedure TNotaFrm.TabSheet1Show(Sender: TObject);
 begin
-  
+
   if (EditCari.Text='') and (QBrowseNO_NOTA.AsString<>'') then
       EditCari.Text:=QBrowseNO_NOTA.AsString;
 
@@ -2006,7 +1988,7 @@ begin
   QDetail.SQL.Text:='select a.*, a.rowid from '+cUserTabel+'bukti_detail a'+
     ' where a.ibukti=:ibukti';
   QDetail.SetVariable('ibukti',QMasterIBUKTI.AsInteger);
-// ShowMessage(QDetail.SQL.Text);
+  //ShowMessage(QDetail.SQL.Text);
   QDetail.Open;
   if QMasterMU.AsString='IDR' then
   begin
@@ -3776,7 +3758,6 @@ end;
 
 procedure TNotaFrm.wwDBComboBox2Change(Sender: TObject);
 begin
-
 if wwDBComboBox2.itemindex=0 then
 QMasterNHARI.AsString:='0';
 //wwDBSpinEdit3.Value:=0;
@@ -3817,7 +3798,7 @@ begin
 QRekap_penj.Close;
 QRekap_penj.DeleteVariables;
 QRekap_penj.SQL.Text:='select * from ipisma_db2.vrekap_penjualan where tgl>=:pawal and tgl<=:pakhir'+
-' and jns_order in (:jns,:jns1) order by no_nota'; //and jns_order in (:jns1)';
+' and substr(jns_order, 11, 3) in (:jns,:jns1) order by no_nota'; //and jns_order in (:jns1)';
 QRekap_penj.DeclareVariable('pawal', otDate);
 QRekap_penj.DeclareVariable('pakhir', otDate);
 QRekap_penj.DeclareVariable('jns', otString);
@@ -3834,9 +3815,9 @@ QTotal_Rekap.DeclareVariable('pawal', otDate);
 QTotal_Rekap.DeclareVariable('pakhir', otDate);
 QTotal_Rekap.DeclareVariable('jns', otString);
 QTotal_Rekap.DeclareVariable('jns1', otString);
-QTotal_Rekap.SQL.Text:='select sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
+QTotal_Rekap.SQL.Text:='select mu, sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
 'sum(dpp_idr) as dpp_idr, sum(ppn_idr) as ppn_idr, sum(akhir_idr) as akhir_idr '+
-'from ipisma_db2.vrekap_penjualan where tgl>=:pawal and tgl<=:pakhir and jns_order in (:jns,:jns1)';
+'from ipisma_db2.vrekap_penjualan where tgl>=:pawal and tgl<=:pakhir and substr(jns_order, 11, 3) in (:jns,:jns1) group by mu';
 QTotal_Rekap.SetVariable('pawal', VTglAwal1.Date);
 QTotal_Rekap.SetVariable('pakhir', VTglAkhir1.Date);
 QTotal_Rekap.SetVariable('jns',vjenis);
@@ -3854,7 +3835,7 @@ begin
 QRekap_penj.Close;
 QRekap_penj.DeleteVariables;
 QRekap_penj.SQL.Text:='select * from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir'+
-' and jns_order in (:jns) order by no_nota';
+' and substr(jns_order, 11, 3) in (:jns) order by no_nota';
 QRekap_penj.DeclareVariable('pawal', otDate);
 QRekap_penj.DeclareVariable('pakhir', otDate);
 QRekap_penj.DeclareVariable('jns', otString);
@@ -3867,9 +3848,9 @@ QTotal_Rekap.DeleteVariables;
 QTotal_Rekap.DeclareVariable('pawal', otDate);
 QTotal_Rekap.DeclareVariable('pakhir', otDate);
 QTotal_Rekap.DeclareVariable('jns',otString);
-QTotal_Rekap.SQL.Text:='select sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
+QTotal_Rekap.SQL.Text:='select mu, sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
 'sum(dpp_idr) as dpp_idr, sum(ppn_idr) as ppn_idr, sum(akhir_idr) as akhir_idr '+
-'from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir and jns_order in (:jns)';
+'from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir and substr(jns_order, 11, 3) in (:jns) group by mu';
 QTotal_Rekap.SetVariable('pawal', VTglAwal1.Date);
 QTotal_Rekap.SetVariable('pakhir', VTglAkhir1.Date);
 QTotal_Rekap.SetVariable('jns',vjenis);
@@ -3886,7 +3867,7 @@ begin
 QRekap_penj.Close;
 QRekap_penj.DeleteVariables;
 QRekap_penj.SQL.Text:='select * from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir'+
-' and jns_order in (:jns) order by no_nota';
+' and substr(jns_order, 11, 3) in (:jns) order by no_nota';
 QRekap_penj.DeclareVariable('pawal', otDate);
 QRekap_penj.DeclareVariable('pakhir', otDate);
 QRekap_penj.DeclareVariable('jns', otString);
@@ -3899,9 +3880,9 @@ QTotal_Rekap.DeleteVariables;
 QTotal_Rekap.DeclareVariable('pawal', otDate);
 QTotal_Rekap.DeclareVariable('pakhir', otDate);
 QTotal_Rekap.DeclareVariable('jns',otString);
-QTotal_Rekap.SQL.Text:='select sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
+QTotal_Rekap.SQL.Text:='select mu, sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
 'sum(dpp_idr) as dpp_idr, sum(ppn_idr) as ppn_idr, sum(akhir_idr) as akhir_idr '+
-'from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir and jns_order in (:jns)';
+'from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir and substr(jns_order, 11, 3) in (:jns) group by mu';
 QTotal_Rekap.SetVariable('pawal', VTglAwal1.Date);
 QTotal_Rekap.SetVariable('pakhir', VTglAkhir1.Date);
 QTotal_Rekap.SetVariable('jns',vjenis);
@@ -3945,7 +3926,7 @@ begin
   //    ShowMessage(QRekap_penj.SQL.Text);
 
   {--------total today IDR LOKAL-------}
-  QTotalToday.Close;
+{  QTotalToday.Close;
   QTotalToday.DeleteVariables;
   QTotalToday.DeclareVariable('pawal', otDate);
   QTotalToday.DeclareVariable('pakhir', otDate);
@@ -3957,11 +3938,11 @@ begin
 
   QTotalToday.SetVariable('pawal', VTglAkhir1.Date);
   QTotalToday.SetVariable('pakhir', VTglAkhir1.Date);
-  QTotalToday.Open;
+  QTotalToday.Open;      }
   {---------------}
 
   {--------total today IDR MAKLON-------}
-  QTotalTodayMKL.Close;
+{  QTotalTodayMKL.Close;
   QTotalTodayMKL.DeleteVariables;
   QTotalTodayMKL.DeclareVariable('pawal', otDate);
   QTotalTodayMKL.DeclareVariable('pakhir', otDate);
@@ -3973,11 +3954,11 @@ begin
 
   QTotalTodayMKL.SetVariable('pawal', VTglAkhir1.Date);
   QTotalTodayMKL.SetVariable('pakhir', VTglAkhir1.Date);
-  QTotalTodayMKL.Open;
+  QTotalTodayMKL.Open;                                       }
   {---------------}
 
   {--------total today USD-------}
-  QTotalToday1.Close;
+{  QTotalToday1.Close;
   QTotalToday1.DeleteVariables;
   QTotalToday1.DeclareVariable('pawal', otDate);
   QTotalToday1.DeclareVariable('pakhir', otDate);
@@ -3989,18 +3970,14 @@ begin
 
   QTotalToday1.SetVariable('pawal', VTglAkhir1.Date);
   QTotalToday1.SetVariable('pakhir', VTglAkhir1.Date);
-  QTotalToday1.Open;
+  QTotalToday1.Open; }
   {---------------}
 
   {--------total todate IDR LOKAL-------}
-  QTotal_Rekap.Close;
+{  QTotal_Rekap.Close;
   QTotal_Rekap.DeleteVariables;
   QTotal_Rekap.DeclareVariable('pawal', otDate);
   QTotal_Rekap.DeclareVariable('pakhir', otDate);
-
-  {QTotal_Rekap.SQL.Text:='select sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
-  'sum(dpp_idr) as dpp_idr, sum(ppn_idr) as ppn_idr, sum(akhir_idr) as akhir_idr '+
-  'from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir'; }
 
   QTotal_Rekap.SQL.Text:='select mu, sum(qty7)as qty7, NVL(sum(dpp),0) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
   'sum(dpp_idr) as dpp_idr, sum(ppn_idr) as ppn_idr, sum(akhir_idr) as akhir_idr '+
@@ -4009,11 +3986,11 @@ begin
 
   QTotal_Rekap.SetVariable('pawal', StartOfTheMonth(VTglAwal1.Date));
   QTotal_Rekap.SetVariable('pakhir', VTglAkhir1.Date);
-  QTotal_Rekap.Open;
+  QTotal_Rekap.Open;                             }
   {----------End total IDR----------}
 
   {--------total todate IDR MAKLON-------}
-  QTotal_RekapMKL.Close;
+ { QTotal_RekapMKL.Close;
   QTotal_RekapMKL.DeleteVariables;
   QTotal_RekapMKL.DeclareVariable('pawal', otDate);
   QTotal_RekapMKL.DeclareVariable('pakhir', otDate);
@@ -4025,18 +4002,14 @@ begin
 
   QTotal_RekapMKL.SetVariable('pawal', StartOfTheMonth(VTglAwal1.Date));
   QTotal_RekapMKL.SetVariable('pakhir', VTglAkhir1.Date);
-  QTotal_RekapMKL.Open;
+  QTotal_RekapMKL.Open;                           }
   {----------End total IDR----------}
 
   {--------total todate USD-------}
-  QTotalRekap1.Close;
+{  QTotalRekap1.Close;
   QTotalRekap1.DeleteVariables;
   QTotalRekap1.DeclareVariable('pawal', otDate);
   QTotalRekap1.DeclareVariable('pakhir', otDate);
-
-  {QTotal_Rekap.SQL.Text:='select sum(qty7)as qty7, sum(dpp) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
-  'sum(dpp_idr) as dpp_idr, sum(ppn_idr) as ppn_idr, sum(akhir_idr) as akhir_idr '+
-  'from ipisma_db2.vrekap_penjualan where trunc(tgl)>=:pawal and trunc(tgl)<=:pakhir'; }
 
   QTotalRekap1.SQL.Text:='select mu, sum(qty7)as qty7, NVL(sum(dpp),0) as dpp, sum(ppn) as ppn, sum(akhir) as akhir, '+
   'sum(dpp_idr) as dpp_idr, sum(ppn_idr) as ppn_idr, sum(akhir_idr) as akhir_idr '+
@@ -4044,32 +4017,28 @@ begin
 
   QTotalRekap1.SetVariable('pawal', StartOfTheMonth(VTglAwal1.Date));
   QTotalRekap1.SetVariable('pakhir', VTglAkhir1.Date);
-  QTotalRekap1.Open;
+  QTotalRekap1.Open;                             }
   {----------End total USD----------}
 
   { GRAND TOTAL }
 
-  vtot_today1 := (QTotalTodayQTY7.AsFloat+QTotalToday1QTY7.AsFloat)+QTotalTodayMKLQTY7.AsFloat;
+{  vtot_today1 := (QTotalTodayQTY7.AsFloat+QTotalToday1QTY7.AsFloat)+QTotalTodayMKLQTY7.AsFloat;
   vtot_today2 := (QTotalTodayDPP_IDR.AsFloat+QTotalToday1DPP_IDR.AsFloat)+QTotalTodayMKLDPP_IDR.AsFloat;
   vtot_today3 := QTotalToday1DPP.AsFloat;
   vtot_todate1 := (QTotal_RekapQTY7.AsFloat+QTotalRekap1QTY7.AsFloat)+QTotal_RekapMKLQTY7.AsFloat;
   vtot_todate2 := (QTotal_RekapDPP_IDR.AsFloat+QTotalRekap1DPP_IDR.AsFloat)+QTotal_RekapMKLDPP_IDR.AsFloat;
-  vtot_todate3 := QTotalRekap1DPP.AsFloat;
+  vtot_todate3 := QTotalRekap1DPP.AsFloat;        }
 
-  TTLQTY.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_today1);
+{  TTLQTY.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_today1);
   TTLIDR.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_today2);
   TTLUSD.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_today3);
 
   TTLQTY2.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_todate1);
   TTLIDR2.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_todate2);
-  TTLUSD2.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_todate3);
+  TTLUSD2.Caption:=FormatFloat('#,##0.00;(#,##0.00)',vtot_todate3);   }
   { END OF GRAND TOTAL }
 
-  {wwDBGrid3.ColumnByName('QTY7').FooterValue:=FormatFloat('#,##0.00;(#,##0.00)',QTotal_Rekap.FieldByName('QTY7').AsFloat);
-  wwDBGrid3.ColumnByName('DPP_IDR').FooterValue:=FormatFloat('#,##0.00;(#,##0.00)',QTotal_Rekap.FieldByName('DPP_IDR').AsFloat);
-  //wwDBGrid3.ColumnByName('DPP').FooterValue:=FormatFloat('#,##0.00;(#,##0.00)',QTotal_Rekap.FieldByName('DPP').AsFloat);
-  wwDBGrid3.ColumnByName('PPN').FooterValue:=FormatFloat('#,##0.00;(#,##0.00)',QTotal_Rekap.FieldByName('PPN').AsFloat);
-  wwDBGrid3.ColumnByName('AKHIR').FooterValue:=FormatFloat('#,##0.00;(#,##0.00)',QTotal_Rekap.FieldByName('AKHIR').AsFloat);}
+  ShowMessage('vjenis : '+vjenis);
 end;
 
 end;
@@ -4237,40 +4206,26 @@ procedure TNotaFrm.wwDBComboBox5Change(Sender: TObject);
 begin
 If wwDBComboBox5.Text='LOKAL' then
   begin
-    vjenis:='LOKAL';
+    vjenis:='LOK';
   end;
 
 If wwDBComboBox5.Text='MAKLON' then
   begin
-    vjenis:='MAKLON';
+    vjenis:='MAK';
     vjenis1:=',';
     vjenis2:='TFO';
   end;
 
 If wwDBComboBox5.Text='EXPORT' then
   begin
-    vjenis:='EXPORT';
+    vjenis:='EXP';
   end;
 end;
 
 procedure TNotaFrm.wwDBComboBox6Change(Sender: TObject);
 begin
-If ComboBox1.Text='LOKAL' then
-  begin
-    vjenis:='LOKAL';
-  end;
-
-If ComboBox1.Text='MAKLON' then
-  begin
-    vjenis:='MAKLON';
-    vjenis1:=',';
-    vjenis2:='TFO';
-  end;
-
-If ComboBox1.Text='EXPORT' then
-  begin
-    vjenis:='EXPORT';
-  end;
+  if wwDBComboBox2.itemindex=0 then
+  QMasterNHARI.AsString:='0';
 end;
 
 procedure TNotaFrm.ComboBox1Change(Sender: TObject);

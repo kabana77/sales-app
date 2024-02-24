@@ -115,6 +115,9 @@ type
     N10: TMenuItem;
     N892RencanaProduksiBulanan1: TMenuItem;
     N892Penimbangan1: TMenuItem;
+    Sarong1: TMenuItem;
+    N11: TMenuItem;
+    erimaSarong1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure Keluar1Click(Sender: TObject);
     procedure ipeMenu1Click(Sender: TObject);
@@ -186,6 +189,8 @@ type
     procedure Agent1Click(Sender: TObject);
     procedure N892RencanaProduksiBulanan1Click(Sender: TObject);
     procedure N892Penimbangan1Click(Sender: TObject);
+    procedure Sarong1Click(Sender: TObject);
+    procedure erimaSarong1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -207,7 +212,8 @@ uses DM, TipeMenu, HakMenu, OrganisasiItem, OrganisasiLokasi,
   OrganisasiItem2,InfoRealisasiPO2,InfoRealisasiPO2Cust,HPPNil,nilaihpp, PermintaanRepack, PermintaanRepro, Reproses,HPPProduksi, //Unpost,
   PermintaanUnpost, InfoStokGJH, InfoStokGJHPP, InfoStokGJHPPM,SPBLainnya,SO_Waste,PindahLokasi2_waste,Nota_Waste,
   SO_BB,PindahLokasi2_Jual,Nota_Jual,Terimabenang,InfoRealisasiPO3,PermintaanDoubling, costing, JenisProses,
-  HargaPacking, PortCountry, RMStandartCost, Trucking, PriceRM123, Agen, RencProd, Penimbangan;
+  HargaPacking, PortCountry, RMStandartCost, Trucking, PriceRM123, Agen, RencProd, Penimbangan,
+  Sarong, TerimaSarong;
 
 {$R *.dfm}
 
@@ -794,6 +800,31 @@ end;
 procedure TPenjualanFrm.N892Penimbangan1Click(Sender: TObject);
 begin
   Penimbangan.ShowForm((Sender as TMenuItem).Name,'PENIMBANGAN',(Sender as TMenuItem).Caption);
+end;
+
+procedure TPenjualanFrm.Sarong1Click(Sender: TObject);
+begin
+  SarongFrm:=TSarongFrm.Create(Application);
+  //SarongFrm.BtnEditing.Enabled:=(Sender as TMenuItem).Checked;
+  SarongFrm.BtnEditing.Enabled:=True;
+  SarongFrm.BtnEditing2.Enabled:=(Sender as TMenuItem).Checked;
+  if MDIChildCount=1 then
+  begin
+     SarongFrm.Left:=0;
+     SarongFrm.Top:=0;
+  end;
+  SarongFrm.Show;
+end;
+
+procedure TPenjualanFrm.erimaSarong1Click(Sender: TObject);
+begin
+  TerimaSarongFrm:=TTerimaSarongFrm.Create(Application);
+  TerimaSarongFrm.vhak_input:=True;
+  TerimaSarongFrm.QJnsTransaksi.Close;
+  TerimaSarongFrm.QJnsTransaksi.SetVariable('kd_transaksi','770');
+  TerimaSarongFrm.QJnsTransaksi.Open;
+  TerimaSarongFrm.Caption:=TerimaSarongFrm.QJnsTransaksiNAMA_TRANSAKSI.AsString;
+  TerimaSarongFrm.Show;
 end;
 
 end.

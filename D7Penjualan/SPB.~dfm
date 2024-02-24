@@ -130,7 +130,7 @@ object SPBFrm: TSPBFrm
               Align = alLeft
               TabOrder = 0
               object Label42: TLabel
-                Left = 6
+                Left = 550
                 Top = 3
                 Width = 49
                 Height = 13
@@ -141,9 +141,10 @@ object SPBFrm: TSPBFrm
                 Font.Name = 'MS Sans Serif'
                 Font.Style = [fsBold]
                 ParentFont = False
+                Visible = False
               end
               object Label6: TLabel
-                Left = 206
+                Left = 8
                 Top = 3
                 Width = 71
                 Height = 13
@@ -299,7 +300,7 @@ object SPBFrm: TSPBFrm
                 ParentFont = False
               end
               object wwDBComboBox3: TwwDBComboBox
-                Left = 6
+                Left = 550
                 Top = 19
                 Width = 177
                 Height = 21
@@ -317,9 +318,10 @@ object SPBFrm: TSPBFrm
                 Sorted = False
                 TabOrder = 0
                 UnboundDataType = wwDefault
+                Visible = False
               end
               object wwDBLookupComboDlg2: TwwDBLookupComboDlg
-                Left = 206
+                Left = 8
                 Top = 20
                 Width = 121
                 Height = 19
@@ -612,7 +614,7 @@ object SPBFrm: TSPBFrm
                 Left = 9
                 Top = 177
                 Width = 30
-                Height = 16
+                Height = 13
                 Caption = 'Sopir'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clOlive
@@ -2392,9 +2394,9 @@ object SPBFrm: TSPBFrm
                     Frame.DrawRight = False
                     Size.Values = (
                       50.270833333333330000
-                      806.979166666666800000
+                      806.979166666666700000
                       2.645833333333333000
-                      280.458333333333400000)
+                      280.458333333333300000)
                     Alignment = taCenter
                     AlignToBand = True
                     AutoSize = True
@@ -2427,7 +2429,7 @@ object SPBFrm: TSPBFrm
                   ForceNewColumn = False
                   ForceNewPage = False
                   Size.Values = (
-                    66.145833333333340000
+                    66.145833333333330000
                     1897.062500000000000000)
                   BandType = rbColumnHeader
                   object QRLabel6: TQRLabel
@@ -5225,7 +5227,7 @@ object SPBFrm: TSPBFrm
     BeforeOpen = QBrowseBeforeOpen
     AfterScroll = QBrowseAfterScroll
     Left = 832
-    Top = 352
+    Top = 360
     object QBrowseNO_NOTA: TStringField
       FieldName = 'NO_NOTA'
     end

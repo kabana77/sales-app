@@ -1872,6 +1872,7 @@ begin
   QMasterTTD3.AsString:=QTransaksiTTD3.AsString;
   QMasterTTD4.AsString:=QTransaksiTTD4.AsString;
   QMasterSTATUS.AsString:='OUT';
+  QMasterNSUPLIER.AsFloat:=0;
 end;
 
 procedure TSPBFrm.QTransaksiBeforeOpen(DataSet: TDataSet);

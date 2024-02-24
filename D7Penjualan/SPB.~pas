@@ -1171,6 +1171,7 @@ type
     procedure PageFooterBand1BeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure QuickRep1AfterPreview(Sender: TObject);
+    procedure QBrowseNewRecord(DataSet: TDataSet);
   private
     { Private declarations }
     vorder, SelectedFont, vkode, vjns_brg, vjns_lokasi : String;
@@ -1673,6 +1674,8 @@ begin
           ppDBText16.Visible:=False;
           ppDBText17.Visible:=False;
           ppLine17.Visible:=False;
+          ppLAlamatWastra.Visible:=False;  //ALAMAT WASTRA
+          ppLTeleponWastra.Visible:=False; //TELEPON WASTRA
           ppNo2.AsInteger:=0;
           if RGKertas.ItemIndex=0 then
             ppReportInput.PrinterSetup.PaperHeight:=297
@@ -1870,6 +1873,7 @@ begin
   QMasterTTD3.AsString:=QTransaksiTTD3.AsString;
   QMasterTTD4.AsString:=QTransaksiTTD4.AsString;
   QMasterSTATUS.AsString:='OUT';
+  QMasterNSUPLIER.AsFloat:=0;
 end;
 
 procedure TSPBFrm.QTransaksiBeforeOpen(DataSet: TDataSet);
@@ -2864,6 +2868,11 @@ end;
 procedure TSPBFrm.QuickRep1AfterPreview(Sender: TObject);
 begin
   qrlNoUrut.Caption:='0';  
+end;
+
+procedure TSPBFrm.QBrowseNewRecord(DataSet: TDataSet);
+begin
+  QMast
 end;
 
 end.
