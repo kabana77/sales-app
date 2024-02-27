@@ -118,6 +118,8 @@ type
     Sarong1: TMenuItem;
     N11: TMenuItem;
     erimaSarong1: TMenuItem;
+    N771KontrakSarong1: TMenuItem;
+    N772SJSarong1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure Keluar1Click(Sender: TObject);
     procedure ipeMenu1Click(Sender: TObject);
@@ -191,6 +193,7 @@ type
     procedure N892Penimbangan1Click(Sender: TObject);
     procedure Sarong1Click(Sender: TObject);
     procedure erimaSarong1Click(Sender: TObject);
+    procedure N771KontrakSarong1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -213,7 +216,7 @@ uses DM, TipeMenu, HakMenu, OrganisasiItem, OrganisasiLokasi,
   PermintaanUnpost, InfoStokGJH, InfoStokGJHPP, InfoStokGJHPPM,SPBLainnya,SO_Waste,PindahLokasi2_waste,Nota_Waste,
   SO_BB,PindahLokasi2_Jual,Nota_Jual,Terimabenang,InfoRealisasiPO3,PermintaanDoubling, costing, JenisProses,
   HargaPacking, PortCountry, RMStandartCost, Trucking, PriceRM123, Agen, RencProd, Penimbangan,
-  Sarong, TerimaSarong;
+  Sarong, TerimaSarong, SKSarong;
 
 {$R *.dfm}
 
@@ -825,6 +828,17 @@ begin
   TerimaSarongFrm.QJnsTransaksi.Open;
   TerimaSarongFrm.Caption:=TerimaSarongFrm.QJnsTransaksiNAMA_TRANSAKSI.AsString;
   TerimaSarongFrm.Show;
+end;
+
+procedure TPenjualanFrm.N771KontrakSarong1Click(Sender: TObject);
+begin
+  SKSarongFrm:=TSKSarongFrm.Create(Application);
+  SKSarongFrm.vhak_input:=True;
+  SKSarongFrm.QJnsTransaksi.Close;
+  SKSarongFrm.QJnsTransaksi.SetVariable('kd_transaksi','771');
+  SKSarongFrm.QJnsTransaksi.Open;
+  SKSarongFrm.Caption:=SKSarongFrm.QJnsTransaksiNAMA_TRANSAKSI.AsString;
+  SKSarongFrm.Show;
 end;
 
 end.

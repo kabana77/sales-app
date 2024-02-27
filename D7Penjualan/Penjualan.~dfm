@@ -497,6 +497,11 @@ object PenjualanFrm: TPenjualanFrm
         GroupIndex = 1
         OnClick = erimaSarong1Click
       end
+      object N771KontrakSarong1: TMenuItem
+        Caption = '771. Kontrak Sarong'
+        GroupIndex = 1
+        OnClick = N771KontrakSarong1Click
+      end
     end
     object Doubling1: TMenuItem
       Caption = 'Produksi'

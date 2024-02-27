@@ -330,15 +330,6 @@ type
     QJnsTransaksiDISTRIBUSI: TStringField;
     QJnsTransaksiSINOPSIS: TBlobField;
     QJnsTransaksiDOC_ISO: TStringField;
-    QBrowseITRX: TFloatField;
-    QBrowseNO_NOTA: TStringField;
-    QBrowseNO_REFF: TStringField;
-    QBrowseKD_REKANAN: TFloatField;
-    QBrowseTGL: TDateTimeField;
-    QBrowseISPOST: TStringField;
-    QBrowseTGL_INSERT: TDateTimeField;
-    QBrowseOPR_INSERT: TStringField;
-    QBrowseKD_TRANSAKSI: TStringField;
     QTransaksiITRX: TFloatField;
     QTransaksiNO_NOTA: TStringField;
     QTransaksiNO_REFF: TStringField;
@@ -368,6 +359,20 @@ type
     QSuplierTELEPON: TStringField;
     QSuplierKD_REKANAN: TFloatField;
     LookSarong: TwwDBLookupComboDlg;
+    QBrowseITRX: TFloatField;
+    QBrowseNO_NOTA: TStringField;
+    QBrowseNO_REFF: TStringField;
+    QBrowseKD_REKANAN: TFloatField;
+    QBrowseTGL: TDateTimeField;
+    QBrowseISPOST: TStringField;
+    QBrowseTGL_INSERT: TDateTimeField;
+    QBrowseOPR_INSERT: TStringField;
+    QBrowseKD_TRANSAKSI: TStringField;
+    QBrowseKETERANGAN: TStringField;
+    QBrowseREKANAN: TStringField;
+    QBrowseTGL_EDIT: TDateTimeField;
+    QBrowseOPR_EDIT: TStringField;
+    QTransaksiISPJK: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure wwDBGrid1TitleButtonClick(Sender: TObject;
       AFieldName: String);
@@ -598,6 +603,7 @@ begin
   QTransaksiKD_TRANSAKSI.AsString:=QJnsTransaksiKD_TRANSAKSI.AsString;
   QTransaksiOPR_INSERT.AsString:=DMFrm.QTimeVUSER.AsString;
   QTransaksiNO_REFF.AsString:='-';
+  QTransaksiISPJK.AsString:='0';
  { QTransaksiTTD1.AsString:=QJnsTransaksiTTD1.AsString+'; '+QJnsTransaksiJAB1.AsString;
   QTransaksiTTD2.AsString:=QJnsTransaksiTTD2.AsString+'; '+QJnsTransaksiJAB2.AsString;
   QTransaksiTTD3.AsString:=QJnsTransaksiTTD3.AsString+'; '+QJnsTransaksiJAB3.AsString;
@@ -648,7 +654,7 @@ begin
       wwDBGrid2.BringToFront;
       wwDBGrid2.RowHeightPercent:=Round(vHeight.Value);
       QTransaksi.Close;
-      //QTransaksi.SetVariable('no_reg_lpb',QBrowseNO_REG_LPB.AsInteger);
+      QTransaksi.SetVariable('itrx',QBrowseITRX.AsInteger);
       QTransaksi.Open;
       QDetail.Open;
       wwDBNavigator1.Enabled:=vhak_input;
@@ -777,7 +783,7 @@ var
 begin
   vpertama:=True;
   if cbTanggal.Checked then
-    vfilter:=' where (tanggal>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tanggal<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
+    vfilter:=' where (tgl>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400)) and ('
   else
     vfilter:=' where (';
   if (QBrowse.FieldCount>=1) then
@@ -828,7 +834,7 @@ end;
 
 procedure TTerimaSarongFrm.FormShow(Sender: TObject);
 begin
-  VTglAwal.Date:=Trunc(DMFrm.QDateTimeVNOW.AsDateTime);
+  VTglAwal.Date:=Trunc(DMFrm.QDateTimeUserTGL.AsDateTime);
   QJnsTransaksi.Open;
 
   TabSheet3.TabVisible:=false;
@@ -921,7 +927,7 @@ procedure TTerimaSarongFrm.TabSheet1Show(Sender: TObject);
 begin
   wwDBGrid1.RowHeightPercent:=Round(vHeight.Value);
   BtnExport.Enabled:=True;
-  vfilter:=' where (tanggal>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tanggal<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400))';
+  vfilter:=' where (tgl>=to_date('''+FormatDateTime('dd/mm/yyyy',VTglAwal.Date)+''',''dd/mm/yyyy'') and tgl<=(to_date('''+FormatDateTime('dd/mm/yyyy',VTglAkhir.Date)+''',''dd/mm/yyyy'')+1-1/86400))';
   QBrowse.Open;
 end;
 

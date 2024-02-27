@@ -306,6 +306,11 @@ object PenjualanFrm: TPenjualanFrm
         GroupIndex = 1
         Visible = False
       end
+      object N771KontrakSarong1: TMenuItem
+        Caption = '771. Kontrak Sarong'
+        GroupIndex = 1
+        OnClick = N771KontrakSarong1Click
+      end
       object OrderPenjualan1: TMenuItem
         Caption = '985. Sales Kontrak'
         GroupIndex = 1
@@ -496,6 +501,10 @@ object PenjualanFrm: TPenjualanFrm
         Caption = '770. Terima Sarong'
         GroupIndex = 1
         OnClick = erimaSarong1Click
+      end
+      object N772SJSarong1: TMenuItem
+        Caption = '772. SJ. Sarong'
+        GroupIndex = 1
       end
     end
     object Doubling1: TMenuItem

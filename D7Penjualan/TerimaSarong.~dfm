@@ -238,7 +238,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               44.979166666666670000
               219.604166666666700000
               13.229166666666670000
-              359.833333333333300000)
+              359.833333333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -1268,7 +1268,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               63.500000000000000000
-              727.604166666666700000
+              727.604166666666800000
               0.000000000000000000
               444.500000000000000000)
             Alignment = taCenter
@@ -1397,7 +1397,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1566.333333333333000000
-              97.895833333333330000
+              97.895833333333340000
               261.937500000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -1429,7 +1429,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1330.854166666667000000
-              97.895833333333330000
+              97.895833333333340000
               211.666666666666700000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -1460,7 +1460,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               108.479166666666700000
               0.000000000000000000
-              76.729166666666670000
+              76.729166666666680000
               722.312500000000000000)
             Alignment = taLeftJustify
             AlignToBand = True
@@ -1493,7 +1493,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               0.000000000000000000
               21.166666666666670000
-              68.791666666666670000)
+              68.791666666666680000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -1617,7 +1617,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               44.979166666666670000
               1058.333333333333000000
-              66.145833333333330000
+              66.145833333333340000
               137.583333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -1681,7 +1681,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1457.854166666667000000
               190.500000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -1710,9 +1710,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               55.562500000000000000
-              947.208333333333300000
-              66.145833333333330000
-              97.895833333333330000)
+              947.208333333333400000
+              66.145833333333340000
+              97.895833333333340000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -1746,7 +1746,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            89.958333333333330000
+            89.958333333333340000
             1902.354166666667000000)
           BandType = rbColumnHeader
           object QRLabel34: TQRLabel
@@ -1761,9 +1761,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              82.020833333333330000
-              42.333333333333330000
-              82.020833333333330000)
+              82.020833333333340000
+              42.333333333333340000
+              82.020833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -1792,8 +1792,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              256.645833333333300000
-              42.333333333333330000
+              256.645833333333400000
+              42.333333333333340000
               330.729166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -1824,7 +1824,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               21.166666666666670000
-              42.333333333333330000
+              42.333333333333340000
               44.979166666666670000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -1854,8 +1854,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              886.354166666666700000
-              42.333333333333330000
+              886.354166666666900000
+              42.333333333333340000
               164.041666666666700000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -1917,7 +1917,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1063.625000000000000000
-              42.333333333333330000
+              42.333333333333340000
               134.937500000000000000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -1948,7 +1948,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1367.895833333333000000
-              42.333333333333330000
+              42.333333333333340000
               113.770833333333300000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -1978,9 +1978,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              669.395833333333300000
-              42.333333333333330000
-              92.604166666666670000)
+              669.395833333333400000
+              42.333333333333340000
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -2010,8 +2010,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1267.354166666667000000
-              42.333333333333330000
-              58.208333333333330000)
+              42.333333333333340000
+              58.208333333333340000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -2041,7 +2041,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1537.229166666667000000
-              42.333333333333330000
+              42.333333333333340000
               121.708333333333300000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -2076,7 +2076,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1902.354166666667000000)
           BandType = rbDetail
           object QRDBText45: TQRDBText
@@ -2155,7 +2155,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              1748.895833333333000000
+              1748.895833333334000000
               0.000000000000000000
               140.229166666666700000)
             Alignment = taCenter
@@ -2252,7 +2252,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1415.520833333333000000
               0.000000000000000000
-              60.854166666666670000)
+              60.854166666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -2435,7 +2435,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1497.541666666667000000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2467,7 +2467,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1497.541666666667000000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2499,7 +2499,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1492.250000000000000000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2531,7 +2531,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1053.041666666667000000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2563,7 +2563,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1053.041666666667000000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2595,7 +2595,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1047.750000000000000000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2625,9 +2625,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              672.041666666666700000
+              672.041666666666800000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2657,9 +2657,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              672.041666666666700000
+              672.041666666666800000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2691,7 +2691,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               666.750000000000000000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2721,9 +2721,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              312.208333333333300000
+              312.208333333333400000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2753,9 +2753,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              312.208333333333300000
+              312.208333333333400000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2787,7 +2787,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               306.916666666666700000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -2821,7 +2821,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1902.354166666667000000)
           BandType = rbPageFooter
           object QRSysData5: TQRSysData
@@ -2898,7 +2898,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              867.833333333333300000
+              867.833333333333400000
               0.000000000000000000
               164.041666666666700000)
             Alignment = taCenter
@@ -2949,7 +2949,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              859.895833333333300000
+              859.895833333333400000
               21.166666666666670000
               179.916666666666700000)
             Alignment = taCenter
@@ -2981,8 +2981,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               121.708333333333300000
               0.000000000000000000
-              42.333333333333330000
-              828.145833333333300000)
+              42.333333333333340000
+              828.145833333333400000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = False
@@ -3134,7 +3134,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               44.979166666666670000
               224.895833333333300000
               10.583333333333330000
-              359.833333333333300000)
+              359.833333333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3260,7 +3260,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               224.895833333333300000
-              97.895833333333330000
+              97.895833333333340000
               164.041666666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -4149,7 +4149,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            89.958333333333330000
+            89.958333333333340000
             1902.354166666667000000)
           BandType = rbColumnHeader
           object QRLabel12: TQRLabel
@@ -4164,9 +4164,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              82.020833333333330000
-              42.333333333333330000
-              82.020833333333330000)
+              82.020833333333340000
+              42.333333333333340000
+              82.020833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -4195,8 +4195,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              256.645833333333300000
-              42.333333333333330000
+              256.645833333333400000
+              42.333333333333340000
               330.729166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -4227,7 +4227,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               841.375000000000000000
-              42.333333333333330000
+              42.333333333333340000
               119.062500000000000000)
             Alignment = taCenter
             AlignToBand = False
@@ -4258,7 +4258,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               21.166666666666670000
-              42.333333333333330000
+              42.333333333333340000
               44.979166666666670000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -4289,7 +4289,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1238.250000000000000000
-              42.333333333333330000
+              42.333333333333340000
               164.041666666666700000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -4351,7 +4351,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1415.520833333333000000
-              42.333333333333330000
+              42.333333333333340000
               134.937500000000000000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -4382,7 +4382,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1576.916666666667000000
-              42.333333333333330000
+              42.333333333333340000
               140.229166666666700000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -4413,8 +4413,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1016.000000000000000000
-              42.333333333333330000
-              92.604166666666670000)
+              42.333333333333340000
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -4448,7 +4448,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1902.354166666667000000)
           BandType = rbDetail
           object QRDBText17: TQRDBText
@@ -4559,7 +4559,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              1748.895833333333000000
+              1748.895833333334000000
               0.000000000000000000
               140.229166666666700000)
             Alignment = taCenter
@@ -4689,7 +4689,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1656.291666666667000000
               0.000000000000000000
-              60.854166666666670000)
+              60.854166666666680000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -4773,7 +4773,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1497.541666666667000000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4805,7 +4805,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1497.541666666667000000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4837,7 +4837,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1492.250000000000000000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4869,7 +4869,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1053.041666666667000000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4901,7 +4901,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1053.041666666667000000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4933,7 +4933,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               1047.750000000000000000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4963,9 +4963,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              672.041666666666700000
+              672.041666666666800000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -4995,9 +4995,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              672.041666666666700000
+              672.041666666666800000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -5029,7 +5029,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               666.750000000000000000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -5059,9 +5059,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              312.208333333333300000
+              312.208333333333400000
               21.166666666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -5091,9 +5091,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              312.208333333333300000
+              312.208333333333400000
               169.333333333333300000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -5125,7 +5125,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               306.916666666666700000
               206.375000000000000000
-              84.666666666666670000)
+              84.666666666666680000)
             Alignment = taCenter
             AlignToBand = False
             AutoSize = True
@@ -5159,7 +5159,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1902.354166666667000000)
           BandType = rbPageFooter
           object QRSysData4: TQRSysData
@@ -5236,7 +5236,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              867.833333333333300000
+              867.833333333333400000
               0.000000000000000000
               164.041666666666700000)
             Alignment = taCenter
@@ -5287,7 +5287,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              859.895833333333300000
+              859.895833333333400000
               21.166666666666670000
               179.916666666666700000)
             Alignment = taCenter
@@ -5319,8 +5319,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               121.708333333333300000
               0.000000000000000000
-              42.333333333333330000
-              828.145833333333300000)
+              42.333333333333340000
+              828.145833333333400000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = False
@@ -5422,7 +5422,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               63.500000000000000000
-              727.604166666666700000
+              727.604166666666800000
               0.000000000000000000
               444.500000000000000000)
             Alignment = taCenter
@@ -5454,7 +5454,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               857.250000000000000000
-              60.854166666666670000
+              60.854166666666680000
               185.208333333333300000)
             Alignment = taCenter
             AlignToBand = True
@@ -5614,7 +5614,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               108.479166666666700000
               0.000000000000000000
-              76.729166666666670000
+              76.729166666666680000
               722.312500000000000000)
             Alignment = taLeftJustify
             AlignToBand = True
@@ -5647,7 +5647,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               0.000000000000000000
               21.166666666666670000
-              68.791666666666670000)
+              68.791666666666680000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -5774,7 +5774,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               0.000000000000000000
               158.750000000000000000
-              296.333333333333300000)
+              296.333333333333400000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -6687,7 +6687,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               0.000000000000000000
               0.000000000000000000
-              296.333333333333300000)
+              296.333333333333400000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = True
@@ -6716,9 +6716,9 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               55.562500000000000000
-              767.291666666666700000
+              767.291666666666800000
               63.500000000000000000
-              415.395833333333300000)
+              415.395833333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -6751,7 +6751,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            68.791666666666670000
+            68.791666666666680000
             1949.979166666667000000)
           BandType = rbColumnHeader
           object QRLabel1: TQRLabel
@@ -6767,7 +6767,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               0.000000000000000000
-              42.333333333333330000
+              42.333333333333340000
               44.979166666666670000)
             Alignment = taLeftJustify
             AlignToBand = True
@@ -6797,8 +6797,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              84.666666666666670000
-              42.333333333333330000
+              84.666666666666680000
+              42.333333333333340000
               113.770833333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6829,7 +6829,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               338.666666666666700000
-              42.333333333333330000
+              42.333333333333340000
               137.583333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6859,8 +6859,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              719.666666666666700000
-              42.333333333333330000
+              719.666666666666800000
+              42.333333333333340000
               171.979166666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6891,8 +6891,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1354.666666666667000000
-              42.333333333333330000
-              82.020833333333330000)
+              42.333333333333340000
+              82.020833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -6922,8 +6922,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1698.625000000000000000
-              42.333333333333330000
-              42.333333333333330000)
+              42.333333333333340000
+              42.333333333333340000)
             Alignment = taRightJustify
             AlignToBand = False
             AutoSize = True
@@ -6953,7 +6953,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               1791.229166666667000000
-              42.333333333333330000
+              42.333333333333340000
               140.229166666666700000)
             Alignment = taRightJustify
             AlignToBand = False
@@ -7015,8 +7015,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Size.Values = (
               37.041666666666670000
               529.166666666666700000
-              42.333333333333330000
-              92.604166666666670000)
+              42.333333333333340000
+              92.604166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -7050,7 +7050,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1949.979166666667000000)
           BandType = rbDetail
           object QRLNomer2: TQRLabel
@@ -7245,8 +7245,8 @@ object TerimaSarongFrm: TTerimaSarongFrm
             Frame.DrawRight = False
             Size.Values = (
               37.041666666666670000
-              883.708333333333300000
-              42.333333333333330000
+              883.708333333333400000
+              42.333333333333340000
               179.916666666666700000)
             Alignment = taCenter
             AlignToBand = True
@@ -7376,7 +7376,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1949.979166666667000000)
           BandType = rbPageFooter
           object QRSysData2: TQRSysData
@@ -7477,7 +7477,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1949.979166666667000000)
           Expression = 'QBrowse.NO_NOTA'
           FooterBand = QRBand3
@@ -7497,7 +7497,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
               37.041666666666670000
               0.000000000000000000
               0.000000000000000000
-              82.020833333333330000)
+              82.020833333333340000)
             Alignment = taLeftJustify
             AlignToBand = True
             AutoSize = False
@@ -7902,16 +7902,13 @@ object TerimaSarongFrm: TTerimaSarongFrm
         ControlType.Strings = (
           'ISPOST;CheckBox;1;0')
         Selected.Strings = (
-          'NO_NOTA'#9'15'#9'NO LPB'#9'F'
-          'ISPOST'#9'6'#9'ISPOST'#9#9
-          'KD_REKANAN'#9'7'#9'KODE'#9'F'#9'SUPLIER'
-          'TGL_INSERT'#9'18'#9'TANGGAL INPUT'#9'F'
-          'KD_TRANSAKSI'#9'3'#9'KD_TRANSAKSI'#9'F'
-          'NO_REFF'#9'19'#9'NO_REFF'#9'F'
-          'TGL'#9'18'#9'TGL'#9'F')
+          'ISPOST'#9'1'#9'ISPOST'#9'F'
+          'KD_REKANAN'#9'10'#9'KD_REKANAN'#9'F'
+          'NO_NOTA'#9'15'#9'NO_NOTA'#9'F'
+          'REKANAN'#9'25'#9'REKANAN'#9'F')
         IniAttributes.Enabled = True
         IniAttributes.SaveToRegistry = True
-        IniAttributes.FileName = 'Pismatex Master'
+        IniAttributes.FileName = 'Marketing'
         IniAttributes.Delimiter = ';;'
         IniAttributes.CheckNewFields = True
         ExportOptions.ExportType = wwgetSYLK
@@ -8990,14 +8987,15 @@ object TerimaSarongFrm: TTerimaSarongFrm
     SequenceField.Sequence = 'IPISMA_DB2.ITRX'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      040000000D000000070000004E4F5F4E4F54410100000000000A0000004B4554
+      040000000F000000070000004E4F5F4E4F54410100000000000A0000004B4554
       4552414E47414E010000000000060000004953504F53540100000000000A0000
       0054474C5F494E534552540100000000000A0000004F50525F494E5345525401
       00000000000C0000004B445F5452414E53414B53490100000000000A0000004B
       445F52454B414E414E0100000000000700000052454B414E414E010000000000
       0400000049545258010000000000070000004E4F5F5245464601000000000003
       00000054474C0100000000000800000054474C5F454449540100000000000800
-      00004F50525F45444954010000000000}
+      00004F50525F454449540100000000000300000050504E010000000000050000
+      004953504A4B010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     RefreshOptions = [roAfterInsert, roAfterUpdate]
@@ -9060,6 +9058,10 @@ object TerimaSarongFrm: TTerimaSarongFrm
     object QTransaksiOPR_EDIT: TStringField
       FieldName = 'OPR_EDIT'
       Size = 128
+    end
+    object QTransaksiISPJK: TStringField
+      FieldName = 'ISPJK'
+      Size = 1
     end
   end
   object dsQTransaksi: TwwDataSource
@@ -9278,12 +9280,14 @@ object TerimaSarongFrm: TTerimaSarongFrm
       003430360000000000080000003A4D59504152414D01000000110000006F7264
       6572206279204E4F5F4E4F54410000000000}
     QBEDefinition.QBEFieldDefs = {
-      04000000090000000C0000004B445F5452414E53414B53490100000000000A00
+      040000000D0000000C0000004B445F5452414E53414B53490100000000000A00
       00004B445F52454B414E414E010000000000070000004E4F5F4E4F5441010000
       000000060000004953504F53540100000000000A00000054474C5F494E534552
       540100000000000400000049545258010000000000070000004E4F5F52454646
       0100000000000300000054474C0100000000000A0000004F50525F494E534552
-      54010000000000}
+      540100000000000A0000004B45544552414E47414E0100000000000700000052
+      454B414E414E0100000000000800000054474C5F454449540100000000000800
+      00004F50525F45444954010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     Session = DMFrm.OS
@@ -9323,6 +9327,21 @@ object TerimaSarongFrm: TTerimaSarongFrm
     object QBrowseKD_TRANSAKSI: TStringField
       FieldName = 'KD_TRANSAKSI'
       Size = 3
+    end
+    object QBrowseKETERANGAN: TStringField
+      FieldName = 'KETERANGAN'
+      Size = 255
+    end
+    object QBrowseREKANAN: TStringField
+      FieldName = 'REKANAN'
+      Size = 255
+    end
+    object QBrowseTGL_EDIT: TDateTimeField
+      FieldName = 'TGL_EDIT'
+    end
+    object QBrowseOPR_EDIT: TStringField
+      FieldName = 'OPR_EDIT'
+      Size = 128
     end
   end
   object dsQBrowse: TwwDataSource
@@ -9365,7 +9384,7 @@ object TerimaSarongFrm: TTerimaSarongFrm
       00000000070000005154595F4C50420100000000000300000051545901000000
       000005000000524153494F010000000000}
     Master = QBrowse
-    MasterFields = 'NO_REG_LPB'
+    MasterFields = 'itrx'
     DetailFields = 'NO_REG_LPB'
     Session = DMFrm.OS
     BeforeOpen = QBrowseDetailBeforeOpen

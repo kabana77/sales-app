@@ -97,7 +97,8 @@ uses
   RencProd in 'RencProd.pas' {RencProdFrm},
   Penimbangan in 'Penimbangan.pas' {PenimbanganFrm},
   Sarong in 'Sarong.pas' {SarongFrm},
-  TerimaSarong in 'TerimaSarong.pas' {TerimaSarongFrm};
+  TerimaSarong in 'TerimaSarong.pas' {TerimaSarongFrm},
+  SKSarong in 'SKSarong.pas' {SKSarongFrm};
 
 {$R *.res}
 
