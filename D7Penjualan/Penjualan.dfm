@@ -311,6 +311,14 @@ object PenjualanFrm: TPenjualanFrm
         GroupIndex = 1
         OnClick = N771KontrakSarong1Click
       end
+      object N773NotaPenjualanSarong1: TMenuItem
+        Caption = '773. Nota Penjualan Sarong'
+        GroupIndex = 1
+      end
+      object N13: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+      end
       object OrderPenjualan1: TMenuItem
         Caption = '985. Sales Kontrak'
         GroupIndex = 1
@@ -505,6 +513,16 @@ object PenjualanFrm: TPenjualanFrm
       object N772SJSarong1: TMenuItem
         Caption = '772. SJ. Sarong'
         GroupIndex = 1
+        OnClick = N772SJSarong1Click
+      end
+      object N12: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+      end
+      object InfoMutasiStokSarong1: TMenuItem
+        Caption = 'Info Mutasi Stok Sarong'
+        GroupIndex = 1
+        OnClick = InfoMutasiStokSarong1Click
       end
     end
     object Doubling1: TMenuItem

@@ -98,7 +98,9 @@ uses
   Penimbangan in 'Penimbangan.pas' {PenimbanganFrm},
   Sarong in 'Sarong.pas' {SarongFrm},
   TerimaSarong in 'TerimaSarong.pas' {TerimaSarongFrm},
-  SKSarong in 'SKSarong.pas' {SKSarongFrm};
+  SKSarong in 'SKSarong.pas' {SKSarongFrm},
+  SJSarong in 'SJSarong.pas' {SJSarongFrm},
+  KartuStokNBB in 'KartuStokNBB.pas' {KartuStokNBBFrm};
 
 {$R *.res}
 

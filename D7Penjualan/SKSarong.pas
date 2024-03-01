@@ -614,6 +614,7 @@ begin
   QTransaksiNO_REFF.AsString:='-';
   QTransaksiISPJK.AsString:='0';
   QTransaksiPPN.AsString:='0';
+  QTransaksiTGL_INSERT.AsDateTime:=trunc(DMFrm.QDateTimeUserTGL.AsDateTime);
  { QTransaksiTTD1.AsString:=QJnsTransaksiTTD1.AsString+'; '+QJnsTransaksiJAB1.AsString;
   QTransaksiTTD2.AsString:=QJnsTransaksiTTD2.AsString+'; '+QJnsTransaksiJAB2.AsString;
   QTransaksiTTD3.AsString:=QJnsTransaksiTTD3.AsString+'; '+QJnsTransaksiJAB3.AsString;

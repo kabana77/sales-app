@@ -9196,18 +9196,21 @@ object SKSarongFrm: TSKSarongFrm
     end
     object QDetailQTY: TFloatField
       FieldName = 'QTY'
+      OnChange = QDetailQTYChange
     end
     object QDetailTGL_INSERT: TDateTimeField
       FieldName = 'TGL_INSERT'
     end
     object QDetailHRG: TFloatField
       FieldName = 'HRG'
+      OnChange = QDetailHRGChange
     end
     object QDetailSUBTOTAL: TFloatField
       FieldName = 'SUBTOTAL'
     end
     object QDetailPOT_HRG: TFloatField
       FieldName = 'POT_HRG'
+      OnChange = QDetailPOT_HRGChange
     end
   end
   object dsQDetail: TwwDataSource
