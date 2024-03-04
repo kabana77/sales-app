@@ -100,7 +100,8 @@ uses
   TerimaSarong in 'TerimaSarong.pas' {TerimaSarongFrm},
   SKSarong in 'SKSarong.pas' {SKSarongFrm},
   SJSarong in 'SJSarong.pas' {SJSarongFrm},
-  KartuStokNBB in 'KartuStokNBB.pas' {KartuStokNBBFrm};
+  KartuStokNBB in 'KartuStokNBB.pas' {KartuStokNBBFrm},
+  NotaSarong in 'NotaSarong.pas' {NotaSarongFrm};
 
 {$R *.res}
 

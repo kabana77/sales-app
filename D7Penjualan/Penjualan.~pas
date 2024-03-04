@@ -200,6 +200,7 @@ type
     procedure N771KontrakSarong1Click(Sender: TObject);
     procedure N772SJSarong1Click(Sender: TObject);
     procedure InfoMutasiStokSarong1Click(Sender: TObject);
+    procedure N773NotaPenjualanSarong1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -222,7 +223,7 @@ uses DM, TipeMenu, HakMenu, OrganisasiItem, OrganisasiLokasi,
   PermintaanUnpost, InfoStokGJH, InfoStokGJHPP, InfoStokGJHPPM,SPBLainnya,SO_Waste,PindahLokasi2_waste,Nota_Waste,
   SO_BB,PindahLokasi2_Jual,Nota_Jual,Terimabenang,InfoRealisasiPO3,PermintaanDoubling, costing, JenisProses,
   HargaPacking, PortCountry, RMStandartCost, Trucking, PriceRM123, Agen, RencProd, Penimbangan,
-  Sarong, TerimaSarong, SKSarong, SJSarong, KartuStokNBB;
+  Sarong, TerimaSarong, SKSarong, SJSarong, KartuStokNBB, NotaSarong;
 
 {$R *.dfm}
 
@@ -865,6 +866,17 @@ begin
   KartuStokNBBFrm.LTitle.Caption:='Kartu Stok Sarong';
   //KartuStokNBBFrm.vkd_jns_item:='8';
   KartuStokNBBFrm.Show;
+end;
+
+procedure TPenjualanFrm.N773NotaPenjualanSarong1Click(Sender: TObject);
+begin
+  NotaSarongFrm:=TNotaSarongFrm.Create(Application);
+  NotaSarongFrm.vhak_input:=True;
+  NotaSarongFrm.QJnsTransaksi.Close;
+  NotaSarongFrm.QJnsTransaksi.SetVariable('kd_transaksi','773');
+  NotaSarongFrm.QJnsTransaksi.Open;
+  NotaSarongFrm.Caption:=NotaSarongFrm.QJnsTransaksiNAMA_TRANSAKSI.AsString;
+  NotaSarongFrm.Show;
 end;
 
 end.

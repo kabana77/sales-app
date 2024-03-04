@@ -314,6 +314,7 @@ object PenjualanFrm: TPenjualanFrm
       object N773NotaPenjualanSarong1: TMenuItem
         Caption = '773. Nota Penjualan Sarong'
         GroupIndex = 1
+        OnClick = N773NotaPenjualanSarong1Click
       end
       object N13: TMenuItem
         Caption = '-'
